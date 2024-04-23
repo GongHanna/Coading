@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>ifEx5</title>
+  <style>
+    img {
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ifEx5</h1>
+
+  <script>
+    // document.body.innerHTML += "<h2>문제</h2>"
+    // document.write("<h2>문제</h2>");
+
+    // 1~4 사이의 숫자를 입력하면 해당 번호의 이미지를 출력
+    let num = prompt('1~4 사이의 숫자를 입력하세요');
+
+    /* prompt는 문자열이라서 숫자를 문자열로 바꿔줌
+    if(num === '1') {
+      document.body.innerHTML += '<img src="./images/food1.jpg" alt="img1">';
+    } else if(num === '2') {
+      document.body.innerHTML += '<img src="./images/food2.jpg" alt="img2">';
+    } else if(num === '3') {
+      document.body.innerHTML += '<img src="./images/food3.jpg" alt="img3">';
+    } else if(num === '4') {
+      document.body.innerHTML += '<img src="./images/food4.jpg" alt="img4">';
+    } else {
+      document.body.innerHTML += '<h2>해당 번호만 입력해 주세요</h2>';
+    }
+    */
+
+    // 숫자 데이터 타입으로 변환
+    // num = Number(num);
+    // num = parseInt(num);
+    // num = +num;
+    num = num * 1;
+
+    if(num === 1) {
+      document.body.innerHTML += '<img src="./images/food1.jpg" alt="img1">';
+    } else if(num === 2) {
+      document.body.innerHTML += '<img src="./images/food2.jpg" alt="img2">';
+    } else if(num === 3) {
+      document.body.innerHTML += '<img src="./images/food3.jpg" alt="img3">';
+    } else if(num === 4) {
+      document.body.innerHTML += '<img src="./images/food4.jpg" alt="img4">';
+    } else {
+      document.body.innerHTML += '<h2>해당 번호만 입력해 주세요</h2>';
+    }
+
+    // if(num == 1) {
+    //   document.body.innerHTML += '<img src="./images/food1.jpg" alt="떡볶이">';
+    // } else if(num == 2) {
+    //   document.body.innerHTML += '<img src="./images/food2.jpg" alt="치킨">';
+    // } else if(num == 3) {
+    //   document.body.innerHTML += '<img src="./images/food3.jpg" alt="덮밥">';
+    // } else if(num == 4) {
+    //   document.body.innerHTML += '<img src="./images/food4.jpg" alt="냉모밀">';
+    // } else {
+    //   alert('1~4까지만 넣어주세요');
+    // }
+  </script>
+</body>
+
+</html>
