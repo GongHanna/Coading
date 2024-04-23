@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>aniEx3</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      height: 100vh;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      /* align-items: flex-start; */
+    }
+    .container .bicycle-wrapper {
+      animation: move 4s infinite linear;
+
+      position: relative;
+      z-index: 99; /* position/ flex/ grid에서만 사용 가능 */
+    }
+    .container .bicycle-wrapper  .bicycle-wheel {
+      animation: spin infinite 1s linear;
+
+      position: absolute;
+      bottom: -89px; left: -91px;
+      /* transform: translate(-50%, 50%); */
+    }
+    .container .bicycle-wrapper  .bicycle-wheel:last-child {
+      left: auto; /* 기존 left 무력화 */
+      right: -93px;
+    }
+
+    .container .fireworks {
+      /* align-self: flex-start; */
+      margin: 20px 20px auto auto; /* flex-item일 때만 가능 */
+
+      animation: scale 3s infinite alternate;
+    }
+    @keyframes scale {
+      0% {opacity: 0;}
+      100% {transform: rotate(360deg) scale(0.5); opacity: 1;}
+    }
+    @keyframes spin {
+      100% { transform: rotate(360deg);}
+    }
+    @keyframes move {
+      0% { opacity: 0; left: -10%; }
+      10% { opacity: 1; left: 0; }
+      80% { opacity: 1; left: 100%; }
+      100% { opacity: 0; left: 110%; }
+    }
+
+    /* body {
+      margin: 0;
+    }
+
+    .img-wrapper {
+      width: 100%;
+      position: relative;
+    }
+
+    .img-wrapper .mov {
+      height: 90vh;
+      animation: mov1 2s infinite linear;
+    }
+    .img-wrapper .mov .bicycle {
+      position: absolute;
+      bottom: 90px;
+      left: 90px;
+    }
+
+    .img-wrapper .mov .wheel1 {
+      position: absolute;
+      bottom: 0; left: 0;
+    }
+
+    .img-wrapper .mov .wheel2 {
+      position: absolute;
+      bottom: 0;
+      left: 470px;
+    }
+
+    .img-wrapper .mov .wheel {
+      animation: mov2 1s infinite linear;
+    }
+
+    .img-wrapper .fireworks {
+      width: 100px;
+      position: absolute;
+      top: 5%;
+      right: 8%;
+
+      animation: fire 1s infinite alternate;
+    }
+
+    @keyframes fire {
+      100% {
+        transform: scale(1.5) rotate(360deg);
+      }
+    }
+    @keyframes mov1 {
+      100% {
+        transform: translateX(100vw);
+      }
+    }
+    @keyframes mov2 {
+      100% {
+        transform: rotate(360deg);
+      }
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="bicycle-wrapper">
+      <img src="./images/bicycle.png" alt="자전거 바디" class="bicycle-body">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="bicycle-wheel">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="bicycle-wheel">
+    </div>
+    <img src="./images/fireworks.png" alt="불꽃놀이 일러스트" class="fireworks">
+  </div>
+
+  <!-- <div class="img-wrapper">
+    <div class="mov">
+      <img src="./images/bicycle.png" alt="bicycle" class="bicycle">
+      <img src="./images/wheel.png" alt="wheel1" class="wheel wheel1">
+      <img src="./images/wheel.png" alt="wheel2" class="wheel wheel2">
+    </div>
+    <img src="./images/fireworks.png" alt="fireworks" class="fireworks">
+  </div> -->
+</body>
+
+</html>

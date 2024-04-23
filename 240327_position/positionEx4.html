@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>positionEx4</title>
+  <link rel="stylesheet" href="../assets/styles/reset.css">
+  <style>
+    body {
+      color: #fff;
+      font-size: 1.4rem;
+    }
+    header, footer {
+      background-color: #070F2B;
+      height: 100px;
+    }
+    .contents {
+      background-color: #ddd;
+      display: flex;
+    }
+    .contents article {
+      background-color: #1B1A55;
+      width: 70%;
+      height: 300vh;
+    }
+    .contents aside {
+      background-color: #535C91;
+      width: 30%;
+      height: 150px;
+
+      position: sticky;
+      top: 0;
+    }
+  </style>
+
+  <!-- <style>
+    body { 
+      margin: 0; 
+      width: 100%; 
+      color: #fff;
+    }
+    header, footer {
+      background-color: #070F2B;
+      padding: 10px 20px;
+    }
+    header h1 { margin: 0; }
+    main {
+      display: flex;
+    }
+    main article {
+      background-color: #1B1A55;
+      flex-grow: 4;
+      padding: 10px 20px;
+      height: 200vh;
+    }
+    main aside {
+      background-color: #535C91;
+      flex-grow: 1;
+      padding: 10px 20px;
+      height: 15vh;
+      position: sticky;
+      top: 0;
+    }
+  </style> -->
+</head>
+  
+<body>
+  <!-- <header>
+    <h1>positionEx4</h1>
+    <h2>header</h2>
+  </header>
+
+  <main>
+    <article>
+      <h2>main contents</h2>
+    </article>
+
+    <aside>
+      <h2>sticky sidebar</h2>
+    </aside>
+  </main>
+
+  <footer>
+    <h2>footer</h2>
+  </footer> -->
+  <header>
+    <h1>positionEx4</h1>
+    <h2>header</h2>
+  </header>
+  <div class="contents">
+    <article>
+      <h2>main contents</h2>
+    </article>
+    <aside>
+      <h2>sticky sidebar</h2>
+    </aside>
+  </div>
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>

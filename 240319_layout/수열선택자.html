@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>수열선택자</title>
+  <style>
+    /*
+    body {
+      text-align: center;
+      font-weight: bold;
+    }
+    .container {
+      list-style: none;
+      margin: 0 auto; padding: 15px 0;
+      border: 3px solid #222;
+      width: 400px;
+      gap: 15px;
+
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-evenly;
+      align-content: space-evenly;
+    }
+    .container li, p {
+      background-color: #ddd;
+      border-radius: 50%;
+      width: 100px; height: 100px;
+      margin: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } 
+    */
+
+    .box {
+      text-align: center;
+      list-style: none;
+      font-weight: bold;
+      border: 3px solid #222;
+      margin: 50px auto; padding: 0;
+
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+
+      width: 480px; /* w100+m10+10=120px */
+    }
+    .box li, .box p, .box div {
+      background-color: #ddd;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+
+      /* display: flex; justify-content: center; align-items: center; */
+      line-height: 100px;
+      margin: 10px;
+
+      box-sizing: border-box; /* width 값 안에 padding+border 값 포함 */
+    }
+
+    /* 
+      수열 선택자, 의사 클래스
+      :first-child {} 같은 부모를 둔 자식들 중 첫번째 자식
+      :last-child {} 같은 부모를 둔 자식들 중 마지막 자식
+      :nth-child(n) {} 같은 부모를 둔 자식들 중 n번째 자식
+
+      :first-of-type {} 같은 부모를 둔 자식들 중 '같은 타입'의 첫번째 자식
+      :last-of-type {} 같은 부모를 둔 자식들 중 '같은 타입'의 마지막 자식
+      :nth-of-type(n) {} 같은 부모를 둔 자식들 중 '같은 타입'의 n번째 자식
+
+      (even) 짝수
+      (odd) 홀수
+      (3n+1) 3개를 기준으로 첫번째 /수열
+      (3n) 3번째 /수열
+    */
+
+    .box li:first-child { /* 같은 부모를 둔 자식들 중 처음 나오는 요소가 li인 경우 적용 */
+      background-color: tomato;
+    }
+    .container p:first-child { /* 같은 부모를 둔 자식들 중 처음 나오는 요소가 p가 아니기 때문에 적용 X */
+      background-color: orange;
+    }
+    .box p:first-of-type { /* 같은 부모 안에서 같은 타입의 자식들 중 첫번째 타입에 적용 */
+      background-color: orange;
+    }
+    .box p:last-child { /* 가장 마지막에 나오는 자식이 p여야지만 적용 */
+      background-color: lightseagreen;
+    }
+    .box div:last-of-type { /* 같은 부모 안에서 같은 타입의 자식들 중 마지막 타입에 적용 */
+      background-color: lightcoral;
+    }
+    .box p:last-of-type { /* 가장 마지막에 나오는 p에 적용 */
+      background-color: blueviolet;
+    }
+    .box li:nth-child(6) { /* 자식들 중 6번째 위치에 li가 있으면 적용 */
+      border: 3px solid #000;
+    }
+    .box li:nth-child(9) { /* 자식들 중 9번째 위치에 li가 없어서 적용 x */
+      border: 3px solid #999;
+    }
+    .box p:nth-of-type(4) { /* 자식들 중 같은 타입의 4번째 p에 적용 */
+      border: 3px solid #999;
+    }
+    .container li:nth-child(even) { /* 짝수 위치의 자식 li에만 적용 */
+      background-color: #B7C9F2;
+    }
+    .wrapper p:nth-child(odd) { /* 홀수 위치의 자식 p에만 적용 */
+      background-color: #FEC7B4;
+    }
+    .container :nth-child(odd) { /* 실제하는 요소 없이 작성시 요소 구분 없이 적용 */
+      font-style: italic;
+    }
+    .container li:nth-child(4n+3) { /* 4개를 기준으로 3번째에만 적용 */
+      border-radius: 50% 0;
+      background-color: #F9F07A;
+    }
+
+    /* 5의 배수 값에 border */ 
+    .container :nth-child(5n) { /* 5개를 기준으로 5번째 */
+      border: 3px dotted maroon;
+    }
+
+    /* 3~11까지 선택 */
+    .wrapper :nth-child(n+3):nth-child(-n+11) {
+      border-radius: 0 50%;
+    }
+    /* 5~11까지 선택하되 2개 중 첫번째에 적용 */
+    .wrapper :nth-child(2n+5):nth-child(-n+11) {
+      color: mediumblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>수열선택자 - 의사클래스</h1>
+  <!-- ul.box.container>li{$$}*22 $$표시 두개는 두자리 숫자를 의미-->
+  <ul class="box container">
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+    <li>04</li>
+    <li>05</li>
+    <li>06</li>
+    <li>07</li>
+    <p>p8</p>
+    <p>p9</p>
+    <li>10</li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <p>p19</p>
+    <p>p20</p>
+    <p>p21</p>
+    <li>22</li>
+  </ul>
+
+  <div class="box wrapper">
+    <p>w01</p>
+    <p>w02</p>
+    <p>w03</p>
+    <p>w04</p>
+    <div>div05</div>
+    <div>div06</div>
+    <p>w07</p>
+    <p>w08</p>
+    <p>w09</p>
+    <p>w10</p>
+    <p>w11</p>
+    <p>w12</p>
+    <p>w13</p>
+    <p>w14</p>
+  </div>
+</body>
+</html>

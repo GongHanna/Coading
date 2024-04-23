@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>미디어쿼리선언방식</title>
+  <!-- 외부선언 1
+  <link rel="stylesheet" href="./style.css">
+   -->
+
+   <!-- 외부선언 2 모바일 우선인 경우 작은 값을 먼저 연결 
+   <link rel="stylesheet" href="./mq_m.css">
+   <link rel="stylesheet" href="./mq_t.css">
+   <link rel="stylesheet" href="./mq_pc.css">
+   -->
+
+   <!-- 외부선언 3 모바일 우선인 경우 작은 값을 먼저 연결 -->
+   <link rel="stylesheet" href="./mq_m.css">
+   <link rel="stylesheet" href="./tablet.css" media="(min-width: 768px)">
+   <link rel="stylesheet" href="./pc.css" media="(width >= 1200px)">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+  <!-- 내부 선언 
+  <style>
+    /* 모바일 기준 */
+    html {
+      font-size: 18px;
+    }
+    body {
+      margin: 0;
+      text-align: center;
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+    h1 {
+      background-color: #201658;
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0;
+      padding: 30px;
+      transition: 0.4s;
+    }
+    h1 strong {
+      display: block;
+    }
+    h2 {
+      font-size: 1.4rem;
+      background-color: #EC8F5E;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      transition: 0.4s;
+    }
+    .container {
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: grid;
+      grid-auto-rows: 20vh;
+    }
+    .container .box1 { background-color: #CAEDFF;}
+    .container .box2 { background-color: #FFC7EA;}
+    .container .box3 { background-color: #FBF0B2;} 
+
+    /* 768px */
+    @media screen and (min-width: 768px) {
+      html {
+      font-size: 17px;
+    }
+      h1 {
+        background-color: #9FBB73;
+        padding: 40px;
+      }
+      h1 strong {
+        display: inline;
+      }
+      h2 {
+        background-color: #872341;
+      }
+      .container {
+        width: 70vw;
+        margin: 0 auto;
+      }
+    }
+
+    /* 1200px */
+    @media screen and (min-width: 1200px) {
+      h1 {
+        background-color: #135D66;
+        padding: 50px;
+      }
+      h2 {
+        display: none;
+      }
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+   */
+  </style>
+  -->
+</head>
+
+<body>
+  <h1>미디어쿼리 <strong>선언 방식</strong></h1>
+  <h2>내부 선언과<br> 외부 선언</h2>
+  <div class="container">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+  </div>
+</body>
+</html>

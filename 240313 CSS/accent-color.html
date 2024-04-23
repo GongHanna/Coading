@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>accent-color</title>
+  <style>
+    /* 
+    accent-color 속성
+      input type=checkbox, radio, range, progress 컨트롤 값 제어
+    */
+    form fieldset {
+      border: 3px solid #000;
+      font-weight: bold;
+      padding: 20px;
+      width: 300px;
+    }
+    form fieldset input[type=radio] {
+      accent-color: orange;
+    }
+    form fieldset progress {
+      accent-color: orange;
+    }
+    form fieldset input[type=range] {
+      accent-color: lightseagreen;
+    } 
+  </style>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>checkbox, radio</legend>
+      <input type="radio" name="animals" id="dog" value="개">
+      <label for="dog">🐶</label>
+      <input type="radio" name="animals" id="fox" value="여우">
+      <label for="fox">🦊</label>
+      <input type="radio" name="animals" id="tiger" value="호랑이" checked>
+      <label for="tiger">🐯</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>progress</legend>
+      <label for="userProgress">progress</label>
+      <progress id="userProgress" min="0" max="100" value="20"></progress>
+    </fieldset>
+
+    <fieldset>
+      <legend>range</legend>
+      <label for="userRange">range</label>
+      <input type="range" id="userRange">
+    </fieldset>
+  </form>
+</body>
+
+</html>

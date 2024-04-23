@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>mediaQueries1</title>
+  <!-- ** 미디어쿼리 작성시 뷰포트 값 필수 -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    /*
+    @media screen { 스크린을 만났을 때 실행
+      실행문
+    }
+    @media screen and (min-width: 414px) { 스크린의 가로 크기가 최소 414px 이상이면 적용
+      실행문
+    }
+    @media all and (min-width: 414px) { 스크린의 가로 크기가 최소 414px 이상이면 적용
+      실행문
+    }
+    @media all and (min-width: 414px) { 스크린의 가로 크기가 최소 414px 이상이면 적용
+      @media screen and (min-width: 960px) { 960px까지만 적용 적용
+        실행문
+       }
+      실행문
+    }
+    @media screen and (min-width: 414px) and (max-width: 768px) { 스크린의 가로 크기가 최소 414px 이상이면 768px 이하 적용
+      실행문
+    }
+    @media (width >= 414px) { 스크린의 가로 크기가 최소 414px 이상이면 적용
+      실행문
+    }
+    */
+
+    /* 모바일 우선 */
+    body {
+      background-color: #ddd;
+      font-size: 14px;
+      color: midnightblue;
+    }
+    h1 {
+      border: 6px solid #000;
+      padding: 10px;
+      margin: 20px;
+      background-color: #F9E8C9;
+    }
+    .txt {
+      font-size: 1.3rem;
+      font-weight: bold;
+      background-color: #fff;
+      padding: 20px;
+    }
+    @media screen and (min-width: 768px) { /* 스크린의 가로 크기가 768px 이상이면 적용 */
+      body {
+        background-color: #FFBE98;
+        font-size: 16px;
+      }
+      h1 {
+        border-style: double;
+      }
+      p {
+        text-decoration: underline;
+      }
+    }
+
+    @media (width >= 1200px) { /* 스크린의 가로 크기가 1200px 이상이면 적용 */
+      ::selection {
+        background-color: #2D9596;
+      }
+      body {
+        background-color: #F9F07A;
+        font-size: 18px;
+      }
+      h1 {
+        border: none;
+        border-bottom: 3px solid #222;
+      }
+      p {
+        background-color: #B7C9F2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>미디어쿼리 Media Queries란?</h1>
+  <h2>화면 해상도, 기기 방향 등의 조건으로 HTML에 적용하는 스타일을 전환할 수 있는 CSS3의 속성 중의 하나이다.</h2>
+  <p class="txt">@media [only 또는 not] [미디어유형] [and 혹은 ,] (조건문) {실행문}</p>
+  <p>**** min을 사용할 땐 반드시 크기가 작은 순서대로 작성해야하고 max를 사용할 때는 반드시 크기가 큰 순서대로 작성해야 한다.</p>
+</body>
+</html>

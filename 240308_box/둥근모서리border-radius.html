@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>둥근모서리border-radius</title>
+  <style>
+    .box {
+      width: 400px;
+      /* 테두리, 중앙 정렬 */
+      border: solid 10px rgb(0, 145, 113);
+      margin: 50px auto;
+    }
+    #box1 {
+      border-color: blueviolet;
+      border-radius: 30px;
+    }
+    #box2 {
+      background-color: #ddd;
+      /* border: 0;
+        border-style: none;
+        border-width: 0;
+      */
+      border: none;
+      border-radius: 50px;
+      border-radius: 50px 20px 30px 10px; /* 숫자 방향은 시계 방향으로 돌아감, T-L, T-R, B-R, B-L */
+    }
+    #box3 {
+      border-radius: 60px 20px 60px 20px;
+      /* T-L/ B-R : 60px, T-R/ B-L : 20px / 대각선으로 마주보는 것들의 값이 동일할 때 */
+      border-radius: 60px 20px;
+    }
+    #box4 {
+      width: 300px;
+      height: 300px;
+      /* border-radius: 150px; */
+      border-radius: 50%; /* 원 */
+    }
+    #box5 {
+      width: 100px; height: 100px;
+      border: none;
+      border-radius: 50%;
+      background-color: #FF0060;
+    }
+    /* 마우스를 올리면 정사각형과 배경색 변경 */
+    #box5:hover {
+      width: 100px; height: 100px;
+      border-radius: 0; /* 사각 모서리 */
+      background-color: #0079FF;
+      cursor: pointer;
+    }
+    #box6, #box7 {
+      width: 0; height: 0;
+      border:none;
+    }
+    #box6 {
+      /* 삼각형 */
+      border-bottom: solid 100px #4F200D;
+      border-left: solid 100px #ddd;
+      border-right: solid 100px #ddd;
+    }
+    #box7 {
+      /* 삼각형 */
+      border-bottom: solid 100px transparent;
+      border-left: solid 100px #FC2947;
+      border-top: solid 100px transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>둥근모서리border-radius</h1>
+  <p class="box" id="box1">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box" id="box2">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box" id="box3">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box" id="box4">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box" id="box5"></p>
+  <p class="box" id="box6"></p>
+  <p class="box" id="box7"></p>
+</body>
+</html>

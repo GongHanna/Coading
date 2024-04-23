@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>gridEx1</title>
+  <style>
+    body { font-weight: bold; font-size: 1.2rem; }
+    .container { width: 80%; height: 50vh; margin: 50px auto; border: 6px solid #000; display: grid; grid-template-columns: minmax(200px, 25%) 1fr; }
+    .container .item1 { background-color: #384dd1; }
+    .container .item2 { background-color: #24af9d; }
+    /* body {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      border: 6px solid #000;
+      display: grid;
+      color: #fff;
+      height: 40vh;
+    }
+
+    .container .item1 {
+      background-color: #3B3486;
+    }
+
+    .container .item2 {
+      background-color: #864AF9;
+    }
+
+    .container {
+      grid-template-columns: minmax(200px, 25%) 1fr;
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item1">min:200px / max:25%</div>
+    <div class="item2">item2</div>
+  </div>
+  <!-- <div class="container">
+    <div class="item1">min:200px / max:25%</div>
+    <div class="item2">item2</div>
+  </div> -->
+</body>
+
+</html>

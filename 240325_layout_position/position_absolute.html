@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>position_absolute</title>
+  <style>
+    body {
+      line-height: 1.5;
+      margin: 0;
+    }
+    body * {
+      margin: 0; padding: 0;
+    }
+    .container {
+      background-color: #ddd;
+      position: relative;
+      margin-top: 500px;
+    }
+    h1 {
+      background-color: orange;
+      padding: 10px 20px;
+      width: 700px;
+    }
+    p {
+      width: 450px;
+      text-align: justify;
+    }
+    .pos {
+      border: 3px solid #000;
+      width: 450px; height: 300px;
+      position: relative;
+    }
+    .pos .title {
+      background-color: tomato;
+      position: absolute;
+      top: 50px; left: 100px;
+    }
+    
+    /* 
+      absolute 기준은 반드시 부모 이상의 요소에 적용
+      (자식, 형제 관계의 요소에 기준값을 적용해도 되지 않음)
+      부모와 조상 요소 둘 다 포지션이 적용된 경우 가까운 부모를 기준으로 적용
+
+      relative를 기준으로 많이 사용하는 이유
+        ㄴ 위치 특성(top, fight, bottom, left)과 함께 사용하지 않으면 기존 레이아웃에 영향을 주지 않이 때문에 많이 사용
+    */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>position: absolute</h1>
+    <h2>절대위치</h2>
+    <h3>가장 가까운 부모 요소의 포지션을 기준으로 위치값 설정</h3>
+
+    <ul>
+      <li>포지션이 적용된 가장 가까운 부모 요소를 기준으로 위치 지정</li>
+      <li>기준 값을 설정해 주지 않으면 body를 기준으로 위치 설정</li>
+      <li>top, right, bottom, left와 함께 작성</li>
+      <li>일반적인 흐름에서 벗어나 다른 요소와 겹쳐짐. 포토샵 레이어처럼 계층을 만듦</li>
+    </ul>
+
+    <div class="pos">
+      <!-- pos:absolute -->
+      <h3 class="title">자전거의 정의와 역사</h3>
+    </div>
+
+    <p>자전거(自轉車)는 일반적으로 바퀴 두 개로 구성된 사람 힘으로 움직일 수 있는 기계이다. 바퀴 두 개를 연결하는 구조 위에 안장을 두어 사람이 올라 탈 수 있도록 되어 있으며 발로 발걸이를 밟아 앞으로
+      나갈 수 있다. 자전차(自轉車)라는 낱말도 쓰이지만 대한민국 국어사전에서는 자전거의 잘못이라고 표기하고 있다.중국에서는 자행차(自行車)라고 부른다.</p>
+    <p>최초의 자전거를 누가 만들었는지에 대한 의견은 분분하다. 독일, 프랑스, 영국이 모두 자기가 원조라고 주장하고 있으며, 이런 논란은 어떠한 형태의 것을 최초의 자전거로 보느냐에 따라 달라지기 때문에
+      일어난다. 1839년에서 1840년 사이 스코틀랜드의 커크파트릭 맥밀란에 의해 페달식 크랭크가 발명되었다. 1861년 3월 프랑스의 어니스트 미슈가 처음으로 운전할 수 있게 하였다.</p>
+    <h3>자전거의 원리와 종류</h3>
+    <p>자전거는 타는 사람이 두 발로 발판을 밟아 체인으로 바퀴를 돌려 나아가게 만든 가볍고 편리한 차다. 자전거는 엔진이 없는 점 외에는 기본적인 구조에서는 자동차와 똑같다. 자전거는 페달을 밟으면 체인휠 중
+      한 개의 스프로킷이 돈다. 체인휠 주위를 감싸고 있는 체인은 뒷바퀴의 작은 스프로킷과 연결되어 있어 뒷바퀴를 구동한다.</p>
+    <p>자전거의 종류에는 산악용·도로용·어린이용 등이 있으며 그 밖에 두 명이 함께 탈 수 있는 탠덤 자전거와 누워 탈 수 있는 자전거 등 특수 자전거 등이 있다.</p>
+
+    <h3>함께 보기</h3>
+    <ul>
+      <li>자전거 구조</li>
+      <li>자전거 타기</li>
+      <li>자전거 길</li>
+      <li>크리티컬 매스</li>
+      <li>자전거 경기</li>
+      <li>사이클</li>
+    </ul>
+  </div>
+</body>
+
+</html>

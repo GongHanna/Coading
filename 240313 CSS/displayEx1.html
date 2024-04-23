@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>displayEx1</title>
+  <style>
+    /* .gnb {
+      text-align: center;
+    }
+    .gnb li {
+      display: inline-block;
+      background-color: goldenrod;
+      width: 80px;
+      padding: 10px;
+      border: 3px solid #000;
+      margin: 5px;
+    }
+    li a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      width: 150px;
+    }
+    .gnb li:hover {
+      background-color: darkred;
+      cursor: pointer;
+    }
+    li a:hover {
+      color: #fff;
+    } */
+    .gnb {
+      text-align: center;
+      /* background-color: #ddd; */
+    }
+    .gnb li{
+      /* background-color: #ddd; */
+      display: inline-block;
+    }
+    .gnb li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: goldenrod;
+      color: inherit; /* 부모 값 상속 */
+      border: 3px solid #000;
+      padding: 5px 10px;
+      margin: 0 5px;
+
+      display: block; /* a 태그에서 필수적으로 제어하기 편하게 작성 */
+    }
+    .gnb li:hover a { /* li에 마우스를 올리면 하위에 있는 a 색깔 변환 */
+      background-color: #201658;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>display 연습1</h1>
+  <ul>
+    <li>마우스를 올리면 글자색과 배경색 변경</li>
+    <li>중앙 정렬</li>
+  </ul>
+
+<!-- 홈페이지에서 메뉴 역할을 하는 태그 -->
+  <menu class="gnb"> 
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </menu>
+</body>
+</html>

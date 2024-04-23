@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>240320_layout_공한나</title>
+  <style>
+    body {
+      background-image: url(../images/240320/3.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      width: 50vw;
+      border: 5px burlywood solid;
+      margin: 30px auto;
+    }
+
+    header .container {
+      background-color: #891652;
+      padding: 10px;
+    }
+
+    header .container h1, p {
+      margin: 0;
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li a {
+      text-decoration: none;
+    }
+
+    header .menu1 {
+      text-align: center;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #FCDC2A;
+    }
+
+    header .menu1 li {
+      margin: 0;
+      width: 7vw;
+    }
+
+    header .menu1 li a {
+      color: #891652;
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px;
+      display: block;
+    }
+
+    footer {
+      background-color: #891652;
+      padding: 5px;
+    }
+    main {
+      height: 480px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    main article {
+      width: 70vw;
+      background-color: #ddd;
+      border-right: 1px solid red;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: space-evenly;
+    }
+
+    main article .container1 {
+      background-color: #fff;
+      padding: 5px;
+      border: 1px solid red;
+      font-style: italic;
+      text-align: right;
+      color: #999;
+      font-size: 0.8rem;
+    }
+
+    main article .container2 li {
+      margin-bottom: 5px;
+      padding: 3px;
+    }
+
+    main article .container2 li:nth-child(1) {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    main article .container2 li:nth-child(2) {
+      font-weight: bold;
+      color: red;
+    }
+
+    main article .box {
+      width: 250px;
+    }
+
+    main aside {
+      width: 30vw;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main aside .menu2 a {
+      color: inherit;
+      border-bottom: 1px solid red;
+      display: block;
+      padding: 10px;
+    }
+
+    main h2 {
+      color: red;
+      padding: 10px;
+    }
+
+    .menu3 {
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    img {
+      width: 100%;
+    }
+    div.container img {
+      width: 10%;
+    }
+    div.container {
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+    }
+    .wrapper {
+      padding: 0 5px;
+      font-style: italic;
+    }
+    
+    ul > li a:hover {
+      background-color: red;
+      color: #fff;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="../images/240320/4.png" alt="logo">
+      <div class="wrapper">
+        <h1>Kim's Kitchen</h1>
+        <p>Cooking Class</p>
+      </div>
+    </div>
+
+    <ul class="menu1">
+      <li><a href="#">홈</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="#">교실</a></li>
+      <li><a href="#">케이터링</a></li>
+      <li><a href="#">연락처</a></li>
+    </ul>
+  </header>
+  <main>
+    <article>
+      <ul class="box container1">
+        <li><img src="../images/240320/1.jpg" alt="샐러드 사진"></li>
+        <li>Oriental Salad</li>
+      </ul>
+      <ul class="box container2">
+        <li>채식주의자</li>
+        <li>런던에서의 5주 코스</li>
+        <li>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</li>
+      </ul>
+
+      <ul class="box container1">
+        <li><img src="../images/240320/2.jpg" alt="소스 사진"></li>
+        <li>Teriyaki</li>
+      </ul>
+      <ul class="box container2">
+        <li>소스 마스터클래스</li>
+        <li>1일 워크샵</li>
+        <li>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</li>
+      </ul>
+    </article>
+    <aside>
+      <h2>인기요리법</h2>
+      <ul class="menu2">
+        <li><a href="#">후라이드</a></li>
+        <li><a href="#">고추바사삭</a></li>
+        <li><a href="#">뿌링클</a></li>
+        <li><a href="#">간지</a></li>
+      </ul>
+
+      <h2>연락처</h2>
+      <ul class="menu3">
+        <li>경기 수원시 팔달구 매산동</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>@Kim's Kitchen 김씨네 키친</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>gridEx3</title>
+  <style>
+    body { font-weight: bold; font-size: 1.2rem; }
+    .container { width: 80%; height: 60vh; margin: 50px auto; border: 6px solid #000;  
+      display: grid;  
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 15vh;
+    }
+    .container .span12 {
+      background-color: #80BCBD; 
+      /* grid-column: 1 / 13; */
+      grid-column: 1 / span 12;
+    }
+    .container .span2 { 
+      background-color: #AAD9BB;
+      grid-row: 4 / 5;
+      /* grid-column: 3 / 5; */
+      grid-column: 3 / span 2;
+    }
+    .container .span6 { 
+      background-color: #D5F0C1; 
+      grid-row: 3 / 4;
+      /* grid-column: 1 / 7; */
+      grid-column: 1 / span 6;
+    }
+    .container .span4 { 
+      background-color: #F9F7C9; 
+      grid-row: 2 / 3;
+      /* grid-column: 4 / 8; */
+      grid-column: 4 / span 4;
+    }
+
+    /* body { font-weight: bold; font-size: 1.2rem; }
+    .container { width: 80%; height: 50vh; margin: 50px auto; border: 6px solid #000; display: grid; grid-template-columns: repeat(7, 1fr); }
+    .item1 {
+      background-color: #80BCBD;
+      grid-column: 1 / 8;
+    }
+    .item2 {
+      background-color: #AAD9BB;
+      grid-row: 4;
+      grid-column: 2 / 3;
+    }
+    .item3 {
+      background-color: #D5F0C1;
+      grid-row: 3;
+      grid-column: 1 / 4;
+    }
+    .item4 {
+      background-color: #F9F7C9;
+      grid-column: 3 / 5;
+    } */
+  </style>
+</head>
+  
+<body>
+  <div class="container">
+    <div class="span12">span1</div>
+    <div class="span2">span2</div>
+    <div class="span6">span3</div>
+    <div class="span4">span4</div>
+  </div>
+  <!-- <div class="container">
+    <div class="item1">span1</div>
+    <div class="item2">span2</div>
+    <div class="item3">span3</div>
+    <div class="item4">span4</div>
+  </div> -->
+</body>
+</html>

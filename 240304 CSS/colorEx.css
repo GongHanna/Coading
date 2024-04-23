@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {
+  background-color: rgba(0, 110, 105, 0.575);
+}
+
+h2 {
+  background-color: #fff;
+}
+
+#text1 {
+  color: darkred;
+}
+
+#text2 {
+  color: darkviolet;
+}
+
+#text3 {
+  color: skyblue;
+}
+
+#text4 {
+  color :aquamarine;
+}

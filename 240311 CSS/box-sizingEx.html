@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>box-sizingEx</title>
+  <style>
+    /* 
+    가로 400, 세로 200
+    요소 중앙 정렬
+    바깥 여백 위 20, 아래 30
+    안쪽 여백 위 20, 아래 20, 오른쪽 30, 왼쪽 30
+    테두리 위 10, 아래 5, 오른쪽 10, 왼쪽 10
+    */
+    .box {
+      color: #fff;
+      width: 400px; height: 200px;
+      margin: 20px auto 30px;
+      padding: 20px 30px;
+      border-width: 10px 10px 5px;
+      border-style: solid;
+      border-color: rgb(24, 61, 61);
+      background-color: rgb(0, 95, 40);
+    }
+    /* .box1 {
+      box-sizing: content-box;
+    }
+    기본 값
+     */
+    .box2 {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>box-sizingEx</h1>
+  <div class="box box1">
+    <h3>box-sizing: content-box</h3>
+    <p>w400 + m0+0 + p30+30 + b10+10 = 480px</p>
+  </div>
+  <div class="box box2">
+    <h3>box-sizing: border-box</h3>
+    <p>w400(p60+b20) + m0+0 = 400px</p>
+  </div>
+</body>
+</html>

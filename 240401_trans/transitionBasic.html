@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transitionBasic</title>
+  <style>
+    .box {
+      width: 100px; height: 100px;
+      background-color: #FF9292;
+      text-align: center;
+
+      /* 움직임 속성 */
+      transition-property: width, height, backgroud-color, font-weight, color, font-size; /* 변경해주고 싶은 것들만 작성 */
+
+      /* 움직임 진행 시간 */
+      transition-duration: 1s; /* css 속도 단위 : s 초, ms 밀리세컨초 */
+    }
+    .box:hover {
+      width: 500px; height: 500px;
+      background-color: #74C7B8;
+      font-weight: bold;
+      font-size: 2rem;
+      color: azure;
+    }
+  </style>
+</head>
+  
+<body>
+  <h1>transition-property, transition-duration</h1>
+  <div class="box">잡아야지? 못잡겠지?</div>
+</body>
+</html>

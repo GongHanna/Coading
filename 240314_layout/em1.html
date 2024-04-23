@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>em1</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 22px;
+    }
+    /* * { 전체 선택자 : 각 요소 요소에 적용되는 선택자로 실제 사용시 주의
+       (연습때만 사용)
+      border: 1px solid #222;
+    } */
+    .wrapper * { /* wrapper 하위의 모든 요소 */
+      border: 3px solid #222;
+      padding: 20px;
+      margin: 20px;
+      display: block; 
+      /* span은 inline 요소이기 때문에 모든 요소를 block으로 적용시키겠다 */
+    }
+
+    .wrapper {
+      border: 3px solid #222;
+      font-size: 1em;
+      /* 
+        브라우저 기본 폰트 사이즈 16px
+        1em => 16px
+        1em => 22px
+      */
+    }
+    .wrapper > h2 {
+      font-size: 1.2em;
+      /* 
+        부모인 .wrapper의 폰트 사이즈 16px
+        1.2em => 19px (19.2px)
+        .wrapper의 폰트 사이즈 22px = 현재 h2의 1em 값
+        1.2em => 26.4px (1.2 * 22)
+      */
+    }
+    .wrapper > h2 > span {
+      font-size: 1em;
+      /* 
+      부모인 h2의 현재 폰트 사이즈 19.2px이기 때문에 
+      1em => 19.2px
+      1em => 26.4px
+      */
+    }
+    .wrapper > p {
+      font-size: 1em;
+      /* 
+        부모인 .wrapper의 폰트 사이즈 16px
+        1em => 16px
+      */
+    }
+
+    .wrapper > .box {
+      font-size: 1.1em;
+      /* 
+      body font-size: 22px
+      bocy > .wrapper : 1em => 22px
+      .box 1.1em => 1.1 * 22 =24.2px
+      부모인 .wrapper의 폰트 사이즈 22px
+      1.1em => 24.2px
+      */
+    }
+    .wrapper > .box > p {
+      font-size: 1.1em;
+      /* 
+      부모인 .box의 폰트 사이즈 24.2px <-이 값이 p의 1em의 값
+      1.1em => 26.62px (1.1 * 24.2)
+      */
+    }
+    .wrapper > .box > p > span {
+      font-size: 0.8em;
+      /* 
+      부모인 p의 폰트 사이즈 26.62px
+      0.8em => 21.296px
+      */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>em 단위</h1>
+  <ul>
+    <li>알파벳 M을 기준으로 만들어진 단위</li>
+    <li>부모의 "font-size"를 기준으로 값 설정</li>
+    <li>브라우저의 기본 폰트 사이즈: 16px</li>
+  </ul>
+
+  <div class="wrapper">
+    .wrapper 1em ==
+    <h2>
+      h2 1.2em ==
+      <span>span 1em ==</span>
+    </h2>
+    <p>p 1em ==</p>
+    <div class="box">
+      .box 1.1em ==
+      <p>p 1.1em ==
+        <span>span 0.8em ==</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

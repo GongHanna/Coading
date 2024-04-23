@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>positionEx2</title>
+  <style>
+    html {
+      scroll-behavior: smooth; /* 스크롤 스무스하게 */
+    }
+    ::selection { /* 문서를 드래그 했을 때 */
+      background-color: #EEE4B1;
+      /* text-decoration: line-through; */
+    }
+    .blank {
+      height: 300vh;
+    }
+    p {
+      width: 400px;
+      line-height: 1.5;
+    }
+    p em {
+      background-color: orange;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-style: normal;
+    }
+    /* .btn {
+      color: #FF9800;
+      text-decoration: none;
+      background-color: #00224D;
+      border-radius: 50%;
+      padding: 20px; margin: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: block;
+      width: 50px; height: 50px;
+      line-height: 50px; 
+      text-align: center;
+      position: fixed;
+      bottom: 0; right: 0;
+    } */
+    .btn {
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      background-color: #00214d67;
+      font-size: 1.2rem;
+      width: 70px; height: 70px;
+
+      position: fixed; /* 인라인 요소도 fixed, absolute 값을 가지면 다른 흐름을 가지게 되며 가로 세로값 인식 */
+      right: 20px; bottom: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 70px;
+    }
+    .btn:hover {
+      background-color: #00224D;
+      bottom: 30px;
+    }
+  </style>
+</head>
+  
+<body>
+  <h2>positionEx2</h2>
+  <p>fixed 값을 사용하는 요소 역시 absolute 값을 사용하는 요소처럼 문서 흐름과는 상관 없이 좌표로 위치를 결정하지만, 기준이 되는 요소가 <em>부모 요소가 아니라 브라우저가 기준</em>이 된다</p>
+  <p>한번 배치되면 fixed라는 이름처럼 브라우저 창을 스크롤하더라도 계속 고정되어 표시된다.</p>
+  <div class="blank"></div>
+  <a href="#" class="btn">위로</a>
+</body>
+</html>

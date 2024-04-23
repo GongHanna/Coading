@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexItem_order</title>
+  <style>
+    .container {
+      margin: 50px auto; padding: 0;
+      list-style: none;
+      text-align: center;
+      border: 6px solid #222;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 80vw; height: 70vh;
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .container .item {
+      width: 10%;
+      padding: 0.4rem;
+      color: #fff;
+    }
+    .container .item1 { background-color: #F4538A; order: 3;}
+    .container .item2 { background-color: #5E1675; order: 4;}
+    .container .item3 { background-color: #337357; order: 5;}
+    .container .item4 { background-color: #387ADF; order: 6;}
+    .container .item5 { background-color: #FC6736; order: 7;}
+    .container .item6 { background-color: #561C24; order: 2;}
+    .container .item7 { background-color: #B19470; order: 1;}
+  </style>
+</head>
+
+<body>
+  <h1>flexItem : order</h1>
+  <p>felx-item에 적용되는 속성으로 아이템 배치 순서 설정</p>
+  <ul class="container">
+    <li class="item item1">item1</li>
+    <li class="item item2">item2</li>
+    <li class="item item3">item3</li>
+    <li class="item item4">item4</li>
+    <li class="item item5">item5</li>
+    <li class="item item6">item6</li>
+    <li class="item item7">item7</li>
+  </ul>
+</body>
+</html>

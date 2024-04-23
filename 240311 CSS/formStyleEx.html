@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>formStyleEx</title>
+  <!-- 외부 선언 -->
+  <link rel="stylesheet" href="./formStyleEx.css">
+  <!-- <style>
+    /* body {
+      font-weight: bold;
+    }
+    form {
+      width: 600px;
+      margin: auto;
+      background-color: #ddd;
+      padding: 50px 10px;
+    }
+    fieldset {
+      width: 80%;
+      margin: auto;
+      background-color: #fff;
+      border: 3px solid #387ADF;
+      border-radius: 10px;
+    }
+    legend {
+      background-color: #387ADF;
+      border-radius: 10px;
+      padding: 5px 10px;
+      color: #fff;
+    }
+    .box1 {
+      color: darkmagenta;
+      text-align: center;
+    }
+    input {
+      border: #fff solid 3px;
+      border-bottom: #387ADF solid 1px;
+    }
+    button {
+      background-color: #387ADF;
+      color: #fff;
+      border: #387ADF 3px solid;
+    }
+    .box2 {
+      width: 360px;
+      text-align: right;
+    } */
+  </style> -->
+</head>
+
+<body>
+  <!-- <form>
+    <fieldset>
+      <legend>회원가입</legend>
+      <div class="box1"><p ><label for="user_name">이름 : </label><input type="text" id="user_name" name="userName"></p>
+      <p><label for="user_email">이메일 : </label><input type="email" id="user_email" name="userEmail"></p>
+      <p class="box2"><button type="submit">가입</button>
+      <button type="reset">취소</button></p></div>
+    </fieldset>
+  </form> -->
+
+  <form>
+    <!-- <h1></h1>
+      <h2></h2>
+      <p></p>
+      <table></table> 
+      
+      <button>
+        폼과 관련된 값을 서버로 전송할 때 사용
+        사용자와의 상호작용이 필요할 때 사용 (값을 서버에 전송하고 그 결과를 사용자에게 피드백)
+
+      <a>
+        다른 페이지로의 이동이 필요할 때
+        페이지간의 이동 (더보기, 새창 띄우기, 서브페이지, 외부 페이지 이동 등등)
+        이벤트 팝업 ....
+    -->
+
+    <fieldset>
+      <legend>회원가입</legend>
+      <label for="userName">이름 : </label>
+      <input type="text" id="userName" name="userName" required autofocus>
+      <br>
+      <label for="userEmail">이메일 : </label>
+      <input type="text" id="userEmail" name="userEmail" required autofocus>
+      <br>
+
+      <button type="submit">가입</button>
+      <button type="reset">취소</button>
+    </fieldset>
+  </form>
+</body>
+</html>

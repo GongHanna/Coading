@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- html 주석 -->
+<!--
+DTD 선언: 브라우저에게 웹 문서의 종류를 알려주는 선언
+브라우저의 호환성과 웹표준을 위해 반드시 작성
+html 문서 최상단에 작성
+-->
+<html lang="ko">
+  <head>
+    <!-- "utf-8" 문서에 맞는 언어로 보여줌 -->
+    <meta charset="utf-8">
+    <title>웹 페이지의 탭 부분</title>
+  </head>
+  
+  <body>
+    브라우저에서 보여지는 부분<br>
+    Hyper Text Markup Language의 약자로 컨텐츠의 구조를 정의하는 마크업 언어<br>
+
+   시맨틱 마크업 Semantic Markup<br>
+   비주얼에 집중하기보다 태그가 가진 의미에 집중하여 콘텐츠 자체에 의미를 부여하는 것. 웹접근성 부분에서도 중요
+
+<!-- 
+https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started
+
+<tag>태그</tag>
+<br> 열린태그
+<br />
+-->
+  </body>
+</html>

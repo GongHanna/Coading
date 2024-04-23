@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>요소의 실제 크기2</title>
+  <style>
+    body {
+      /* 어절 기준 줄바꿈. 상속 가능 */
+      word-break: normal;
+      word-break: break-all; /* 어절에 맞춰 줄바꿈 영어 한정 */
+      word-break: keep-all; /* 어절을 유지하며 줄바꿈. 한글 적용 */
+    }
+    .box {
+      font-weight: bold;
+      background-color: #ddd;
+      font-size: 20px;
+    }
+    .box1 {
+      background-color: #1B1A55;
+      color: #fff;
+      width: 400px; height: 300px;
+      outline: 10px solid #535C91;
+      margin: 50px auto; /* T+B, R+L */
+    }
+    .box2 {
+      border: solid 3px #2D9596;
+      width: 300px; height: 300px;
+      margin: 0 auto; /* T+B, R+L */
+      padding-top: 100px; padding-left: 20px;
+    }
+    .box3 {
+      background-color: #FFBE98;
+      outline: 4px solid #000;
+      width: 300px; height: 400px;
+      margin: 20px auto 0; /* T, R+L, B */
+      padding: 20px 10px 0 30px; /* T, R, B, L */
+    }
+    .box4 {
+      background-color: #FFF67E;
+      border: dotted 2px #1B1A55;
+      border-top: none;
+      width: 400px; height: 200px;
+      outline: #FB88B4 30px solid;
+      margin: 20px auto 0; /* T, R+L, B */
+      padding: 10px 20px 0 0; /* T, R, B, L */
+    }
+    .box5 {
+      /*
+       가로 600, 세로 250
+       안쪽 여백 위 아래 50
+       안쪽 여백 좌 우 20
+       테두리 위 10, 오른쪽 5, 아래 10 왼쪽 5
+       */
+       width: 600px; height: 250px;
+       padding: 50px 20px;
+       border-width: 10px 5px;
+       border-style: double;
+       border-color: #FBA834;
+       background-color: #50C4ED;
+    }
+    .box6 {
+      /* 
+      가로 150, 세로 200
+      요소 중앙 정렬
+      바깥 여백 위 50
+      안쪽 여백 위 10, 안쪽 여백 아래 50, 안쪽 여백 오른쪽 50, 안쪽 여백 왼쪽 50
+      테두리 위 10, 아래 5, 왼쪽 4, 오른쪽 4
+      */
+      width: 150px; height: 200px;
+      margin: 50px auto 0;
+      padding: 10px 50px 50px;
+      border-width: 10px 4px 5px;
+      border-style: solid;
+      border-color: #535C91;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>요소의 실제 크기 2</h1>
+  <!-- .box.box$*6>p{너비 :}+p{높이:} -->
+  <div class="box box1">
+    <p>너비: w400 + m0+0 + p0+0 +b0+0 = 400px</p>
+    <p>높이: h300 + m50+50 + p0+0 +b0+0 = 400px</p>
+  </div>
+  <div class="box box2">
+    <p>너비: w300 + m0+0 + p0+20 +b3+3 = 326px</p>
+    <p>높이: h300 + m0+0 + p100+0 +b3+3 = 406px</p>
+  </div>
+  <div class="box box3">
+    <p>너비: w300 + m0+0 + p10+30 +b0+0 = 340px</p>
+    <p>높이: h400 + m20+0 + p20+0 +b0+0 = 440px</p>
+  </div>
+  <div class="box box4">
+    <p>너비: w400 + m0+0 + p20+0 +b2+2 = 424px</p>
+    <p>높이: h200 + m20+0 + p10+0 +b0+2 = 232px</p>
+  </div>
+  <div class="box box5">
+    <p>너비: w600 + m0+0 + p20+20 +b5+5 = 650px</p>
+    <p>높이: h250 + m0+0 + p50+50 +b10+10 = 370px</p>
+  </div>
+  <div class="box box6">
+    <p>너비: w150+m0+0+p50+50+b4+4=258px</p>
+    <p>높이: h200+m50+0+p10+50+b10+5=325px</p>
+    <p>국가의 세입·세출의 결산, 국가 및 법률이 정한 단체의 회계검사와 행정기관 및 공무원의 직무에 관한 감찰을 하기 위하여 대통령 소속하에 감사원을 둔다.</p>
+  </div>
+</body>
+</html>

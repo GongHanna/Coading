@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+     <meta charset="utf-8">
+    <title>콘텐츠 분할 span</title>
+    <!-- PC에서는 줄바꿈 x, 모바일에서만 줄바꿈 o -->
+    <style>
+      @media screen and (max-width: 414px) {
+        #wrapper {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+   <h1>콘텐츠 분할 span</h1>
+   <h3>가장 대표적인 인라인 요소</h3>
+   <h2>인라인으로 구조를 나누기 위한 태그 / 
+    <span id="wrapper">브라우저상에 나타는 특징이 없음.</span>
+  </h2>
+   <span class="txt">주로 다른 텍스트와 구분하고 싶지만 적절한 태그가 없을 때 사용.</span>
+   <span class="txt">id, class 속성과 함께 사용.</span>
+
+   <!-- div, mark, span 태그를 이용하여 꾸민 예제 
+   <div>주로 다른 텍스트와 구분하고 싶지만 <mark>적절한 태그</mark>가 없을 때 사용. <span style="color:rgb(255, 0, 0);">id, class 속성과 함께 사용.</span></div> -->
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx7</title>
+  <style>
+    /* body {
+      margin: 0;
+    }
+    .container {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      background-color: #5b95eb;
+
+      display: flex;
+    }
+    .container li {
+      width: 25%;
+      padding: 10px 0;
+
+      display: flex;
+      justify-content: center;
+    }
+    .container li a {
+      text-decoration: none;
+      color: inherit;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    .container li a:hover {
+      color: #fff;
+    }
+    .container li:hover {
+      background-color: #0e51b6;
+    } */
+
+    body {
+      margin: 0;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      text-align: center;
+    }
+    .gnb {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #FFA447;
+      /* height: 60px; */
+
+      display: flex;
+      /* justify-content: space-evenly; */
+      /* align-items: center; */
+    }
+    .gnb li {
+      /* display: flex; */
+      width: 20%;
+    }
+    .gnb li a {
+      text-decoration: none;
+      color: inherit;
+      display: block; /* a의 성격을 block으로 바꿔서 a의 영역을 제어할 수 있게 만들어주기 위함 */
+      height: 60px; /* 부모는 자식의 높이값을 가져와 본인의 높이값을 정하기 때문에 a의 높이값이 곧 li의 높이값, .gnb의 높이값이 됨 */
+      line-height: 60px;
+    }
+    .gnb li a:hover {
+      background-color: #222;
+      color: aliceblue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <ul class="container">
+    <li><a href="#">home</a></li>
+    <li><a href="#">company</a></li>
+    <li><a href="#">product</a></li>
+    <li><a href="#">servie</a></li>
+    <li><a href="#">board</a></li>
+  </ul> -->
+  <ul class="gnb">
+      <li><a href="#">home</a></li>
+      <li><a href="#">company</a></li>
+      <li><a href="#">product</a></li>
+      <li><a href="#">servie</a></li>
+      <li><a href="#">board</a></li>
+  </ul>
+</body>
+</html>

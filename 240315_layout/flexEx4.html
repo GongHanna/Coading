@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>flexEx4</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .wrapper footer h2 {
+      margin: 0;
+    }
+    /* 
+    .wrapper {
+      display: flex;
+      align-items: flex-end;
+      height: 100vh;
+    }
+    .wrapper footer {
+      background-color: lightskyblue;
+      width: 1400px; 1400/1900*100
+      width: 73.684vw;
+      margin: 0 auto;
+      padding: 1vw 2vw;
+      box-sizing: border-box; width기준(border + padding)
+    }
+     */
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+     }
+     .wrapper footer {
+      background-color: lightskyblue;
+      width: 73.684vw;
+      /* margin: 0 auto; */
+      padding: 1vw 2vw;
+      box-sizing: border-box;
+
+      /* align-self: flex-end; 플렉스 아이템에 직접 적용 */
+
+      /* 플렉스 아이템에 직접 적용
+        margin을 통해 개별적으로 위치지정 가능. 더 섬세하게 조정 가능
+      */
+      /* margin: auto; center center */
+      /* margin-left: auto; 여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽 배치 */
+      /* margin-right: auto; 여백이 오른쪽으로 들어가기 때문에 아이템은 왼쪽 배치 */
+      /* margin-bottom: auto; 여백이 아래쪽으로 들어가기 때문에 아이템은 위쪽 배치 */
+      /* margin-top: auto; 여백이 위쪽으로 들어가기 때문에 아이템은 아래쪽 배치 */
+
+      margin: 5rem auto 2rem;
+      margin: auto auto 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper"> <!-- flex-container -->
+    <footer> <!-- flex-item -->
+      <h2>footer</h2>
+      <p>헌법재판소는 법률에 저촉되지 아니하는 범위안에서 심판에 관한 절차, 내부규율과 사무처리에 관한 규칙을 제정할 수 있다. 국회는 국무총리 또는 국무위원의 해임을 대통령에게 건의할 수 있다. 형사피의자 또는 형사피고인으로서 구금되었던 자가 법률이 정하는 불기소처분을 받거나 무죄판결을 받은 때에는 법률이 정하는 바에 의하여 국가에 정당한 보상을 청구할 수 있다.</p>
+    </footer>
+  </div>
+</body>
+</html>

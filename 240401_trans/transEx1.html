@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transEx1</title>
+  <style>
+    .container {
+      border: 3px solid #000;
+      width: 95vw;
+    }
+    .container .item {
+      width: 100px; height: 100px;
+      font-weight: bold; font-size: 1.1rem;
+      text-align: center;
+      color: #fff;
+      margin: 10px;
+      transition: 1s linear;
+
+      /* position: relative;
+      left: 0;  포지션은 시작값이 필요 */
+    }
+    .container .item:nth-child(1) { background-color: lightcoral; }
+    .container .item:nth-child(2) { background-color: lightseagreen; transition-delay: .5s; }
+
+    /* container 위에 마우스를 올리면, 아이템이 ~ */
+    .container:hover .item {
+      /* 
+      margin-left: 500px;
+      position: relative;
+      left: 500px; 
+      */
+      transform: translateX(calc(95vw - 120px)) rotate(1080deg);
+    }
+  </style>
+
+  <!-- <style>
+    .container {
+      width: 90vw;
+      border: 3px solid #222;
+    }
+    .container .item {
+      width: 100px; height: 100px;
+      margin: 10px;
+      text-align: center;
+
+      transition: 0.5s;
+    }
+    .container:hover .item {
+      transform: rotate(360deg) translate(20%);
+    }
+    .container .item:first-child { background-color: lightcoral; }
+    .container .item:last-child { background-color: lightgreen;  transition-delay: 0.5s;}
+  </style> -->
+</head>
+  
+<body>
+  <h1>trans 연습 1</h1>
+  <!-- 마우스를 영역 위에 올리면 굴러서 이동. 두번째 박스는 기다렸다가 시작 -->
+  <div class="container">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+  </div>
+</body>
+</html>

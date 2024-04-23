@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>bgEx</title>
+  <style>
+    /* 
+    form {
+      margin: 40px auto;
+      border: 3px solid #222;
+      border-radius: 20px;
+      width: 60vw; 
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    input {
+      outline: none;
+      border: 1px solid #222;
+      margin: 5px;
+      height: 1.5rem; width: 15rem;
+      padding: 5px 5px 5px 45px;
+      border-radius: 20px;
+      font-size: 1rem;
+    }
+    input::placeholder {
+      color: red;
+      font-size: 1rem;
+      font-weight: bold;
+    } 
+    input:hover {
+      background-color: lightblue;
+    }
+    #userName {
+      background-image: url(../images/240321/user.svg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 20px;
+      background-position: 15px;
+    }
+    #userEmail {
+      background-image: url(../images/240321/email.svg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 20px;
+      background-position: 15px;
+    }
+    #userTel {
+      background-image: url(../images/240321/phone.svg);
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: 20px;
+      background-position: 15px;
+    }
+     */
+    form {
+      border: 3px solid #000;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 50px;
+      min-width: 300px; /* 300px 이하로 줄어들지 말아라 */
+      max-width: 500px; /* 500px 이상으로 커지지 말아라 */
+/* 
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; */
+    }
+    form input {
+      outline: none;
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      border: 1px solid #000;
+      border-radius: 50px;
+      /* padding: 10px 10px 10px 50px;
+      box-sizing: border-box; */
+      padding: 10px;
+      text-indent: 40px; /* 들여쓰기, 레이아웃에 영향을 주고 싶지 않을 때 사용 */
+      font-size: 1.1rem; /* input에는 직접 줘야함 상속 X */
+
+      /* background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 20px 50%; */
+      background: no-repeat 20px 50% / 20px;
+    }
+    form input::placeholder {
+      color: #FB6D48;
+    }
+    form input:hover, form input:focus {
+      background-color: #00224D;
+      color: #fff;
+    }
+    [autofocus] {
+      background-image: url(../images/240321/user.svg);
+    }
+    form input[type="email"] {
+      background-image: url(../images/240321/email.svg);
+    }
+    [name=userTel] {
+      background-image: url(../images/240321/phone.svg);
+    }
+  </style>
+</head>
+<body>
+  <!-- <form>
+    <input type="text" id="userName" placeholder="이름을 입력하세요" autofocus name="userName">
+    <input type="email" id="userEmail" placeholder="이메일을 입력하세요" name="userEmail">
+    <input type="tel" id="userTel" placeholder="연락처를 입력하세요" name="userTel">
+  </form> -->
+  <form>
+    <input type="text" placeholder="이름을 입력하세요" name="userName" autofocus>
+    <input type="email" placeholder="이메일을 입력하세요" name="userEmail">
+    <input type="tel" placeholder="연락처를 입력하세요" name="userTel">
+  </form>
+</body>
+</html>

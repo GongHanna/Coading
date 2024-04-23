@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>position_sticky2</title>
+  <style>
+    body, h1, h2 { margin: 0; }
+    header, footer { background-color: #A1C398; height: 100px; padding: 20px; }
+    main { border: 6px solid #000; display: flex; }
+    main aside {
+      background-color: #C4E4FF;
+      flex-grow: 1;
+      padding: 20px;
+      height: 300vh;
+    }
+    main article { /* flex-item */
+      background-color: #FFEBB2;
+      color: #fff;
+      flex-grow: 3;
+      padding: 20px;
+      height: 800px;
+
+      display: flex;
+      align-items: flex-start; /* 교차축 */
+
+      position: relative; /* 일반적인 흐름 방해하지 않음 */
+    }
+    main article .relative { position: relative; background-color: #F4538A; }
+    main article .fixed { /* 뷰포트 안에서 위치 고정 */
+      background-color: #FAA300; 
+      position: fixed; /* flex와 fixed 동시 적용시 fixed 우선 */
+      left: 130px;
+
+    }
+    main article .absolute { /* 나를 감싸는 부모 혹은 내가 정한 부모 위치를 기준으로 위치 잡음 */
+      background-color: #59D5E0; 
+      position: absolute; /* flex와 absolute 동시 적용시 absolute 우선 */
+      left: 200px;
+      top: 20px;
+    }
+    main article .sticky { /* 나를 감싸는 부모 요소의 넓이를 벗어나지 않음 */
+      background-color: #6420AA; 
+      position: sticky;
+      left: 310px; /* 이 값이 sticky의 고정값으로 작동하려면 가로 스크롤 필요 */
+      top: 20px;
+    }
+  </style>
+</head>
+  
+<body>
+  <header>
+    <h1>position_sticky2</h1>
+    <h2>header</h2>
+  </header>
+  <main>
+    <article>
+      <h2 class="relative">relative</h2>
+      <h2 class="fixed">fixed</h2>
+      <h2 class="absolute">absolute</h2>
+      <h2 class="sticky">sticky</h2>
+    </article>
+    <aside>
+      <h2>aside</h2>
+    </aside>
+  </main>
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>

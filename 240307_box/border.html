@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>border</title>
+  <style>
+    body {
+      background-color: #cdcdcd;
+      line-height: 1.6;
+      font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+    }
+    p, div, h1,#id, .class > p, .class h2 { /* 다중 선택자: 여러 선택자에 동일한 특성을 부여하고자 할 때 사용. 쉼표로 구분. 띄어쓰기 상관없음 */
+      width: 400px;
+      background-color: #fff;
+    }
+    .box1 {
+      /* 테두리 굵기 */
+      border-top-width: 2px;
+      border-bottom-width: 10px;
+      border-left-width: 1px;
+      border-right-width: 4px;
+
+      /* 테두리 스타일 */
+      border-bottom-style: double;
+      border-right-style: dashed;
+      border-top-style: dotted;
+      border-left-style: solid;
+
+      /* 테두리 색상 */
+      border-top-color: #91c500;
+      border-right-color: #FF3EA5;
+      border-bottom-color: red;
+      border-left-color: #9b65ff;
+    }
+    .box2 {
+      /* 테두리의 네 방향의 값이 같을 때 */
+      border-style: groove;
+      border-width: 10px;
+      border-color: #ff8fba;
+    }
+    .box3 {
+      /* 축약형: 값의 순서에 상관없이 띄어쓰기로 구분 */
+      border: 8px ridge #6420AA;
+    }
+    .box4 {
+      border-top: red 2px dotted;
+      border-bottom: blue 5px solid;
+      border-left: rgb(112, 112, 0) 7px dashed;
+      border-right: green 10px double;
+    }
+    .box5 {
+      /* 
+      border-top: 5px solid #51829B;
+      border-bottom: 5px double #51829B;
+      border-left: 5px solid #51829B;
+      border-right: 5px solid #51829B;
+      */
+      border :5px solid #51829B;
+      border-bottom-style: double;
+    }
+    .box6 {
+      border : 4px solid #50C4ED;
+      border-top-width: 6px;
+      border-right-style: dashed;
+    }
+    h1 {
+      border-top: 3px solid lightseagreen;
+      border-bottom: 6px double lightseagreen;
+      width: 210px;
+      background-color: transparent;
+    }
+    .box7 {
+      /* border와 달리 요소의 바깥 부분에 그려지고 요소가 가지는 실제 크기에 영향을 주지 않음 */
+      outline-style: solid;
+      outline-width: 4px;
+      outline-color: #9B4444;
+      outline: solid 16px #9B4444;
+    }
+    .box8 {
+      outline: 40px solid blue;
+      border: 10px solid yellow;
+    }
+    .box9 {
+      border: 20px solid orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>테두리 border</h1>
+  <p class="box box1">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box box2">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box box3">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box box4">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box box5">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box box6">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <p class="box box7">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</p>
+  <div class="box box8">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</div>
+  <div class="box box9">박스 모델은 실제 콘텐츠 영역, 박스와 콘텐츠 영역 사이의 여백인 패딩(padding), 박스의 테두리(border), 그리고 여러 박스 모델 간의 여백인 마진(margin) 등의 요소로 구성되어 있다</div>
+</body>
+</html>

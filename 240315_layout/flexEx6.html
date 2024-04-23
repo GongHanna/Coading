@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx6</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    form .container {
+      /* border: 3px solid #222; */
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      align-items: center;
+      /* justify-content: space-between; */
+      width: 100vw;
+      height: 4rem;
+    }
+    form .container li {
+      height: 4rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form .container li input[type=text] {
+      outline: none;
+      border: 1px solid #222;
+      border-right: none;
+      padding: 0.35rem;
+      margin-left: 0.5rem;
+    }
+    form .container li button[type=submit] {
+      border: 1px solid #222;
+      /* margin-left: 0.3rem; */
+      padding: 0.27rem;
+    }
+    form .container li button[type=submit]:hover {
+      background-color: #00224D;
+      color: #fff;
+      /* border: 1px solid #222;  */
+    }
+    form .container .item1 {
+      background-color: #00224D; color: #fff;
+      width: 10%;
+    }
+    form .container .item2 { 
+      display: flex;
+      justify-content: flex-start;
+      background-color: #FFE6E6; 
+      width: 85%;
+    }
+    form .container .item3 { 
+      background-color: #7F9F80; 
+      width: 5%;
+    }
+    h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <ul class="container">
+      <li class="item item1"><h3>로고</h3></li>
+      <li class="item item2"><input type="text"><button type="submit">검색</button></li>
+      <li class="item item3">메뉴</li>
+    </ul>
+  </form>
+</body>
+</html>

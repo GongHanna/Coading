@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* 스케줄 박스 */
+.schdule-wrapper {
+  width: 90vw;
+  height: 60vh;
+  margin: 100px auto;
+  grid-template-columns: 0.5fr 6fr;
+  gap: 10px;
+}
+
+/* 스케줄 시간 */
+.schdule-wrapper .schedule-time-box {
+  font-size: var(--font-title-sm);
+  font-family: var(--font-sans-serif);
+  color: var(--color-gray-50);
+  text-align: right;
+}
+
+/* 주 5일 스케줄 내용 박스 */
+.schdule-wrapper .schedule-list-box {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.schdule-wrapper .schedule-list-box .day-box .time {
+  font-size: var(--font-title-sm);
+  color: var(--color-gray-50);
+}
+
+/* Securities Regulation */
+.schdule-wrapper .schedule-list-box .day-box .des-box1 {
+  background-color: var(--color-odd-pm);
+  top: 50%;
+  padding-bottom: 10vh;
+}
+
+/* Corporate Finance */
+.schdule-wrapper .schedule-list-box .day-box .des-box2 {
+  background-color: var(--color-even-am);
+  top: 10%;
+  padding-bottom: 3vh;
+}
+
+/* Enterainment Law */
+.schdule-wrapper .schedule-list-box .day-box .des-box3 {
+  background-color: var(--color-even-pm);
+  top: 40%;
+  padding-bottom: 10vh;
+}
+
+/* Writing Seminar */
+.schdule-wrapper .schedule-list-box .day-box .des-box4 {
+  padding: 0;
+  border: none;
+  border-radius: none;
+  border: none;
+  top: 30%;
+}
+.schdule-wrapper .schedule-list-box .day-box .des-box4 h3 {
+  margin: auto;
+  border: 1px solid var(--color-gray-50);
+  border-radius: 5px;
+  padding: 20px 10px 10px;
+  background-color: var(--color-odd-am);
+}
+.schdule-wrapper .schedule-list-box .day-box .des-box4 .time {
+  padding-left: 10px;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  html {
+    font-size: 13px;
+  }
+  .schdule-wrapper {
+    position: relative;
+  }
+  .schdule-wrapper .schedule-list-box .day-box .day-title {
+    font-size: var(--font-title-sm);
+    margin-top: 12px;
+  }
+  .schdule-wrapper .schedule-list-box .day-box .day-title strong {
+    font-size: var(--font-title-lg);
+    position: absolute;
+    top: -13%;
+  }
+  .schdule-wrapper .schedule-list-box {
+    height: 85%;
+    margin-top: 7%;
+  }
+  /* Corporate Finance */
+  .schdule-wrapper .schedule-list-box .day-box .des-box2 {
+    top: 5.5%;
+    padding-bottom: 2.5vh;
+  }
+}
+
+/* mobile */
+@media (max-width: 650px) {
+  html {
+    font-size: 16px;
+  }
+  .schdule-wrapper {
+    grid-template-columns: 1fr;
+    margin: 50px auto;
+  }
+  .schdule-wrapper .schedule-time-box {
+    display: none;
+  }
+
+  .schdule-wrapper {
+    position: relative;
+  }
+  .schdule-wrapper .schedule-list-box .day-box .day-title {
+    font-size: var(--font-title-lg);
+    margin-top: 0;
+  }
+  .schdule-wrapper .schedule-list-box .day-box .day-title strong {
+    font-size: var(--font-title-lg);
+    position: static;
+  }
+
+  .schdule-wrapper .schedule-list-box {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 60vh;
+    gap: 80px;
+  }
+  /* Corporate Finance */
+  .schdule-wrapper .schedule-list-box .day-box .des-box2 {
+    top: 7%;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>swiperJS</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- 슬라이드 전체 감싸는 컨테이너 -->
+  <div class="swiper mySwiper">
+    <!-- wrapper 추가 필수 -->
+    <div class="swiper-wrapepr">
+      <!-- 실제 이미지나 컨텐츠가 들어갈 slide들 -->
+      <div class="swiper-slide">Slide1</div>
+      <div class="swiper-slide">Slide1</div>
+      <div class="swiper-slide">Slide1</div>
+    </div>
+    <!-- pagination 필요할 경우 추가 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- navigation buttons 필요할 경우 추가 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <script>
+  const mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal'
+    // 슬라이드 방향을 설정합니다.
+    // horizontal: 수평 방향(기본값)
+    // verticle : 수직 방향 
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    loop: true
+    // 슬라이드 루프 설정 여부를 결정합니다.
+    // true : 무한 루프(기본값)
+    // false : 루프 없음
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    // 자동 재생 여부를 설정합니다.
+    // false : 자동 재생 끔 (기본값)
+    // true: 자동 재생 켬
+    // delay: 자동 재생 딜레이 시간 (ms)
+    autoplay: {
+      delay: 3000
+    }
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    speed: 500
+    // 슬라이드 애니메이션 속도를 설정합니다. (ms)
+    // 기본값은 300
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 2
+    // 한 번에 보여지는 슬라이드 수를 설정합니다.
+    // 1: 한 개씩 보이기(기본값)
+    // 2: 두 개씩 보이기
+    // 3: 세 개씩 보이기
+    // auto: 슬라이드의 넓이나 높이에 따라 자동으로 계산
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    // 페이지 설정 여부를 결정합니다.
+    // false: 페이징 끔 (기본값)
+    // true: 페이징 켬
+    // type: 페이징 종류 (bullets, fraction, progressbar, custom)
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets'
+    }
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    // 이전/다음 버튼 설정 여부를 결정합니다.
+    // false: 버튼 끔 (기본값)
+    // true: 버튼 켬
+    // nextEl: 다음 버튼 선택자
+    // prevEl: 이전 버튼 선택자
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    // 스크롤바 설정 여부를 결정합니다.
+    // false: 스크롤바 끔 (기본값)
+    // true: 스크롤바 켬
+    // hide: 스크롤바 숨김
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      hide: true
+    }
+  });
+  const mySwiper = new Swiper('.swiper-container', {
+    effect: 'fade'
+    // 슬라이드 애니메이션 효과를 설정합니다.
+    // slide: 기본 슬라이드 효과 (기본값)
+    // fade: 페이드 효과
+    // cube: 큐브 효과
+    // coverflow: 커버플로우 효과
+    // flip: 플립 효과
+  });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Serif+KR&display=swap');
+
+@font-face {
+  font-family: Noto Serif KR;
+  src: local(Noto Serif KR)
+    url(./fonts/NotoSerifKR-Regular.woff2) format(woff2),
+    url(./fonts/NotoSerifKR-Regular.woff) format(woff),
+    url(./fonts/NotoSerifKR-Regular.otf) format(otf);
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: Nanum Myeongjo;
+  src: local(Nanum Myeongjo)
+    url(./fonts/NanumMyeongjo-Regular.woff2) format(woff2),
+    url(./fonts/NanumMyeongjo-Regular.woff) format(woff),
+    url(./fonts/NanumMyeongjo-Regular.ttf) format(ttf);
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+body :nth-child(2) {
+  font-family: Noto Serif KR;
+  font-weight: 400;
+}
+body :nth-child(3), h1 {
+  font-family: Nanum Myeongjo;
+  font-weight: 400;
+}

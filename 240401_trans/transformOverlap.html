@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transformOverlap</title>
+  <style>
+    .box_outer {
+      width: 50vw; height: 50vw;
+      margin: 5vw auto;
+      border: 6px solid #222;
+      font-weight: bold;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .box_outer .box_inner {
+      background-color: lightseagreen;
+      transition: 1s;
+      width: 100%; height: 100%;
+    }
+    /* 마우스를 올리면 회전, 크기 변경 */
+    .box_outer:hover .box_inner {
+      /* 
+      transform: scale(.5);
+      transform: rotate(360deg);
+      */
+
+      /* 여러 개의 값 적용시 띄어쓰기로 구분. 순서에 따라 결과 값이 달라질 수 있음 */
+      transform: scale(0.5) rotate(360deg) skew(15deg);
+    }
+  </style>
+</head>
+  
+<body>
+  <h1>transform 중첩</h1>
+  <div class="box_outer">
+    <div class="box_inner">
+      rotate(); skew(); scal()
+    </div>
+  </div>
+</body>
+</html>

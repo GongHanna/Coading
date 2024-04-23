@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+html {
+  font-size: 17px;
+}
+
+h1 {
+  background-color: #9FBB73;
+  padding: 40px;
+}
+
+h1 strong {
+  display: inline;
+}
+
+h2 {
+  background-color: #872341;
+}
+
+.container {
+  width: 70vw;
+  margin: 0 auto;
+}

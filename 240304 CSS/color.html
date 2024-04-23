@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>color</title>
+  <!-- 내부 선언 -->
+  <style>
+    /* 글자 색상 */
+    h1 {
+      color: orange; /* color name */
+    }
+    h2 {
+      color: #F72798; /* hex R(F7)G(27)B(98) 6자리 기본 */
+    }
+    ul {
+      color: rgba(33, 22, 90, 0.7);
+    } /* ul, li 둘 다 가능 */
+    p {
+      color: hsla(0, 100%, 25%, 1) /* hsla(색상, 채도%, 명도%, 불투명도) */
+    }
+    #paragraph { /* 아이디 선택자: 하나의 html 문서 안에서 고유한 이름을 가지며 다른 id에 같은 이름을 쓸 수 없음 */
+      color: blueviolet;
+    }
+    .paragraph {
+      color : blue;
+    }
+
+    /* 
+    1. css 상속 inheritance: 해당 선택자의 자식, 자손까지 같은 특성이 적용되는 것.
+    주로 서체와 관련된 속성들이 상속되는 경우가 많음
+
+    2. 선택자는 우선 순위가 있음
+    부모 및 조상의 상속 값은 본인(자식)의 적용 값보다 우선하지 않음.
+    즉, 직접 적용값 우선.
+    같은 특성 적용시 선택자의 우선 순위가 높은 선택자 특성이 적용
+    타입 선택자보다 아이디 선택자가 우선 적용됨
+    */
+  </style>
+</head>
+<body>
+  <h1>글자 색상 color</h1>
+  <h2>한글 입숨</h2>
+  <ul>
+    <li>color 특성은?</li>
+    <li>color name: orange</li>
+    <li>hex: #FF5F00</li>
+    <li>rgb: rgb(0,55,150)</li>
+    <li>rgba(red,green,blue,alpha): rgba(50,100,250,0.7) 마지막 자리수는 불투명도로 0~1 사이의 값을 가짐.</li>
+  </ul>
+  <p id="paragraph">외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다. 모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.</p>
+
+  <p class="paragraph">비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로 할 수 있다. 다만, 사형을 선고한 경우에는 그러하지 아니하다.</p>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body {
+  font-family: '나눔고딕', '맑은 고딕', 돋움, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+h1.title {
+  background-color: #2D9596;
+  color: #fff;
+  border-bottom: 6px solid #265073;
+  border-radius: 20px 20px 0 0; 
+  padding: 10px;
+  width: 500px;
+  width: 60%;
+  min-width: 400px; /* 최소 가로값이 400px은 유지 */
+  margin: 50px auto; /* 블록 요소 중앙 정렬 방법 */
+  /* text-align: center; 텍스트 중앙 정렬 방법 */
+}
+h2 {
+  text-decoration: line-through;
+  font-size: 22px;
+  /* text-align: center; */
+  /* background-color: #ddd; */
+}
+
+.list li { /* 블록 요소 */
+  border: 1px solid #000;
+  width: 300px;
+  padding: 4px;
+  /* margin: 0 auto;
+  margin-bottom: 4px; */
+  margin: 0 auto 4px;
+  text-align: left;
+}
+
+.url {
+  background-color: #ff90b3;
+  width: 60%;
+  min-width: 300px; /* 300px 이하로는 작아지지 않음. 최소 크기 300 유지 */
+  padding: 10px;
+  margin: 0 auto 1px; /* 탑 오른쪽+왼쪽 아래 */
+  /* text-align: center; */
+}
+.url a {
+  color: #fff;
+  text-decoration: none;
+}
+.url:hover {
+  background-color: #387ADF;
+}
+.wrapper {
+  width: 60%;
+  min-width: 300px;
+  margin: 50px auto;
+}
+.wrapper .site {
+  background-color: #40679E;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  line-height: 40px;
+  /* 
+  "텍스트가 한 줄인 경우" 세로 중앙 정렬 방법
+    height와 line-height의 값을 동일하게 적용
+    폰트 사이즈의 크기가 큰 경우는 잘 안됨
+  */
+}

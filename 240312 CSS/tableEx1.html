@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>tableEx1</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      border: 1px solid #000;
+    }
+    table td {
+      border: 1px solid #000;
+      padding: 10px 30px;
+    }
+    thead td, .box1, .box2, .box3 {
+      background-color: #A4CE95;
+    }
+    .box4 {
+      background-color: #F6995C;
+    }
+    .empty {
+      background-color: #fff;
+      border: none;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1>테이블 스타일 연습2</h1>
+  <table>
+    <caption>소</caption>
+    <thead>
+      <tr>
+        <td>소머리</td>
+        <td>목심</td>
+        <td>등심<br>
+        (살치살· <a href="https://ko.wikipedia.org/wiki/%EC%87%A0%EA%B3%A0%EA%B8%B0_%EB%B6%80%EC%9C%84" target="_blank">꽃등심</a>)</td>
+        <td>채끝살</td>
+        <td>우둔<br>
+        (홍두깨살)</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="box box1">
+        <td class="empty"></td>
+        <td rowspan="2">앞다리<br>(부채살)</td>
+        <td>갈비<br>(안창살 · 제비추리)</td>
+        <td>안심</td>
+        <td rowspan="2">설도<br>(도가니살)</td>
+      </tr>
+      <tr class="box box2">
+        <td class="empty"></td>
+        <td colspan="2">양지<br>(차돌박이 · 우삼겹)</td>
+      </tr>
+      <tr class="box box3">
+        <td class="empty"></td>
+        <td>사태</td>
+        <td colspan="2" class="empty"></td>
+        <td>사태<br>(아롱사태)</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="box box4">
+        <td class="empty"></td>
+        <td>우족</td>
+        <td colspan="2"  class="empty"></td>
+        <td>우족</td>
+      </tr>
+    </tfoot>
+  </table>
+  
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>aniEx1</title>
+  <style>
+    @keyframes gradient {
+      30% {
+        background-position: 0 50%;
+      } 60% {
+        background-position: 100% 50%;
+      } 100% {
+        background-position: 0% 30%;
+      }
+    }
+    body {
+      margin: 0;
+      background-image: linear-gradient(-125deg, #5755FE ,#E8751A, #FEC7B4);
+      background-size: 400%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+      animation: gradient 10s infinite ease-in-out alternate;
+    }
+    .btn {
+      color: #fff;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: bold;
+      border: 5px solid #fff;
+      padding: 10px 30px;
+      transition: .3s;
+    }
+    .btn:hover{
+      border-radius: 40px;
+    }
+    /* body {
+      background: linear-gradient(135deg, #481E14, #D20062) no-repeat fixed;
+
+      animation-name: mov1;
+      animation-duration: 2s;
+      animation-delay: .5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .btn {
+      text-decoration: none;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 10px 30px;
+
+      position: absolute;
+      top: 50%; left: 50%;
+    }
+    .btn:hover {
+      border-radius: 30px;
+    }
+    @keyframes mov1 {
+      100% {
+        background: linear-gradient(135deg, #D20062, #481E14) no-repeat fixed;
+      }
+    } */
+  </style>
+</head>
+  
+<body>
+  <!--
+    1. 움직이는 그라디언트 배경
+    2. 중앙 정렬 된 고스트 버튼
+  -->
+  <a href="#" class="btn">aniEx1</a>
+</body>
+</html>

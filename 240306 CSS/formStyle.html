@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>form Style</title>
+  <!-- 내부 선언 -->
+  <style>
+    body {
+      font-family: '함초롱바탕', '휴먼아미체', '바탕', serif;
+      font-size: 26px;
+      color: #4D2DB7;
+    }
+    /* form 관련 요소들은 기본 스타일이 존재하기 때문에 직접 적용 */
+
+    form > fieldset { /* 자식 선택자 */
+      background-color: #FBFFDC;
+      text-align: center; /* 인라인 요소의 중앙 정렬 */
+    }
+
+    form > fieldset > legend {
+      background-color: rgb(0, 160, 133);
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-align: left;
+    }
+    form > fieldset> button[type="submit"] {
+      /* 요소[속성="값"] 
+        속성 선택자: input요소들 중에 type의 값이 submit인 선택자
+      */
+      background-color: #4D2DB7;
+      color: #fff;
+      font-size: 25px;
+      font-family: '함초롱바탕', '휴먼아미체', '바탕', serif;
+      cursor: pointer; /* 마우스 커서 모양 변경 */
+    }
+    form > fieldset > button[type="submit"]:hover {
+      background-color: #900C3F;
+    }
+    form > fieldset > input[type="text"] {
+      background-color: #ffdce9;
+    }
+    form > fieldset > input[id="hint"]::placeholder {
+      color: black;
+      font-family: '함초롱바탕', '휴먼아미체', '바탕', serif;
+    }
+    form> fieldset> input {
+      font-size: 25px;
+    }
+    /* :checked 체크박스나 라디오 버튼에 체크가 되면~을 의미 */
+    form > fieldset > input[type=checkbox]:checked ~ label {
+      background-color: orange;
+      /* appearance: none; form과 관련된 요소들의 기본 스타일 값 제어 */
+    }
+    /* 
+      인접 형제 선택자 :
+        선택자 + 선택자
+        기준 요소 바로 뒤에 오는 형제 관계 선택자 단 하나만  
+      일반 형제 선택자 :
+        선택자 ~ 선택자
+        기준 요소 뒤에 오는 모든 형제 관계 선택자
+    */
+  </style>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>form event</legend>
+      <label for="hint">이름 : </label>
+      <input type="text" name="hint" id="hint" placeholder="이름을 작성하세요" autofocus>
+      <button type="submit">전송</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>:checked</legend>
+      <input type="checkbox" name="check" value="체크1 체크2 체크3" id="check">
+      <label for="check">체크1</label>
+      <label>체크2</label>
+      <label>체크3</label>
+    </fieldset>
+  </form>
+</body>
+</html>

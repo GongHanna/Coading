@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>mqEx3</title>
+  <style>
+    /* 모바일 기준 */
+    body {
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .container {
+      padding: 10%;
+      gap: 1vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #DBA979;
+    }
+    .container .box {
+      background-color: #AFD198;
+      display: grid;
+      place-items: center;
+      height: 40px;
+    }
+    .container .box4 {
+      display: none;
+    }
+    /* 768px */
+    @media screen and (min-width: 768px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .container .box {
+        background-color: #D862BC;
+      }
+      .container .box10 {
+        display: none;
+      }
+    }
+    /* 1200px */
+    @media screen and (min-width: 1200px) {
+      .container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .container .box10 {
+        display: grid;
+        background-color: #8576FF;
+      }
+    }
+    /* 1500px */
+    @media screen and (min-width: 1500px) {
+      .container {
+        width: 800px;
+        margin: 0 auto;
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .container .box4 {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box box1">txt1</div>
+    <div class="box box2">txt2</div>
+    <div class="box box3">txt3</div>
+    <div class="box box4">txt4</div>
+    <div class="box box5">txt5</div>
+    <div class="box box6">txt6</div>
+    <div class="box box7">txt7</div>
+    <div class="box box8">txt8</div>
+    <div class="box box9">txt9</div>
+    <div class="box box10">txt10</div>
+  </div>
+</body>
+
+</html>

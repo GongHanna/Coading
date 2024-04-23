@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flex1_flex-direction</title>
+  <style>
+    /* 
+      display: flex;
+        뷰포트나 요소의 크기가 동적으로 변할 때 사용
+        상속되지 않음
+        부모 박스(flex-container)와 자식 아이템(flex-item)의 개념으로 구성
+        주축(main axis)와 교차축(cross axis)이 존재하며 주축을 기준으로 방향을 정함
+
+        flex-container에 들어가는 특성: flex-direction, flex-wrap, justify-content, align-content, gap ....
+        flex-item에 들어가는 특성: align-self, flex, flex-grow, flex-shrink, flex-basis, order...
+    */
+    .wrapper {
+      border: 6px solid #222;
+      /* 
+      width: 900px;
+      width: 53.892vw;  1670px viewport 
+      margin: 20px auto;
+      margin: 1.198vw auto;
+       */
+       width: 80vw;
+       margin: 2vw auto;
+    }
+    #container { /* flex-container */
+      display: flex;
+
+      /* 플렉스 아이템의 가로 세로 정렬 기준 설정. 즉 주축의 방향 설정 */
+      flex-direction: row; /* 기본값. 주축은 가로(왼 -> 오른) 교차축은 세로(위 -> 아래) */
+      flex-direction: column; /* 주축이 세로(위 -> 아래) 교차축 (왼 -> 오른) */
+      flex-direction: row-reverse; /* 주축은 역방향(오른 -> 왼) */
+      flex-direction: column-reverse; /* 주축은 역방향(아래 -> 위) */
+    }
+    .wrapper .item {
+      color: #fff;
+    }
+    .wrapper .item1 {
+      background-color: #030637;
+    }
+    .wrapper .item2 {
+      background-color: #3C0753;
+    }
+    .wrapper .item3 {
+      background-color: #720455;
+    }
+    .wrapper .item4 {
+      background-color: #910A67;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank">flex</a></h1>
+
+  <h2>flex-direction 정렬</h2>
+  <div class="wrapper" id="container"> <!-- flex-container -->
+    <div class="item item1">item1</div> <!-- flex-item -->
+    <div class="item item2">item2</div> <!-- flex-item -->
+    <div class="item item3">item3</div> <!-- flex-item -->
+    <div class="item item4">item4</div> <!-- flex-item -->
+  </div>
+  <img src="../images/240314/flex.png" alt="flex 구조">
+</body>
+</html>

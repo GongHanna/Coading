@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>요소실제크기1</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 300px;
+      font-weight: bold;
+    }
+    .box1 {
+      border: 10px solid orangered;
+      background-color: #8Ec;
+      margin: 10px; padding: 10px;
+    }
+    .box2 {
+      outline: 30px solid #2D9596;
+      background-color: #265073;
+      color: #fff;
+      margin: 30px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>요소의 실제 크기 1</h1> 
+  <!-- 레이아웃이 밀릴 때를 대비해 계산 방법 숙지 필요 -->
+  <h2>width + margin-left + margin-right + padding-left + padding-right + border-left + border-right</h2>
+  <h2>height + margin-top + margin-bottom + padding-top + padding-bottom + border-top + border-bottom</h2>
+
+  <!-- .box.box$*2>h3+p*2 -->
+  <div class="box box1">
+    <h3>border</h3>
+    <p>.box1의 실제 너비: w500 + m10 + m10 + p10 + p10 + b10 + b10 = 560px</p>
+    <p>.box1의 실제 높이: h300 + m10 + m10 + p10 + p10 + b10 + b10 = 360px</p>
+  </div>
+  <div class="box box2">
+    <h3>outline</h3>
+    <p>.box2의 실제 너비: W500 + m30 + m30 + p10 + p10 + (border 0) = 580px</p>
+    <p>.box2의 실제 높이: W300 + m30 + m30 + p10 + p10 + (border 0) = 380px</p>
+    <!-- outline은 포함시키지 않음 -->
+  </div>
+</body>
+</html>

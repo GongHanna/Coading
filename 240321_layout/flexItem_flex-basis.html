@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexItem_flex-basis</title>
+  <style>
+        ul {
+      list-style: none;
+      margin: 10px;
+      padding: 0;
+      background-color: #000;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: center;
+      display: flex;
+      width: 600px; height: 60px;
+    }
+    ul li { 
+      width: 300px; 
+      flex-grow: 0; /* 기본값. 컨테이너 영역이 남아도 아이템을 채우지 않음 */
+      flex-shrink: 1; /* 기본값. 아이템의 크기가 커도 컨테이너를 넘기지 않음 */
+    }
+    ul li:nth-child(1) { background-color: #FFF67E;}
+    ul li:nth-child(2) { background-color: #9BCF53;}
+    ul li:nth-child(3) { background-color: #BFEA7C;}
+
+    .box1 li {
+      flex-basis: auto;
+    }
+    .box2 li {
+      flex-basis: 0; /* 플렉스 아이템의 컨텐츠를 제외한 영역을 기준으로 grow와 shrink 설정 */
+    }
+    .box3 li {
+      flex-basis: 150px; /* width 값보다 더 우선적으로 적용 */
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>flexItem : flex-basis 기준 비율</h1>
+  <h2>flex-basis: auto; 기본값. 아이템 컨텐츠 크기에 맞춰 grow 비율 설정</h2>
+  <ul class="box1">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+  <h2>flex-basis: 0;</h2>
+  <ul class="box2">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+  <h2>flex-basis: 150px;</h2>
+  <ul class="box3">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+  </ul>
+</body>
+</html>

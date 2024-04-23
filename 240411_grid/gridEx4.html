@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>gridEx4</title>
+  <style>
+    body { font-weight: bold; font-size: 1.2rem; text-align: center; }
+    .container { width: 80%; height: 60vh; margin: 50px auto; border: 6px solid #000;  
+      display: grid;  
+      grid-template-columns: 150px minmax(200px, 2fr) 1fr;
+      grid-auto-rows: 100px minmax(200px, 2fr) 70px;
+    }
+    .container header {
+      background-color: #86B6F6;
+      grid-column: 1 / 4;
+    }
+    .container nav { background-color: #DC84F3;}
+    .container .contents { background-color: #E9A8F2;}
+    .container aside { background-color: #F3CCF3;}
+    .container footer { 
+      background-color: #B4D4FF;
+      grid-column: 1 / span 3;
+    }
+    
+    /* .container .item1 { 
+      background-color: #86B6F6;
+      grid-column: 1 / span 6;
+    }
+    .container .item2 { 
+      background-color: #DC84F3;
+      grid-row: 2 / 3;
+    }
+    .container .item3 { 
+      background-color: #E9A8F2;
+      grid-row: 2 / 3;
+      grid-column: 2 / span 3;
+    }
+    .container .item4 {
+       background-color: #F3CCF3;
+       grid-row: 2 / 3;
+       grid-column: 5 / span 2;
+      }
+    .container .item5 { 
+      background-color: #B4D4FF;
+      grid-row: 3 / 4;
+      grid-column: 1 / span 6;
+    } */
+  </style>
+</head>
+  
+<body>
+  <h1>gridEx4</h1>
+  <div class="container">
+    <header>header-고정</header>
+    <nav>nav-고정</nav>
+    <div class="contents">main-가변</div>
+    <aside>aside-가변</aside>
+    <footer>footer-고정</footer>
+  </div>
+  <!-- <h1>gridEx4</h1>
+  <div class="container">
+    <div class="item1">header-고정</div>
+    <div class="item2">nav-고정</div>
+    <div class="item3">main-가변</div>
+    <div class="item4">aside-가변</div>
+    <div class="item5">footer-고정</div>
+  </div> -->
+</body>
+</html>

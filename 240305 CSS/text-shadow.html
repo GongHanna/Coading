@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>text-shadow</title>
+  <style>
+    /* 서체 변경, 중앙 정렬, 대소문자, 서체 크기 */
+    body {
+      text-align: center;
+    }
+    h2.title1 {
+    font-family: 'Modern', '맑은 고딕', 돋움, sans-serif;
+    text-transform: capitalize;
+    font-size: 16px;
+    text-shadow: 10px 10px 10px #999; /* x축 y축 번짐 색상 */ 
+    }
+    h2.title2 {
+      font-family: 'Segoe Script', '맑은 고딕', 돋움, sans-serif;
+      text-transform: lowercase;
+      font-size: 20px;
+      text-shadow: -10px -10px 10px orange; /* -는 반대방향을 의미 */ 
+    }
+    h2.title3 {
+      font-family: '휴먼편지체', '나눔고딕', 돋움, sans-serif;
+      text-transform: uppercase;
+      font-size: 24px;
+      text-shadow: 0 10px 0 #cdcdcd; /* x축 y축 번짐 색상 */
+    }
+    h2.title4 {
+      font-family: 'Georgia', '맑은 고딕', 바탕, serif;
+      text-transform: none;
+      font-size: 28px;
+      text-shadow: 0 -10px 0 #81bcff; /* x축 y축 번짐 색상 */
+    }
+    h2.title5 {
+      font-family: 'Segoe Print', '맑은 고딕', 돋움, sans-serif;
+      text-transform: uppercase;
+      font-size: 30px;
+      text-shadow: 0 10px; /* x축 y축. 번짐 생략. 색상 생략 시 글자 색을 따라감 */
+      color: bisque;
+    }
+    h2.title6 {
+      font-family: '국민연금체', '맑은 고딕', 돋움, sans-serif;
+      text-transform: lowercase;
+      font-size: 36px;
+      text-shadow: /* 중첩 가능 */
+       0 0 10px #999,
+       10px 10px 10px red,
+       -10px -10px 10px hotpink,
+       0 0 10px orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="title1">text-shadow 서체 그림자</h2>
+  <h2 class="title2">text-shadow 서체 그림자</h2>
+  <h2 class="title3">text-shadow 서체 그림자</h2>
+  <h2 class="title4">text-shadow 서체 그림자</h2>
+  <h2 class="title5">text-shadow 서체 그림자</h2>
+  <h2 class="title6">text-shadow 서체 그림자</h2>
+</body>
+</html>

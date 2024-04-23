@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>블록요소중앙정렬</title>
+  <style>
+    body {
+      margin: 0;
+      font-weight: bold;
+    }
+    h1 {
+      background-color: darkcyan;
+      color: yellow;
+      margin: 0;
+      padding: 10px;
+    }
+    .box {
+      /* width: 500px; */
+      width: 60%;
+      height: 100px;
+      background-color: #efefef;
+      border: 10px solid orange;
+      text-align: center; /* 상속 가능 */
+    }
+    .box .txt { /* 하위 선택자 */
+      background-color: rgb(129, 170, 87);
+      /* text-align: center; */
+    }
+    .box2 {
+      /* 
+        블록 요소 중앙 정렬
+          1. 요소의 가로 값이 필요
+          2. 일반적인 흐름
+          3. 해당 요소에 적용
+      */
+      margin: 0 auto 0 auto; /* T, R, B, L */
+      margin: 20px auto;
+      margin: auto; /* 가로 중앙 정렬만. 세로 중앙 정렬 x */
+      margin: auto 0;
+      margin: 20px auto 0; /* T R+L B */
+    }
+    .box2 .txt {
+      width: 60%;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- h1{블록 요소의 중앙 정렬}+p.box.box1>span.txt{인라인 요소 및 컨텐츠의 중앙정렬}^.box.box2>.txt{블록 요소의 중앙 정렬} -->
+  <h1>블록 요소의 중앙 정렬</h1>
+  <p class="box box1"><span class="txt">인라인 요소 및 컨텐츠의 중앙정렬</span></p>
+  <div class="box box2">
+    <div class="txt">블록 요소의 중앙 정렬</div>
+  </div>
+</body>
+</html>

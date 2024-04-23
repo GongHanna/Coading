@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx1</title>
+  <style>
+    /* body {
+      background-color: #ddd;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .wrapper {
+      border: 3px solid #222;
+      width: 100%; height: 100vh;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-content: center;
+    } */
+    body {
+      margin: 0;
+    }
+    .wrapper {
+      background-color: #ddd;
+      font-weight: bold;
+      font-size: 2rem;
+
+      display: flex;
+      /* 주축 기준 정렬 */
+      justify-content: center;
+      /* 교차축 기준 정렬 */
+      align-items: center;
+
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper" id="container"> <!-- flex-container -->
+    <a href="#">텍스트<br>텍스트</a> <!-- flex-item -->
+  </div>
+</body>
+</html>

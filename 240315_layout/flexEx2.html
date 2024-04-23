@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>flexEx2</title>
+  <style>
+    /* body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    ul {
+      list-style: none;
+      border: 2px solid #222;
+      width: 70vw; height: 60vh;
+      padding-left: 0;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .box .item {
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 10px 80px;        
+    }
+  
+    .box .item1 { background-color: #363062;}
+    .box .item2 { background-color: #435585;}
+    .box .item3 { background-color: #818FB4;}
+    .box .item4 { background-color: #F5E8C7;}
+    .box .item5 { background-color: #35155D;} */
+
+    /* body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    } */
+    .box {
+      padding: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      list-style: none;
+      border: 3px solid #222;
+      width: 70vw; height: 70vh;
+      /* css 함수 : calc(값 * 값) 반드시 연사자를 띄어써야 함 */
+      margin: calc(15vh - 3px) auto;
+      /* box-sizing: border-box; with(padding+border) + margin */
+
+      display: flex;
+      /* 주축 row 
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      justify-content: center;
+      align-content: center;
+      */
+
+      /* 주축 col */
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .box .item {
+      /* width: 50%;
+      margin: 0 10px; */
+      width: 60%;
+      height: 15%; /* 부모의 값이 한정되어 있을 때 % 값 적용 가능 */
+      /* line-height: 15%; px, 한 줄 때만 가능 */
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box .item1 { background-color: #363062;}
+    .box .item2 { background-color: #435585;}
+    .box .item3 { background-color: #818FB4;}
+    .box .item4 { background-color: #F5E8C7;}
+    .box .item5 { background-color: #35155D;}
+  </style>
+</head>
+
+<body>
+  <!-- 내부 박스, 글자 좌우, 상하  중앙정렬 -->
+  <ul class="box">
+    <li class="item item1">item1<br>item</li>
+    <li class="item item2">item2<br>item</li>
+    <li class="item item3">item3<br>item</li>
+    <li class="item item4">item4<br>item</li>
+    <li class="item item5">item5<br>item</li>
+  </ul>
+</body>
+</html>

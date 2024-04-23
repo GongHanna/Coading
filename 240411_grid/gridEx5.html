@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>gridEx5</title>
+  <style>
+    body { font-weight: bold; font-size: 1.2rem; text-align: center;}
+    .container { width: 80%; height: 30vh; margin: 50px auto; border: 6px solid #000; 
+      color: #fff;
+      display: grid; 
+    }
+    .container .item:nth-child(odd) { /* 홀수 */
+      background-color: #6C3428; 
+    }
+    .container .item:nth-child(even) { /* 짝수 */
+      background-color: #E14D2A;
+    }
+
+    /* 컨테이너의 크기가 커지면 여백없이 채우고 작아지면 아이템 자동 줄바꿈 */
+    .box1 {grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    /* 아이템이 원래 크기를 유지하고 컨테이너의 영역에 여백이 생길 수 있음 */
+    .box2 {grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  </style>
+</head>
+  
+<body>
+  <!-- 컨테이너의 크기가 커지면 여백없이 채우고 작아지면 아이템 자동 줄바꿈 -->
+  <div class="container box1">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  <div class="container box2">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+</body>
+</html>

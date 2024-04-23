@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>240315flex공부</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    form .container {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    form .container li {
+      /* background-color: #ddd; */
+      margin: 0.3rem 0;
+
+      display: flex;
+      text-align: right;
+    }
+    form .container li label {
+      background-color: orange;
+      margin-right: 0.4rem;
+      padding: 0.4rem;
+      width: 10rem;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    form .container li input[type=text] {
+      outline: none;
+      border: 1px solid #222;
+      padding: 0.3rem;
+      width: 12rem;
+    }
+    #flex3, #flex4, #flex5 {
+      height: 5rem;
+    } 
+  </style>
+</head>
+<body>
+  <h1>각 폼 제목의 세로 중앙 정렬</h1>
+  <form>
+    <ul class="container">
+      <li>
+        <label for="flex1">채널 키워드</label>
+        <input type="text" placeholder="플렉스 적용하기" id="flex1"></li>
+      <li>
+        <label for="flex2">채널 키워드</label>
+        <input type="text" placeholder="플렉스 적용하기" id="flex2"></li>
+      <li>
+        <label for="flex3">채널 키워드 채널 키워드</label>
+        <input type="text" placeholder="플렉스 적용하기" id="flex3"></li>
+      <li>
+        <label for="flex4">채널 키워드 channel keyword</label>
+        <input type="text" placeholder="플렉스 적용하기" id="flex3"></li>
+      <li>
+        <label for="flex5">channel keyword 채널 키워드</label>
+        <input type="text" placeholder="플렉스 적용하기" id="flex5"></li>
+    </ul>
+  </form>
+</body>
+</html>

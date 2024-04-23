@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transitionShorthand</title>
+  <style>
+    .btn {
+      text-decoration: none;
+      color: inherit;
+      border: 3px solid #000;
+      text-align: center;
+      padding: 4px 6px;
+      display: block;
+      width: 100px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .box {
+      background-color: #ddd;
+      width: 50px; height: 50px;
+      margin: 10px 0;
+
+      /* transition-property: all;
+      transition-duration: .7s;
+      transition-delay: .3s;
+      transition-timing-function: ease-in-out; */
+
+      /* 축약형. 값의 순서에 상관없이 작성 가능. 첫번째 나오는 숫자는 시간, 두번째 숫자는 대기시간 */
+      /* transition: all 0.7s .3s ease-in-out; */
+      transition: 0.7s;
+    }
+    /* .btn:hover +.box */
+     .btn:hover ~ .box1 {
+      background-color: #B2A4FF;
+      width: 60vw;
+    }
+  </style>
+  <!-- <style>
+    .btn {
+      color: inherit;
+      text-decoration: none;
+      border: 3px solid #222;
+      display: block;
+      width: 100px; height: 30px; line-height: 30px;
+      font-size: 1.2rem; 
+      text-align: center;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .box {
+      background-color: #ddd;
+      width: 50px; height: 50px;
+      margin: 10px 0;
+
+      transition-property: all;
+      transition-duration: 1s;
+    }
+    .btn:hover + .box1 {
+      width: 300px;
+      background-color: #B2A4FF;
+    }
+  </style> -->
+</head>
+  
+<body>
+  <h1>transition 축약</h1>
+  <p>버튼 위에 마우스를 올리면 첫번째 박스의 크기, 색상이 변경</p>
+  <a href="#" class="btn">이벤트</a>
+  <div class="box box1">움직인다</div>
+  <div class="box box2">안움직인다</div>
+</body>
+</html>

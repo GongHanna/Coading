@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>z-index</title>
+  <style>
+    /* body {
+      margin: 0;
+      text-align: center;
+      line-height: 1.5;
+    }
+    .container h1 {
+      margin: 0;
+    }
+    .container ul, .wrapper {
+      margin: 0; padding: 0;
+      list-style: none;
+    } */
+    body { margin: 0; line-height: 1.6; height: 300vh;}
+    ul { list-style: none; margin: 0; padding: 0; }
+
+    .container { background-color: #5E1675; color: #fff; padding: 20px; position: fixed; top: 0; width: 100%; text-align: center; z-index: 9999; }
+    .container ul { max-width: 700px; background-color: #EE4266; text-align: left; padding: 20px 40px; margin: 0 auto; box-sizing: border-box; }
+
+    .wrapper {
+      margin: 200px auto; /* 마진 상쇄 현상 */
+      /* position: absolute;  일반적인 흐름에서 벗어나기 때문에 마진 상쇄 현상이 일어나지 않는다  */
+      width: 400px; height: 400px;
+      position: relative;
+      background-color: navy;
+    }
+    .wrapper .box {
+      position: absolute;
+      width: 200px; height: 200px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .wrapper .box1 { background-color: #7469B6; top: 10px; left: 10px; z-index: 1000; }
+    .wrapper .box2 { background-color: #AD88C6; top: 40px; left: 40px; z-index: 100; } 
+    .wrapper .box3 { background-color: #E1AFD1; top: 70px; left: 70px; z-index: 10; }
+    .wrapper .box4 { background-color: #FFE6E6; top: 100px; left: 100px; z-index: 1; }
+  </style>
+</head>
+  
+<body>
+  <div class="container">
+    <h1>position, flex, grid 요소 계층 순위 설정</h1>
+    <ul>
+      <li>요소에 포지션 값 적용시 포토샵의 레이어처럼 계층이 생김<br>이때 겹치는 순서를 정의</li>
+      <li>숫자가 클수록 위쪽에 위치. 단위값 없음</li>
+    </ul>
+  </div>
+
+  <ul class="wrapper">
+    <li class="box box1">box1</li>
+    <li class="box box2">box2</li>
+    <li class="box box3">box3</li>
+    <li class="box box4">box4</li>
+  </ul>
+</body>
+</html>

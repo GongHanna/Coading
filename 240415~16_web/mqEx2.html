@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>mqEx2</title>
+  <style>
+    /* 모바일 기준 */
+    body { margin: 0; text-align: center; font-weight: bold; font-size: 2rem;}
+
+    .wrapper {
+      display: grid;
+      grid-auto-rows: 50vh 20vh 20vh;
+      /* grid-template-rows: 50vh 20vh 20vh; */
+    }
+    .wrapper .box1 { background-color: #6C0345; color: #fff;}
+    .wrapper .box2 { background-color: #DC6B19;}
+    .wrapper .box3 { background-color: #F7C566;}
+
+    /* 768px 이상일 때 */
+    @media (min-width: 768px) {
+      .wrapper {
+        grid-template: 25vh 25vh / 1fr 2fr;
+      }
+      .box1 {
+        grid-row: span 2;
+      }
+    }
+
+    /* 1200px 이상일 때 */
+    @media (min-width: 1200px) {
+      .wrapper {
+        width: 80vw;
+        margin: 0 auto;
+      }
+      .box1 { order: 2; }
+      .box2 { order: 3; }
+      .box3 { order: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box box1">item1</div>
+    <div class="box box2">item2</div>
+    <div class="box box3">item3</div>
+    <!-- <div class="box box1">item4</div> -->
+  </div>
+</body>
+</html>

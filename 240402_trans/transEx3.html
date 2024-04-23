@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>transEx3</title>
+  <style>
+    body {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      text-transform: capitalize;
+    }
+    .global-nav {
+      background-color: #31363F;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      width: 90vw;
+    }
+    .global-nav li {
+      /* flex-grow: 1; */
+      width: 25%;
+    }
+    .global-nav li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 0;
+      position: relative;
+      display: block;
+    }
+    .global-nav li a::after {
+      content: "";
+      width: 0; height: 5px;
+      background-color: #76ABAE;
+      position: absolute;
+      left: 0; bottom: 0;
+      /* top: 50%;
+      transform: translateY(-50%); */
+      transition: 0.4s;
+      opacity: 0;
+    }
+    .global-nav li a:hover::after {
+      content: "";
+      width: 100%;
+      opacity: 1;
+    }
+  </style>
+  <!-- <style>
+    body {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .menu {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      text-transform: capitalize;
+      background-color: #31363F;
+      display: flex;
+      width: 90vw; height: 50px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .menu li {
+      width: 25%;
+      height: 50px; line-height: 50px;
+      transition: 1s;
+    }
+    .menu a {
+      text-align: center;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .menu li:nth-child(1) a::after {
+      content: "";
+      width: 23%; height: 5px;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0; left: 0;
+    }
+    .menu li:nth-child(1):hover a::after {
+      background-color: #76ABAE;
+      transform: translateX(90vw / 4);
+    }
+    .menu li:nth-child(2) a::after {
+      content: "";
+      width: 23%; height: 5px;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0; left: 25%;
+    }
+    .menu li:nth-child(2):hover a::after {
+      background-color: #76ABAE;
+      transform: translateX(90vw / 4);
+    }
+    .menu li:nth-child(3) a::after {
+      content: "";
+      width: 23%; height: 5px;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0; left: 50%;
+    }
+    .menu li:nth-child(3):hover a::after {
+      background-color: #76ABAE;
+      transform: translateX(90vw / 4);
+    }
+    .menu li:nth-child(4) a::after {
+      content: "";
+      width: 23%; height: 5px;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0; left: 75%;
+    }
+    .menu li:nth-child(4):hover a::after {
+      background-color: #76ABAE;
+      transform: translateX(90vw / 4);
+    }
+  </style> -->
+</head>
+  
+<body>
+  <!-- 해당 메뉴에 마우스를 올리면 왼쪽에서 오른쪽을 바 진행 -->
+  <ul class="global-nav">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </ul>
+  <!-- <ul class="menu">
+    <li><a href="#">menu1</a></li>
+    <li><a href="#">menu2</a></li>
+    <li><a href="#">menu3</a></li>
+    <li><a href="#">menu4</a></li>
+  </ul> -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>대입연산자Ex</title>
+</head>
+
+<body>
+<!-- 
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript</li>
+    <li>jQuery</li>
+  </ul> 
+-->
+
+  <script>
+    // 더하기 대입 연산자를 이용해 DOM 구축
+
+    // 변수 선언
+    let output = '';
+    // 문자열에서 더하기 대입 연산자 사용시 앞의 내용이 그대로 추가
+    output += '<ul>'; // output('') + '<ul>' -> output('<ul>')
+    output += '<li>HTML5</li>'; // output('<ul>') + '<li>HTML5</li>' -> output('<ul>'<li>HTML5</li>')
+    output += '<li>CSS3</li>';
+    output += '<li>JavaScript</li>';
+    output += '<li>jQuery</li>';
+    output += '</ul>';
+
+    document.body.innerHTML = output;
+    
+    /* 
+      변수 초기화
+        let txt = ''; 문자열
+        let num = 0; 숫자
+        let boo = false; 불리언
+        let obj = null; 객체
+    */
+  </script>
+</body>
+</html>
