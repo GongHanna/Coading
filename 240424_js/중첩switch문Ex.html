@@ -1,0 +1,33 @@
+<body>
+  <h1>중첩switch문Ex</h1>
+  <script>
+    const defaultID = 'web';
+    const defaultPw = 1234; // number
+
+    let userId = prompt('아이디를 입력하세요');
+    
+    switch (userId === defaultID) { // 아이디를 입력 받아
+      case true: // 일치하면
+        alert('아이디가 일치합니다');
+
+        let userPw = +prompt('비밀번호를 입력하세요'); // 비밀번호를 입력받고
+        // let userPw = prompt('비밀번호를 입력하세요');
+        // userPw = parseInt(userPw);
+
+        // switch (userPw * 1) 
+        switch (userPw) {
+          case defaultPw:
+            alert('로그인 되었습니다');
+            break;
+          default:
+            alert('비밀번호가 일치하지 않습니다');
+        }
+
+        break;
+    
+      default:
+        alert('아이디가 일치하지 않습니다');
+    }
+
+  </script>
+</body>

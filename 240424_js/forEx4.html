@@ -1,0 +1,29 @@
+<body>
+  <h1>forEx4</h1>
+  <script>
+    // 2~9단 출력
+    let result = '';
+    for(let i = 2; i <= 9; i++) { // 2~9단
+      // document.write(`<h3>-- ${i}단 --</h3>`);
+      result += `<h3>-- ${i}단 --</h3>`;
+      
+      for(let e = 1; e <= 9; e++) { // *1~9
+        result += `<p>${i} x ${e} = ${i * e}</p>`;
+      }
+    }
+    document.body.innerHTML = result;
+
+  /*
+   let result = '';
+    for(let i = 2; i <= 9; i++) { // 2~9단
+      result += `<h3>-- ${i}단 --</h3>`;
+
+      for(let e = 1; e <= 9; e++) { // *1~9
+        let num = e * i;
+        result += `<p>${i} * ${e} = ${num}</p>`;
+      }
+    }
+    document.body.innerHTML = result;
+    */
+  </script>
+</body>

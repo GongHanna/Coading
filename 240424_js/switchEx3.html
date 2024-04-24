@@ -1,0 +1,64 @@
+<body>
+  <h1>switchEx3</h1>
+  <script>
+    /* 
+      입력받은 커피와 가격 출력
+      아메리카노: 15000, 카페라떼: 20000, 카페모카: 20000, 바닐라라떼: 25000
+    */
+
+    const coffee = prompt('아메리카노, 카페라떼, 카페모카, 바닐라라떼 중 선택하세요');
+
+    let price = 0; // 숫자로 초기화
+
+    switch (coffee) {
+      case '아메리카노':
+        price = 15000;
+        break;
+      case '카페라떼':
+        price = 20000;
+        break;
+      case '카페모카':
+        price = 20000;
+        break;
+      case '바닐라라떼':
+        price = 25000;
+        break;
+    
+      default:
+        document.body.innerHTML += '<h2>메뉴에 있는 음료만 주문 가능합니다</h2>'
+        break;
+    }
+
+    if(price) document.body.innerHTML += `<h2>주문한 ${coffee}의 가격은 ${price.toLocaleString()}원 입니다.</h2>`;
+
+    // .toLocaleString() 지역별 정의값을 문자열로 반환
+
+
+
+
+
+  //   let msg = '';
+
+  //   switch (coffee) {
+  //     case null:
+  //       msg =  `<h2>취소되었습니다</h2>`;
+  //       break;
+  //     case '아메리카노':
+  //       msg =  `<h2>아메리카노는 15,000원 입니다</h2>`;
+  //       break;
+  //     case '카페라떼':
+  //       msg =  `<h2>카페라떼는 20,000원 입니다</h2>`;
+  //       break;
+  //     case '카페모카':
+  //       msg =  `<h2>카페모카는 20,000원 입니다</h2>`;
+  //       break;
+  //     case '바닐라라떼':
+  //       msg =  `<h2>바닐라라떼는 25,000원 입니다</h2>`;
+  //       break;
+    
+  //     default:
+  //       msg =  `<h2>아메리카노, 카페라떼, 카페모카, 바닐라라떼만 입력하세요</h2>`;
+  //   }
+  //   document.body.innerHTML += msg;
+  // </script>
+</body>

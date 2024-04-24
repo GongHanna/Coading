@@ -1,0 +1,66 @@
+<body>
+  <h1>switchEx2</h1>
+  <script>
+    /* 
+      1~4 사이의 숫자를 입력하면 해당 번호의 이미지 출력
+      취소 버튼 클릭시 취소했습니다 출력
+    */
+
+    const num = prompt('1~4번까지 숫자를 입력해주세요');
+    let url = '';
+
+    switch (num) {
+      case null:
+        url = '<h2>취소했습니다</h2>';
+        break;
+      case '1':
+        url = `<img src="./images/food${num}.jpg" alt="img${num}">`;
+        break;
+      case '2':
+        url = `<img src="./images/food${num}.jpg" alt="img${num}">`;
+        break;
+      case '3':
+        url = `<img src="./images/food${num}.jpg" alt="img${num}">`;
+        break;
+      case '4':
+        url = `<img src="./images/food${num}.jpg" alt="img${num}">`;
+        break;
+    
+      default:
+        url = `<h2>해당 번호만 입력해 주세요</h2>`;
+    }
+    document.body.innerHTML += url;
+
+
+
+
+    /*
+    let num = prompt('1~4사이의 숫자를 입력해주세요');
+    let msg = "";
+    let alt = "";
+
+    switch (num) {
+      case '1':
+        msg = "./images/food1.jpg";
+        alt = "img1";
+        break;
+      case '2':
+        msg = "./images/food2.jpg";
+        alt = "img2";
+        break;
+      case '3':
+        msg = "./images/food3.jpg";
+        alt = "img3";
+        break;
+      case '4':
+        msg = "./images/food4.jpg";
+        alt = "img4";
+        break;
+    
+      default:
+        document.body.innerHTML += `<h2>취소했습니다</h2>`;
+    }
+    if(msg) document.body.innerHTML += `<img src="${msg}" alt="${alt}">`;
+    */
+  </script>
+</body>
