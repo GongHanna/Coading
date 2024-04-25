@@ -1,0 +1,33 @@
+<body>
+  <h1>Math객체Ex1</h1>
+  <script>
+    // 10까지의 랜덤 수 출력
+    console.log(
+      `10까지의 랜덤 수 : ${Math.floor(Math.random() * 10 + 1)}`
+    );
+
+    // 60까지의 랜덤 수 출력
+    console.log(
+      `10까지의 랜덤 수 : ${Math.floor(Math.random() * 60 + 1)}`
+    );
+
+    // -5 ~ 5까지의 랜덤 수 출력
+    // Math.floor(Math.random() * (최대값 - 최소값 + 1) + 최소값)
+    // let num = Math.random() * (5 - -5 + 1) + -5;
+    console.log(
+      // Math.floor(num)
+      `-5 ~ 5까지의 랜덤 수 : ${Math.floor(Math.random() * 11 - 5)}`
+    );
+
+    // -25 ~ 25까지의 랜덤 수 출력
+    // let nnum = Math.random() * (25 - -25 + 1) + -25;
+    console.log(
+      `-25 ~ 25까지의 랜덤 수 : ${Math.floor(Math.random() * 51 - 25)}`
+    );
+
+    // 0~10 난수
+    console.log(
+      `10까지의 랜덤 수 : ${Math.floor(Math.random() * 11)}`
+    );
+  </script>
+</body>
