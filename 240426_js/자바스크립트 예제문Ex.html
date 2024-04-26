@@ -1,0 +1,37 @@
+<body>
+  <h1>기온별 옷차림 추천</h1>
+  <ul>
+    <li>오늘의 기온을 입력하면 옷차림을 추천</li>
+    <li>if 조건문을 사용해서 prompt창에 오늘의 기온을 입력하면 옷차림을 추천해 주세요</li>
+    <li>-20 ~ 36도 사이의 기온만 입력 가능하게 해주세요</li>
+    <li>숫자만 입력 가능하게 해주세요</li>
+    <li>기온별 옷차림은 하기 이미지 참고</li>
+  </ul>
+
+  <script>
+    let weather = prompt('오늘의 기온을 입력해주시면 옷차림을 추천해드릴게요');
+
+    if(weather >= -20 && 36 >= weather) {
+      if(weather >= -20 && -4 >= weather) {
+        alert('추천 옷차림 : 패딩, 두꺼운 코트, 히트텍/내복, 목도리, 장갑 입니다.');
+      } else if(weather >= -3 && 8 >= weather) {
+        alert('추천 옷차림 : 코트, 가죽자켓, 니트+플리스 입니다.');
+      } else if(weather >= 9 && 11 >= weather) {
+        alert('추천 옷차림 : 트렌치코트, 야상, 자켓 입니다.');
+      } else if(weather >= 12 && 16 >= weather) {
+        alert('추천 옷차림 : 기모후드티, 가디건, 니트/맨투맨 입니다.');
+      } else if(weather >= 17 && 19 >= weather) {
+        alert('추천 옷차림 : 후드티, 바람막이, 슬랙스 입니다.');
+      } else if(weather >= 20 && 22 >= weather) {
+        alert('추천 옷차림 : 셔츠, 7부바지, 면바지 입니다.');
+      } else if(weather >= 23 && 27 >= weather) {
+        alert('추천 옷차림 : 티셔츠, 반바지 입니다.');
+      } else if(weather >= 28 && 36 >= weather) {
+        alert('추천 옷차림 : 민소매, 숏팬츠 입니다.');
+      }    
+    } else {
+      alert('숫자만 입력해주세요');
+      location.reload();
+    }
+  </script>
+</body>
