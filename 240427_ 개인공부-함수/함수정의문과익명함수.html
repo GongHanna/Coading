@@ -1,0 +1,24 @@
+<body>
+  <h1>함수정의문과익명함수</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    let count = 0;
+
+    myFnc(); // 함수호출
+
+    function myFnc() {
+      count++;
+      document.write("hello" + count, "<br>");
+    }
+
+    myFnc();
+
+    let theFnc = function() {
+      count++;
+      document.write('bye' + count, "<br>");
+    }
+
+    theFnc();
+  </script>
+</body>

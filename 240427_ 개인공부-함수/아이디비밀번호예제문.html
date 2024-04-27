@@ -1,0 +1,33 @@
+<body>
+  <h1>아이디비밀번호예제문</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    /* 
+      1. prompt창을 통해 방문자의 아이디와 비밀번호를 입력받아
+      2. 만일 잘못된 아이디가 입력된 경우 "존재하지 않는 아이디입니다" 경고창
+      3. 잘못된 비밀번호 작성된 경우 "잘못된 비밀번호입니다" 경고창 출력
+      4. 아이디와 비밀번호가 일치하면 html문서에 환영문구 출력
+    */
+
+    let tureID = 'hanna';
+    let turePW = '1234';
+
+    function login(id, pw) {
+      if (id == tureID) { // 올바른 아이디
+        if (pw == turePW) { // 올바른 패스워드
+          document.body.innerHTML += `${id}님 방문을 환영합니다`;
+        } else { // 틀린 비밀번호
+          alert("잘못된 비밀번호입니다");
+        }
+      } else { // 틀린 아이디
+        alert("존재하지 않는 아이디입니다");
+      }
+    }
+
+    let userId = prompt('아이디를 입력하세요');
+    let userPw = prompt('비밀번호를 입력하세요');
+
+    login(userId, userPw); // 함수 호출
+  </script>
+</body>
