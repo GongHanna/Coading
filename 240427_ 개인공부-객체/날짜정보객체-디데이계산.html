@@ -1,0 +1,17 @@
+<body>
+  <h1>날짜정보객체-디데이계산</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    let today = new Date();
+    let nowYear = today.getFullYear();
+
+    let theDate = new Date(nowYear, 11, 31); // 올해 연말에 대한 날짜 정보 객체 생성
+    let diffDate = theDate.getTime() - today.getTime(); // 남은 날 = 특정 날짜 - 현재 날짜 (밀리세컨 단위)
+
+    let result = Math.ceil( diffDate / (60 * 1000 * 60 * 24));
+    // 지정한 날짜에서 현재 날짜를 빼면 지금부터 연말까지 남은 시간을 구할 수 있음(밀리세컨)
+    // 계산 한 값을 일 다누이로 계산한 다음 오늘 날짜까지 포함시키기 위해 Math.ceil() 메서드를 사용하여 반올림.
+    document.write('연말 D-day: ' + result + " 일 남았습니다.");
+  </script>
+</body>

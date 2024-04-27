@@ -1,0 +1,36 @@
+<body>
+  <h1>수학객체-가위바위보</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    document.write('<h3>컴퓨터 가위,바위,보 맟추기</h3>');
+
+    let game = prompt('가위, 바위, 보 중 선택하세요?', '가위');
+    let gameNum;
+    switch (game) {
+      case '가위':
+        gameNum = 1;
+        break;
+      case '바위':
+        gameNum = 2;
+        break;
+      case '보':
+        gameNum = 3;
+        break;
+
+      default:
+      alert('잘못 작성하셨습니다');
+      location.reload();
+    }
+
+    let com = Math.ceil(Math.random() * 3); // 1~3사이의 난수 발생
+
+    document.write("<img src=\"images/math_img_" + com + ".jpg\">");
+
+    if(gameNum == com) {
+      document.write('<img src="./images/game_1.jpg">');
+    } else {
+      document.write('<img src="./images/game_2.jpg">');
+    }
+  </script>
+</body>

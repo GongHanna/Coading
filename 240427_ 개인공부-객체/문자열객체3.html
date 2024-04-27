@@ -1,0 +1,30 @@
+<body>
+  <h1>문자열객체3</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    // 이메일 유효성 검사 예제
+
+    let userEmail = prompt('당신의 이메일 주소는?');
+    let arrUrl = [".co.kr", '.com', '.net', '.or.kr', "go.kr"];
+
+    let check1 = false; 
+    let check2 = false;
+
+    if (userEmail.indexOf('@') > 0) { check1 = true; }
+    // 이메일 유효성을 검사하여 '@'을 정상적으로 작성하면 check1에 true 저장
+
+    for(let i = 0; i < arrUrl.length; i++) { // arrUrl.length; => 5
+      if(userEmail.indexOf(arrUrl[i]) > 0) {
+        check2 = true;
+        // 입력한 이메일과 arrUrl의 단어를 하나씩 비교하여 1개의 단어라도 일치하면 check2에 true 저장
+      }
+    }
+
+    if(check1 && check2) {
+      document.write(userEmail);
+    } else {
+      alert('이메일 형식이 잘못되었습니다');
+    }
+  </script>
+</body>

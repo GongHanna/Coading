@@ -1,0 +1,29 @@
+<body>
+  <h1>배열객체1</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    let arr = [30, "따르릉", true];
+
+    document.write('<h3>배열값 가져오기 -1-</h3>');
+    document.write(arr[0], "<br>");
+    document.write(arr[1], "<br>");
+    document.write(arr[2], "<br>");
+
+
+    document.write('<h3>배열값 가져오기 -2-</h3>');
+    for ( let i = 0; i < arr.length; i++) {
+      // i < arr.length; 배열에 3개의 데이터가 저장되어 있음
+      document.write(arr[i], "<br>");
+
+    }
+
+    // for 문에서 i는 0부터 2까지 반복되며, arr의 인덱스 값 0,1,2를 화면에 출력
+
+    document.write('<h3>배열값 가져오기 -3-</h3>');
+    for (i in arr) {
+      document.write(arr[i], "<br>");
+    }
+
+  </script>
+</body>

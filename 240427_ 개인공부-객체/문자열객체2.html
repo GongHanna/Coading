@@ -1,0 +1,23 @@
+<body>
+  <h1>문자열객체2</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    // 사용자가 입력한 영문 이름 소문자 -> 대문자로 변환
+    // 사용자가 입력한 휴대폰번호를 정보가 노출되지 않도록 뒤에 자리 ****로 출력 
+
+    let userName = prompt('당신의 영문 이름은?', "");
+
+    let upperName = userName.toUpperCase();
+    document.write(upperName, "<br>");//HANNA
+
+    let userNum = prompt('당신의 연락처는?');
+    let result = userNum.substring(0, userNum.length -4) + "****";
+    /* 
+     userNum.substring(0, userNum.length -4) == userNum.substring(0, 7)
+     userNum.substring(0, 7)은 userNum의 인덱스(0~7)값인 '0102302' 반환
+     그 후, "****"와 결합하여 0102302**** 반환
+    */
+    document.write(result, "<br>"); //0102302****
+  </script>
+</body>

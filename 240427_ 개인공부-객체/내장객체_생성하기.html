@@ -1,0 +1,28 @@
+<body>
+  <h1>내장객체_생성하기</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    let tv = new Object();
+    tv.color = "white";
+    tv.price = 300000;
+    tv.info = function() {
+      document.write('tv 색상: ' + this.color, "<br>");
+      document.write('tv 가격: ' + this.price, "<br>");
+    }
+
+    let car = {
+      color: 'black',
+      price: 5000000,
+      info: function () {
+        document.write('car 색상: ' + this.color, "<br>");
+        document.write('car 가격: ' + this.price, "<br>");
+      }
+    };
+
+    document.write('<h3>tv 객체 매서드 호출</h3>');
+    tv.info(); // tv.info 함수 호출
+    document.write('<h3>car 객체 매서드 호출</h3>');
+    car.info(); // car.info 함수 호출
+  </script>
+</body>

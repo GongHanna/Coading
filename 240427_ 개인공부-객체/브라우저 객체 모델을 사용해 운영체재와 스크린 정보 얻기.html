@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>브라우저 객체 모델을 사용해 운영체재와 스크린 정보 얻기</title>
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+
+<body>
+  <h1>브라우저 객체 모델을 사용해 운영체재와 스크린 정보 얻기</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    /* 
+      운영체제 정보를 제공하는 navigator객체와 스크린 정보를 제공하는 screen객체를 이용하여 각각의 버튼을 누를 때마다 방문자의 운영체제 정보와 스크린 사이즈 정보를 출력하는 예제
+
+      1. 방문자의 운영체제 정보를 알 수 있으면 현재 사이트를 방문한 사람이 pc를 이용해 방문했는지, mobile을 이용해 방문했는지 파악 가능
+      2. 현재 방문자의 스크린 사이즈 정보를 알면 사이즈마다 다양한 자바스크립트 적용 가능
+    */
+
+    let info = navigator.userAgent.toLowerCase();
+    // 운영체제 정보를 구함. 구한 정보는 소문자로 변환
+    let osImg = null;
+
+    // 운영체제의 정보가 windows라는 문자를 포함하고 있으면 osImg에 윈도우 이미지의 파일명 저장됨
+    if (info.indexOf('windows') >= 0) {
+      osImg = "windows.png";
+    } else if (info.indexOf('macintosh') >= 0) {
+      osImg = "macintosh.png";
+    } else if (info.indexOf('iphone') >= 0) {
+      osImg = "iphone.png";
+    } else if (info.indexOf('android') >= 0) {
+      osImg = "android.png";
+    }
+
+    document.write("<img src=\"images/" + osImg + "\">", "<br>");
+
+    let scr = screen;
+    let sc_w = scr.width;
+    let sc_h = scr.height;
+    // scr에 스크린 객체 참조. 스크린 객체의 너비와 높이를 구해 각각의 변수 sc_w, sc_h에 저장
+
+    document.write("모니터 해상도 너비:" + sc_w + "px", "<br>");
+    document.write("모니터 해상도 높이:" + sc_h + "px", "<br>");
+  </script>
+</body>
+
+</html>

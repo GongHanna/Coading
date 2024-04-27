@@ -1,0 +1,28 @@
+<body>
+  <h1>날짜정보객체</h1>
+  <h2>코딩해보세요</h2>
+
+  <script>
+    let today = new Date(); // date 객체
+    let nowMonth = today.getMonth(), // 월 정보를 가져옴. 현재 월 -1
+    nowDate = today.getDate(), // 일 정보를 가져옴
+    nowDay =  today.getDay(); // 요일 정보를 가져옴. 일:0 ~ 토: 6
+
+    document.write("<h3>오늘 날짜 정보</h3>");
+    // 오늘 날짜 정보 객체를 생성하고 날짜 정보를 가져옴 (월, 일, 요일)
+    document.write("현재 월: " + nowMonth, "<br>");
+    document.write("현재 일: " + nowDate, "<br>");
+    document.write("현재 요일: " + nowDay, "<br>");
+
+    let worldcup = new Date(2002,4,31);
+    let theMonth = worldcup.getMonth();
+    theDate = worldcup.getDate();
+    theDay = worldcup.getDay();
+
+    // 월드컵 날짜 정보 객체 생성, 날짜 정보 가져옴 (월, 일, 요일)
+    document.write("<h3>월드컵 날짜 정보</h3>");
+    document.write("2002월드컵 몇 월: " + theMonth, "<br>");
+    document.write("2002월드컵 몇 일: " + theDate, "<br>");
+    document.write("2002월드컵 무슨 요일: " + theDay, "<br>"); // 금요일
+  </script>
+</body>
