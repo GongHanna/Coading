@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>조건문</title>
+</head>
+
+<body>
+  <h1>조건문</h1>
+  <p>조건문이란 주어진 조건에 따라서 에플리케이션을 다르게 동작하도록 하는 것</p>
+  <a href="https://opentutorials.org/module/532/4724" target="_blank">조건문-생활코딩</a>
+  <h2>Boolean</h2>
+  <p>참과 거짓은 '숫자와 문자 수업'에서 배운 숫자와 문자처럼 언어에서 제공하는 데이터 형</p>
+  <p>불린으로 올 수 있는 값은 true와 false 두가지 밖에 없다</p>
+
+  <script>
+    /* 
+      if : 조건문은 if로 시작. if 뒤의 괄호엔 조건이 오고, 조건이 될 수 있는 값은 Boolean
+    */
+   if(true) {
+    // 예제의 실행결과는 'result : true'다. if 뒤에 true가 왔기 때문이다.
+    alert('result : true');
+   }
+   if(false) {
+    // 이 예제는 아무것도 출력하지 않을 것이다. if 뒤에 false가 왔기 때문이다.
+    alert('result : true');
+   }
+   if(true) {
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+   }
+   alert(5); 
+  //  결과는 12345를 출력, if 문의 조건이 참이면 중괄호의 시작({}부터 중괄호의 끝(})까지의 구간이 실행
+  if(false) {
+    alert(1);
+    alert(2);
+    alert(3);
+    alert(4);
+   }
+   alert(5); 
+  //  결과는 5만 출력, 거짓이면 중괄호 구간이 실행되지 않기 때문에 alert(5); 구문만 실행
+
+  /* 
+   else : 주어진 조건이 거짓일 때 실행할 구간을 정의하는 것
+  */
+// if문의 조건이 true라면 if의 중괄호 구간이 실행되고, false라면 else 이후의 중괄호 구간이 실행
+ if(true) {
+  alert(1);
+ } else {
+  alert(2);
+ } // 결과는 1
+ if(false) {
+  alert(1);
+ } else {
+  alret(2);
+ } // 결과는 2
+
+ /* 
+  else if : else if는 좀 더 다양한 케이스의 조건을 검사할 수 있는 기회를 제공. 
+            else if의 특징은 if나 else와는 다르게 여러개가 올 수 있다
+            else if의 모든 조건이 false라면 else가 실행된다. else는 생략 가능
+ */
+
+ /* 
+  if문 중첩
+ */
+let id = pompt('아이디를 입력해주세요');
+
+if(id == 'hanna') { // 아이디가 hanna로 일치했을 때
+  password = prompt('비밀번호를 입력해주세요');
+
+  if(password === '1234') { // 비밀번호가 1234로 일치할 때
+    alert('로그인되었습니다');
+  } else { // 비밀번호가 일치하지 않을 때
+    alret('비밀번호가 틀렸습니다');
+  }
+} else { // 아이디가 일치하지 않을 때
+  alret('아이디가 틀렸습니다')
+}
+
+/* 
+  논리 연산자
+
+  1. &&(and 연산자) : 좌항과 우항이 모두 참(true)일 때 참
+  2. ||(or 연산자) : 좌우항 중에 하나라도 true라면 true가 됨.
+  3. !(not 연산자) : '!'는 부정의 의미로 Boolean 값을 역전. true => false, false => true
+*/
+let userId = prompt('아이디를 입력해주세요');
+let userPw = prompt('비밀번호를 입력해주세요');
+
+// && and 연산자
+if(userId == 'hanna' && userPw == '1234') { 
+  alert('로그인되었습니다');
+} else {
+  alert('로그인에 실패했습니다')
+}
+// || or 연산자
+if(userId == 'hanna' || userId == 'gong' || userId == 'kong') {
+  alert('로그인되었습니다');
+} else {
+  alert('로그인에 실패했습니다')
+}
+// || + && 연산자
+if((userId == 'hanna' || userId == 'gong' || userId == 'kong') && userPw === '1234') {
+  alert('로그인되었습니다');
+} else {
+  alert('로그인에 실패했습니다')
+}
+  </script>
+</body>
+</html>

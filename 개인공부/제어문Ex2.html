@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제어문Ex2</title>
+</head>
+
+<body>
+  
+  <script>
+    /* 
+    랜덤 점심메뉴 추천
+      - prompt창으로 '한식, 중식, 일식, 양식' 중 하나를 입력하였을때 아래의 각 점심 메뉴가 나오게 코드를 작성하시오
+      - if문과 Math.random() 활용할 것
+      - HTML 문서에 결과값이 나오도록 작성할 것
+
+      /힌트/
+      1. 각 카테고리의 메뉴를 배열할때는 베열 요소를 문자열로 감싸주어야 함
+      2. 배열에서 랜덤한 값을 선택할시 ".length"를 사용
+      .length(): 텍스트의 길이를 제한하기 위해서 사용하거나,String이나 Object List 배열의 길이를 가져와 for문으로 배열의 길이만큼의 index로 값을 가져올 때 사용
+      ex.Math.random()*한식.length;
+      ​
+      - 아래 메뉴 참고
+      한식:김치찌개, 청국장,된장찌개,부대찌개,낙곱새,닭갈비
+      일식:초밥,돈까스,가츠동,카츠나베,모밀소바
+      중식:짜장면,짬뽕,마파두부,중국냉면,유린기
+      양식:토마호크,파스타,감자뇨끼,피자,햄버거
+    */
+   let menu = prompt('한식, 중식, 일식, 양식 중 하나를 입력해주세요');
+    // 배열 생성
+   let 한식 = ['김치찌개', '청국장','된장찌개','부대찌개','낙곱새','닭갈비'];
+   let 일식 = ['초밥','돈까스','가츠동','카츠나베','모밀소바']; 
+   let 중식 = ['짜장면','짬뽕','마파두부','중국냉면','유린기']; 
+   let 양식 = ['토마호크','파스타','감자뇨끼','피자','햄버거']; 
+
+   let select;
+   if(menu === '한식') {
+    select = 한식;
+   } else if(menu === '일식') {
+    select = 일식;
+   } else if(menu === '중식') {
+    select = 중식;
+   } else if(menu === '양식') {
+    select = 양식;
+   } else {
+    alert('유효하지 않은 카테고리입니다. 한식, 중식, 일식, 양식을 입력해주세요.');
+   }
+
+   if(select) {
+    let random = Math.floor(Math.random() * select.length);
+    // Math.random()을 사용하여 배열의 길이만큼 랜덤한 인덱스를 선택하고, 해당 인덱스의 메뉴를 선택
+    let randomMenu = select[random];
+
+    document.body.innerHTML = `추천된 점심 메뉴: ${randomMenu}`;
+   }
+  </script>
+</body>
+</html>

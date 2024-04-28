@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>제어문Ex5</title>
+</head>
+
+<body>
+  <script>
+    /* 
+      오늘의 운세는?
+
+      1.입력창에 '요일을 입력해 주세요'가 뜬다.
+      2.월~금 요일만 입력이 가능하다.
+      3.월~금이 아닌 다른 단어입력 시 '요일만 입력해 주세요'가 뜬다.
+      4.월~금 중에 입력 시 랜덤으로 오늘의 운세가 문서내에 뜬다.
+
+      문서내에
+      오늘의 운세는?
+      오늘의 운세 : ( )
+
+      랜덤 운세 메시지 :
+      - 행운!
+      - 초불행🤯
+      - 아무 일도 없는 날★
+      - 이불 밖은 위험해
+      - 그럭저럭
+      - 굿이네요굿굿굿
+      - 무난
+    */
+
+    // 사용자로부터 요일을 입력받습니다.
+    let inputDay = prompt('요일을 입력해 주세요:');
+
+    // 월~금 요일을 배열로 정의합니다.
+    let weekdays = ['월요일', '화요일', '수요일', '목요일', '금요일'];
+
+    // 오늘의 운세 메시지를 배열로 정의합니다.
+    let fortunes = [
+      '행운!',
+      '초불행🤯',
+      '아무 일도 없는 날★',
+      '이불 밖은 위험해',
+      '그럭저럭',
+      '굿이네요굿굿굿',
+      '무난'
+    ];
+
+    // 사용자가 입력한 요일이 '월~금'인지 확인합니다.
+    if (weekdays.includes(inputDay)) {
+      // 오늘의 운세 메시지를 랜덤으로 선택합니다.
+      let randomIndex = Math.floor(Math.random() * fortunes.length);
+      let randomFortune = fortunes[randomIndex];
+
+      // 문서 내에 오늘의 운세를 출력합니다.
+      document.body.innerHTML += `
+        <p>오늘의 운세는?</p>
+        <p>오늘의 운세: ${randomFortune}</p>
+    `;
+    } else {
+      // '월~금'이 아닌 다른 단어 입력 시 알림 메시지를 출력합니다.
+      alert('요일만 입력해 주세요');
+    }
+
+  </script>
+</body>
+
+</html>

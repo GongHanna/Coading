@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제어문Ex4</title>
+</head>
+
+<body>
+  <script>
+    /* 
+      사용자에게 태어난 연도를 입력받고, else if문을 사용해 해당하는 띠를 출력하세요. 사용자가 숫자를 제외한 다른 값을 입력했을 시 "숫    자를 입력하세요." 라는 문구가 출력되도록 하세요.
+
+      참고: 태어난 연도를 12로 나눈 나머지가 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 일 때,
+      띠동물은 원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양입니다.
+    */
+
+    let year = prompt('태어난 년도를 입력해주세요');
+    year = Number(year);
+
+    if(isNaN(year)) {
+      alert('숫자를 입력하세요.');
+    } else {
+      let birthIndex = year % 12; //태어난 년도 나누기 12의 나머지 값
+
+      if(birthIndex === 0) {
+        alert('띠동물은 원숭이입니다.');
+      } else if(birthIndex === 1) {
+        alert('띠동물은 닭입니다.');
+      } else if(birthIndex === 2) {
+        alert('띠동물은 개입니다.');
+      } else if(birthIndex === 3) {
+        alert('띠동물은 돼지입니다.');
+      } else if(birthIndex === 4) {
+        alert('띠동물은 쥐입니다.');
+      } else if(birthIndex === 5) {
+        alert('띠동물은 소입니다.');
+      } else if(birthIndex === 6) {
+        alert('띠동물은 호랑이입니다.');
+      } else if(birthIndex === 7) {
+        alert('띠동물은 토끼입니다.');
+      } else if(birthIndex === 8) {
+        alert('띠동물은 용입니다.');
+      } else if(birthIndex === 9) {
+        alert('띠동물은 뱀입니다.');
+      } else if(birthIndex === 10) {
+        alert('띠동물은 말입니다.');
+      } else if(birthIndex === 11) {
+        alert('띠동물은 양입니다.');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>제어문Ex1</title>
+</head>
+
+<body>
+  <!-- <h1>가격에 따른 할인금액 계산</h1>
+  <ul>
+    <li>시작은 let productPrice = prompt("상품 가격을 입력해 주세요"); 을 활용</li>
+    <li>최종 금액은 정수로 출력 (소수점 첫째 자리에서 내림)</li>
+    <li>최종 금액에 지역의 정의값을 문자열로 반환 (10,000)</li>
+    <li>숫자 외에 것을 입력 했을 때 '상품의 가격만 숫자로 입력해주세요' 알림으로 출력</li>
+    <li>document.body.innerHTML += `할인율: ${}%`; 과  document.body.innerHTML += `할인된 가격: ${}원'`; 로 결과를 출력</li>
+    <li>할인율표는 하기와 같음</li>
+  </ul>
+  <p>
+    0 ~ 29,999원  0%<br>
+
+    30,000 ~  49,999원  5%<br>
+    
+    50,000 ~ 99,999원  10%<br>
+    
+    100,000 ~ 149,999원  20%<br>
+    
+    150,000 ~   30%<br>
+  </p> -->
+
+  <script>
+    /* 
+      소수점 첫째자리에서 내림 => Math.floor()
+      최종 금액에 지역의 정의값을 문자열로 반환 (10,000) => toLocaleString(); 현지 날짜, 시간, 숫자, 통화, 단위 등에 맞춤
+    */
+
+    let productPrice = prompt("상품 가격을 입력해 주세요");
+    productPrice = Number(productPrice); // 숫자로 변환
+
+    if (isNaN(productPrice)) { // 숫자 외의 값을 입력했을 때
+      alert('상품의 가격만 숫자로 입력해주세요');
+      location.reload();
+    } else {
+      let discountRate = 0; // 할인율 변수 선언
+
+      // 할인율을 계산합니다.
+      if (productPrice >= 0 && productPrice < 30000) {
+        discountRate = 0;
+      } else if (productPrice >= 30000 && productPrice < 50000) {
+        discountRate = 5;
+      } else if (productPrice >= 50000 && productPrice < 100000) {
+        discountRate = 10;
+      } else if (productPrice >= 100000 && productPrice < 150000) {
+        discountRate = 20;
+      } else if (productPrice >= 150000) {
+        discountRate = 30;
+      }
+
+      // 할인된 가격을 계산합니다.
+      let discountAmount = productPrice * (discountRate / 100);
+      let discountedPrice = productPrice - discountAmount;
+
+      // 할인된 가격을 정수로 변환하고 소수점 첫째 자리에서 내림합니다.
+      discountedPrice = Math.floor(discountedPrice);
+
+      // 결과를 출력합니다.
+      document.body.innerHTML += `할인율: ${discountRate}%<br>`;
+      document.body.innerHTML += `할인된 가격: ${discountedPrice.toLocaleString()}원<br>`;
+    }
+
+    /* 
+      1. prompt()를 통해 상품 가격을 입력
+      2. 입력받은 값을 숫자로 변환, 숫자가 아닌 경우 '상품의 가격만 숫자로 입력해주세요' 알림을 출력 //변수명 = Number();
+      3. 상품 가격에 따른 할인율을 계산
+      4. 할인된 가격을 계산하고, 정수로 변환하여 소수점 첫째 자리에서 내림 //Math.floor();
+      5. 할인율과 할인된 가격을 document.body.innerHTML을 사용하여 웹 페이지에 출력
+    */
+
+  </script>
+</body>
+
+</html>

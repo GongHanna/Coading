@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배열</title>
+</head>
+
+<body>
+  <h1>배열</h1>
+  <p>배열(Array)이란 연관된 데이터를 모아서 통으로 관리하기 위해서 사용하는 데이터 타입</p>
+  <p>변수가 하나의 데이터를 저장하기 위한 것이라면 배열은 여러 개의 데이터를 하나의 변수에 저장하기 위한 것</p>
+  <a href="https://opentutorials.org/module/532/4736" target="_blank">배열-생활코딩</a>
+
+  <script>
+    let name = ['hanna', 'gong', 'kong'] // 하나의 변수에 3개의 데이터 담음
+    // 여러 개의 데이터를 하나의 변수에 담아서 관리하는 방법 => 배열 사용
+    console.log(name[0]); //hanna
+    console.log(name[1]); //gong
+    console.log(name[2]); //kong
+    /* 
+      배열에 담겨있는 값을 가져올 때는 대괄호 안에 숫자를 넣는다.
+      이 숫자를 색인 = index라고 부른다
+      인덱스 번호는 0부터 시작한다.
+    */
+   console.log('---------------------------------------------------------------------');
+   function get_names() {
+    return ['hanna', 'gong', 'kong'];
+   }
+   let names = get_names();
+   console.log(names[0]);
+   console.log(names[1]);
+   console.log(names[2]);
+
+  </script>
+</body>
+</html>

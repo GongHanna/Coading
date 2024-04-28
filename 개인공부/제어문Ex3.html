@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>제어문Ex3</title>
+</head>
+
+<body>
+  <script>
+    /* 
+      1보다 큰 수를 입력해서 입력한 숫자까지 짝수만 더하는 식을 만드시오.
+    */
+   let num = prompt('1보다 큰 숫자를 입력해주세요');
+   num = Number(num);
+
+   if(isNaN(num) || num <= 1) {
+    alert('1보다 큰 숫자를 입력해주세요');
+   } else {
+    let sum = 0; // 변수 선언
+
+    for(let i = 2; i <= num; i +=2) {
+      sum +=i;
+      // 입력된 숫자까지의 짝수를 반복하여 더하고, 합계를 sum 변수에 저장
+    }
+    alert(`1부터 ${num}까지의 짝수 합계는 ${sum}입니다.`);
+   }
+  </script>
+</body>
+</html>
