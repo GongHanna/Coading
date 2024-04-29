@@ -1,0 +1,25 @@
+<body>
+  <h1>함수Ex6</h1>
+
+  <script>
+    // '입력한 금액의 부가세 포함 가격은 xxx원 입니다' 출력/  부가세 10%
+
+    const tax = () => {
+      let price = prompt('가격을 입력하세요');
+      // price * 0.1 + price => price
+      // price * 1.1
+      // const cash = price * 1.1;
+
+      if (price) {
+        let cash = parseInt(price) * 1.1;
+        // parseInt() 함수는 문자열 인자를 파싱하여 특정 진수(수의 진법 체계에서 기준이 되는 값)의 정수를 반환합니다.
+        alert(`입력한 금액의 부가세 포함 가격은 ${cash.toLocaleString()}원 입니다`);
+      } else {
+        alert('금액만 입력해 주세요');
+      }
+    }
+
+    tax();
+
+  </script>
+</body>

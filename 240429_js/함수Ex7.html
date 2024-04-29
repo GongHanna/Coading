@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>함수Ex7</title>
+  <style>
+    .btn {
+      border: 3px solid #000;
+      display: block;
+      width: 100px;
+      padding: 6px 10px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      margin: 20px;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+
+  <script>
+    // 문서 준비 이벤트
+    /*
+    window.onload = function () { // window가 불러와지면 함수가 실행되어라.
+      function tomato () {
+        document.querySelector('body').style.backgroundColor = 'tomato';
+      }
+      
+      const orange = () => document.body.style.backgroundColor = 'orange';
+
+      // document.querySelector('#tomato').addEventListener('click', tomato);
+    }
+
+
+      css(-하이푼 표기법) VS js(카멜표기법)
+      background-color | backgroundColor
+      margin-right | marginRight
+      padding-top | paddingTop
+    */
+  </script>
+
+  <script defer src="./함수Ex7.js"></script>
+
+</head>
+
+<body>
+  <!-- 버튼을 클릭하면 배경색 변경 -->
+  <a href="#" class="btn" id="tomato" onclick="tomato()">tomato</a>
+  <a href="#" class="btn" id="orange" onclick="orange()">orange</a>
+</body>
+</html>

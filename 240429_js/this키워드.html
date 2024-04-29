@@ -1,0 +1,26 @@
+<body>
+  <h1>this 키워드</h1>
+  <p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this" target="_blank">MDN this</a></p>
+  <h3>일반 함수에서는 메서드를 호출할 때 사용된 "그" 객체를 나타내는 키워드</h3>
+
+  <script>
+    const noName = { // 객체
+      // key : value => property
+      id: 1,
+      text: '-- this 키워드 --',
+      func: function () { // 일반 함수
+        // 일반 함수에서의 this는 noName(객체 자신)을 가리키는 키워드
+        console.log(this);
+      },
+      arrow: () => { // 화살표 함수
+        // 참조하는 대상이 window, 혹은 상황에 따라 다른 객체를 참조하기도 함
+        console.log(this);
+      }
+    }
+    
+    // 객체 읽기
+    console.log(noName.text);
+    noName.func(); // {id: 1, text: '-- this 키워드 --', func: ƒ, arrow: ƒ}, 객체 내의 함수를 불러올 땐 () 꼭 작성
+    noName.arrow(); // Window 객체, Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+  </script>
+</body>
