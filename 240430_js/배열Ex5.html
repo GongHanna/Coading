@@ -1,0 +1,30 @@
+<body>
+  <h1>배열Ex5</h1>
+
+  <script>
+    // 점수를 배열로 만들고 점수의 최대 점수, 최저 점수, 평균 출력
+    let score = [33, 30, 50, 90, 57];
+
+    // 최고 점수
+    const maxArr = (num) => {
+      // return Math.max(num); NaN. 배열로 들어감 [33, 30, 50, 90, 57]
+      return Math.max(...num); 
+    }
+
+    // 최저 점수
+    const minArr = (num) => {
+      return Math.min(...num);
+    }
+
+    // 평균 점수
+    const avgArr = (num) => {
+      // .reduce();
+      const sum = num.reduce((total, current) => total + current);
+      return sum / num.length;
+    }
+
+    console.log(`최고 점수: ${maxArr(score)}`);
+    console.log(`최저 점수: ${minArr(score)}`);
+    console.log(`평균 점수: ${avgArr(score)}`);
+  </script>
+</body>

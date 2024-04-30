@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>배열Ex6</title>
+</head>
+
+<body>
+  <h1>배열Ex6</h1>
+  <h2 class="title">현재 날짜와 시간</h2>
+  <!-- 
+    현재 년 월 일 요일 AM/PM 시: 분: 초
+    24시간제 x -> 12시간제
+
+    2024년 04월 30일 화요일 PM 05: 01: 15 <- 출력
+
+    1초에 한번씩 실행
+    setTimeout(function() {}, 시간); 지정 시간 후 한 번만 실행
+    setInterval(콜백함수, 시간); 지정 시간마다 실행
+   -->
+
+   <script>
+    let today = new Date(); 
+
+    let nowYear = today.getFullYear(); 
+    let nowMonth = today.getMonth() + 1; 
+    let nowDate = today.getDate(); 
+    let nowDay = today.getDay(); //요일 0:일 ~ 7: 토
+    let nowHur = today.getHours(); 
+    let nowMin = today.getMinutes(); 
+    let nowSec = today.getSeconds(); 
+
+    const now = new Date().getDay();
+    nowDay = ['일', '월', '화', '수', '목', '금', '토'];
+
+    const nowH = new Date().getHours();
+    hour = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+    nowHur = ['AM',...hour];
+    
+    /*
+    if(nowHur >= 1 && nowHur <= 11  && 24 === nowHur) { //am
+      const nowHour = new Date.getHours();
+      hour = [1,2,3,4,5,6,7,8,9,10,11];
+      nowHur = ['AM', ...hour]
+    } else if(nowHur >= 12 && 23 >= nowHur) { //pm
+
+    }
+    */
+
+    console.log(`${nowYear}년 ${nowMonth}월 ${nowDate}일 ${nowDay[now]}요일 ${nowHur[nowH]}:${nowMin}:${nowSec}`);
+
+    // document.querySelector('.title').innerText = output;
+   </script>
+</body>
+</html>
