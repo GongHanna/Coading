@@ -1,0 +1,17 @@
+<body>
+  <h1>전역지역함수예제1</h1>
+
+  <script>
+    let num = 100;
+
+    function menu() { //개발자 A
+      num += 100;
+      alert(num);
+    }
+    menu(); // 200
+
+    function menu() { // 개발자 B
+      alert(num); // 100, 함수명이 같아서 개발자 A가 만든 함수는 제거되고 개발자 B가 만든 함수 호출됨
+    }
+  </script>
+</body>

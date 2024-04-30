@@ -1,0 +1,22 @@
+<body>
+  <h1>전역지역함수예제2</h1>
+
+  <script>
+    (function () {
+      let num = 100;
+      function menu() {
+        num += 100;
+        alert(num);
+      }
+      menu();
+    }());
+
+    (function () {
+      let num = 100;
+      function menu() {
+        alert(num);
+      }
+      menu();
+    }());
+  </script>
+</body>
