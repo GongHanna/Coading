@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>한글로렘입숨생성기</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+</head>
+
+<body>
+  <form>
+    <input type="number" id="amount">
+    <button type="submit" class="create_btn">생성</button>
+    <button type="submit" class="short_btn">짧게</button>
+    <button type="submit" class="middle_btn">중간</button>
+    <button type="submit" class="long_btn">길게</button>
+  </form>
+  <p class="result_text"></p>
+
+  <script>
+    /* 
+      1. 랜덤으로 한글 입숨 생성하기
+      2. input에 숫자 입력시 숫자 개수 만큼 랜덤 단어 출력
+      3. .repeat(); 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다
+      4. 함수, for문, if문, document.querySelector(), addEventListener를 사용해주세요
+    */
+    const dummyText = [
+      '계절이', '지나가는', '하늘에', '가을로', '있습니다', '나는', '걱정도', '아무', '없이', '가을 속의', '여름 하나', '별들을', '모두', '헤일 듯', '합니다', '가슴속에', '하나둘', '이제', '헤는 것은', '쉬이', '아침이', '오는', '까닭이요', '내일', '남은', '청춘이', '않은', '다하지', '아직', '별 하나에', '추억과', '사랑과', '쓸쓸함과', '동경과', '시와', '어머니', '한마디', '이국 소녀들의', '이름과', '꽃들 속에서', '바람들과', '비둘기들', '불러봅니다', '릴케의', '시선과', '북간도에', '계십니다', '별빛들', '우는 벌레는', '부끄러운', '지난 겨울에', '봄이 오면', '피어나듯이'
+    ];
+
+    const randomText = (amount) => {
+      let result = "";
+      for (let i = 0; i < amount; i++) {
+        // 랜덤 인덱스를 선택하여 dummyText 배열에서 텍스트 조각을 가져옵니다.
+        const randomIndex = Math.floor(Math.random() * dummyText.length);
+        // 결과에 텍스트 조각을 추가합니다.
+        result += dummyText[randomIndex];
+
+        // 다음 텍스트 조각 사이에 랜덤한 수의 공백 문자를 추가합니다.
+        if (i < amount - 1) {
+          // 랜덤하게 1에서 5까지의 공백 수를 결정합니다.
+          const spaces = Math.floor(Math.random() * 5) + 1;
+          result += ' '.repeat(spaces);
+        }
+      }
+      return result;
+    }
+
+    const createBtn = document.querySelector('.create_btn');
+    const resultText = document.querySelector('.result_text');
+    const amountInput = document.querySelector('#amount');
+
+    createBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // 버튼의 성격 제거. 새로고침(클릭했을 때 넘어감)
+      const amount = parseInt(amountInput.value, 10);
+      if (isNaN(amount) || amount <= 0) {
+        resultText.innerHTML = "0 이상의 숫자를 입력해주세요";
+      } else {
+        const result = randomText(amount);
+        resultText.innerHTML = result;
+      }
+    });
+
+    const shortBtn = document.querySelector('.short_btn');
+    const middleBtn = document.querySelector('.middle_btn');
+    const longBtn = document.querySelector('.long_btn');
+
+    shortBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // 짧게 버튼을 클릭했을 때 10~15개의 단어 출력
+      const amount = Math.floor(Math.random() * 6) + 10; // 10~15개
+      const result = randomText(amount);
+      resultText.innerHTML = result;
+    });
+
+    middleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // 중간 버튼을 클릭했을 때 25~30개의 단어 출력
+      const amount = Math.floor(Math.random() * 6) + 25; // 25~30개
+      const result = randomText(amount);
+      resultText.innerHTML = result;
+    });
+
+    longBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // 길게 버튼을 클릭했을 때 40~50개의 단어 출력
+      const amount = Math.floor(Math.random() * 11) + 40; // 40~50개
+      const result = randomText(amount);
+      resultText.innerHTML = result;
+    });
+  </script>
+</body>
+
+</html>
