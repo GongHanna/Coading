@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>배열Ex6</title>
@@ -17,39 +18,73 @@
     1초에 한번씩 실행
     setTimeout(function() {}, 시간); 지정 시간 후 한 번만 실행
     setInterval(콜백함수, 시간); 지정 시간마다 실행
+
+    재귀 함수 :
+      함수 내부에서 자기 자신을 호출하는 함수
+      재귀 함수 사용시 종료 조건을 설정하지 않으면 무한 호출 됨 (타이머 같은 경우에 사용)
+      내부적으로 호출 스택(call stack)을 사용하기 때문에 호출시 스택이 쌓이게 되고,
+      각 호출이 종료되면 스택에서 제거됨
+      단점. 메모리 사용이 많음
+
+    즉시 실행 함수
+    (function 함수명 () {})();
+    (function 함수명 () {} ());
    -->
 
-   <script>
-    let today = new Date(); 
+  <script>
+    // const time = () => {
+    (function time() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth() + 1; // 0부터 시작하기 때문에 +1을 해주어야 함
+      const date = now.getDate();
+      let day = ['일', '월', '화', '수', '목', '금', '토'];
+      // const dayIndex = now.getDay(); // 0:일~6:토
+      // day = day[dayIndex];
+      day = day[now.getDay()];
 
-    let nowYear = today.getFullYear(); 
-    let nowMonth = today.getMonth() + 1; 
-    let nowDate = today.getDate(); 
-    let nowDay = today.getDay(); //요일 0:일 ~ 7: 토
-    let nowHur = today.getHours(); 
-    let nowMin = today.getMinutes(); 
-    let nowSec = today.getSeconds(); 
+      let hour = now.getHours(); // 0~23
 
-    const now = new Date().getDay();
-    nowDay = ['일', '월', '화', '수', '목', '금', '토'];
+      /*
+      let ampm = '';
+      if(hour >= 12) {
+        ampm = '오후';
+      } else {
+        ampm = '오전';
+      }
+      */
+      const ampm = hour >= 12 ? '오후' : '오전'; // 삼항연산자로 작성. const ampm = 조건 ? 참일때 값 : 거짓일때 값;
 
-    const nowH = new Date().getHours();
-    hour = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
-    nowHur = ['AM',...hour];
-    
-    /*
-    if(nowHur >= 1 && nowHur <= 11  && 24 === nowHur) { //am
-      const nowHour = new Date.getHours();
-      hour = [1,2,3,4,5,6,7,8,9,10,11];
-      nowHur = ['AM', ...hour]
-    } else if(nowHur >= 12 && 23 >= nowHur) { //pm
+      hour = hour % 12; // 12시간제
+      hour = hour ? hour : 12; // 0시는 12시로 표현
+      // hour = hour ? hour(1~11까지는 참) : 12(나머지 값이 0이 되는 순간 거짓이기 때문에 12를 작성);
 
-    }
-    */
+      /* 두자리 숫자로 변경
+      if(hour < 10) {
+        hour = '0' + hour;
+      } else {
+        hour;
+      }
+      */
+      hour = hour < 10 ? '0' + hour : hour;
 
-    console.log(`${nowYear}년 ${nowMonth}월 ${nowDate}일 ${nowDay[now]}요일 ${nowHur[nowH]}:${nowMin}:${nowSec}`);
+      // .padStart(문자열 길이, '채워넣을문자');
+      const min = now.getMinutes().toString().padStart(2, '0');
+      const sec = now.getSeconds().toString().padStart(2, '0');
 
-    // document.querySelector('.title').innerText = output;
-   </script>
+
+      const output = `${year}년 ${month}월 ${date}일 ${day}요일 ${ampm} ${hour} : ${min} : ${sec}`;
+
+      document.querySelector('.title').innerText = output;
+
+      setTimeout(time, 1000);
+    })(); // 즉시실행함수. 스크립트 리더기를 만나면 (함수 호출하지 않아도) 즉시 실행.
+    // }
+
+    // setInterval(time, 1000); delay가 생기는 단점이 있음
+
+    // time();
+  </script>
 </body>
+
 </html>
