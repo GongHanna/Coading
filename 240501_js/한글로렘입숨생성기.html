@@ -9,7 +9,9 @@
 
 <body>
   <form>
-    <input type="number" id="amount">
+    <input type="number" id="amount"> 
+    <!-- 사용자가 입력하는 숫자 창 -->
+
     <button type="submit" class="create_btn">생성</button>
     <button type="submit" class="short_btn">짧게</button>
     <button type="submit" class="middle_btn">중간</button>
@@ -20,48 +22,54 @@
   <script>
     /* 
       1. 랜덤으로 한글 입숨 생성하기
-      2. input에 숫자 입력시 숫자 개수 만큼 랜덤 단어 출력
+      2. input에 숫자 입력시 숫자 개수 만큼 랜덤 단어를 p에 출력
       3. .repeat(); 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다
       4. 함수, for문, if문, document.querySelector(), addEventListener를 사용해주세요
+      5. 짧게 랜덤 단어 범위 : 10~15
+      5. 중간 랜덤 단어 범위 : 25~30
+      5. 길게 랜덤 단어 범위 : 40~50
     */
-    const dummyText = [
+    const dummyText = [ // 한글 단어를 포함하는 배열
       '계절이', '지나가는', '하늘에', '가을로', '있습니다', '나는', '걱정도', '아무', '없이', '가을 속의', '여름 하나', '별들을', '모두', '헤일 듯', '합니다', '가슴속에', '하나둘', '이제', '헤는 것은', '쉬이', '아침이', '오는', '까닭이요', '내일', '남은', '청춘이', '않은', '다하지', '아직', '별 하나에', '추억과', '사랑과', '쓸쓸함과', '동경과', '시와', '어머니', '한마디', '이국 소녀들의', '이름과', '꽃들 속에서', '바람들과', '비둘기들', '불러봅니다', '릴케의', '시선과', '북간도에', '계십니다', '별빛들', '우는 벌레는', '부끄러운', '지난 겨울에', '봄이 오면', '피어나듯이'
     ];
 
-    const randomText = (amount) => {
+    const randomText = (amount) => { // 'amount'만큼 랜덤 단어 생성하여 반환
       let result = "";
-      for (let i = 0; i < amount; i++) {
-        // 랜덤 인덱스를 선택하여 dummyText 배열에서 텍스트 조각을 가져옵니다.
+
+      for (let i = 0; i < amount; i++) { // 반복문을 통해 amount 만큼의 단어 생성
+        // 랜덤 인덱스를 선택하여 dummyText 배열에서 랜덤 단어 가져옴
         const randomIndex = Math.floor(Math.random() * dummyText.length);
-        // 결과에 텍스트 조각을 추가합니다.
+        // 결과에 텍스트 조각 추가
         result += dummyText[randomIndex];
 
-        // 다음 텍스트 조각 사이에 랜덤한 수의 공백 문자를 추가합니다.
-        if (i < amount - 1) {
+        // 다음 텍스트 조각 사이에 랜덤한 수의 공백 문자 추가
+        if (i < amount - 1) { // amount-1인 이유 : amount만큼 랜덤 단어 생성시 공백은 amount-1
           // 랜덤하게 1에서 5까지의 공백 수를 결정합니다.
           const spaces = Math.floor(Math.random() * 5) + 1;
+          // spaces 변수는 이 랜덤한 정수 값을 가지고 있으며, 이 값은 텍스트 조각 사이에 삽입할 공백의 수를 결정
           result += ' '.repeat(spaces);
         }
       }
-      return result;
+      return result; // 리턴써서 반환
     }
 
-    const createBtn = document.querySelector('.create_btn');
-    const resultText = document.querySelector('.result_text');
-    const amountInput = document.querySelector('#amount');
+    const createBtn = document.querySelector('.create_btn'); // 탐색 후 대입
+    const resultText = document.querySelector('.result_text'); // 탐색 후 대입
+    const amountInput = document.querySelector('#amount'); // 탐색 후 대입
 
-    createBtn.addEventListener('click', (e) => {
+    createBtn.addEventListener('click', (e) => { // 클릭 이벤트 시 적용될 함수 작성
       e.preventDefault(); // 버튼의 성격 제거. 새로고침(클릭했을 때 넘어감)
-      const amount = parseInt(amountInput.value, 10);
-      if (isNaN(amount) || amount <= 0) {
+      const amount = parseInt(amountInput.value, 10); // parseInt(string, radix);
+      if (isNaN(amount) || amount <= 0) { // 숫자가 아닐때, 0보다 작거나 같을 때의 참의 값
         resultText.innerHTML = "0 이상의 숫자를 입력해주세요";
-      } else {
+      } else { // 거짓의 값
         const result = randomText(amount);
         resultText.innerHTML = result;
       }
+
     });
 
-    const shortBtn = document.querySelector('.short_btn');
+    const shortBtn = document.querySelector('.short_btn'); // 탐색 후 대입
     const middleBtn = document.querySelector('.middle_btn');
     const longBtn = document.querySelector('.long_btn');
 
@@ -69,6 +77,7 @@
       e.preventDefault();
       // 짧게 버튼을 클릭했을 때 10~15개의 단어 출력
       const amount = Math.floor(Math.random() * 6) + 10; // 10~15개
+      // 10~15까지의 숫자 개수 = 6개, 시작범위는 10
       const result = randomText(amount);
       resultText.innerHTML = result;
     });
