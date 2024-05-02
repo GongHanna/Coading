@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>fadeIn+fadeOut+fadeToggle</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .box {
+      list-style: none;
+      margin: 0; padding: 0;
+      text-align: center;
+      font-weight: bold;
+    }
+    .box li {
+      width: 150px; height: 150px;
+    }
+    .box li:nth-child(1) { background-color: #A87676;}
+    .box li:nth-child(2) { background-color: #CA8787;}
+    .box li:nth-child(3) { background-color: #E1ACAC;}
+    .box li:nth-child(4) { background-color: #FFD0D0;}
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(function() {
+      $('#btn1').click(function() {
+        // == display : none;
+        $('li').eq(0).fadeOut(); // 서서히 사라짐
+        $('li').eq(1).fadeOut(500); 
+        $('li').eq(2).fadeOut('slow'); 
+        $('li').eq(3).fadeOut(2500); 
+      });
+      $('#btn2').on('click', () => {
+        $('li').eq(0).fadeIn(); // 서서히 나타남
+        $('li').eq(1).fadeIn('fast'); 
+        $('li').eq(2).fadeIn(2000); 
+        $('li').eq(3).fadeIn(3000); 
+      });
+      $('#btn3').on('click', () => {
+        $('li').eq(0).fadeToggle();
+        $('li').eq(1).fadeToggle(600); 
+        $('li').eq(2).fadeToggle(1200); 
+        $('li').eq(3).fadeToggle(1800); 
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>.fadeIn() .fadeOut() .fadeToggle()</h1>
+
+  <button class="btn" id="btn1">fadeOut()</button>
+  <button class="btn" id="btn2">fadeIn()</button>
+  <button class="btn" id="btn3">fadeToggle()</button>
+
+  <ul class="box">
+    <li>box1</li>
+    <li>box2</li>
+    <li>box3</li>
+    <li>box4</li>
+  </ul>
+
+</body>
+</html>
