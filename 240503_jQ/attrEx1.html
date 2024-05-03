@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>attrEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    p {
+      background-color: cornflowerblue;
+      width: calc(75vw - 26px);
+      padding: 10px;
+      border: 3px solid #000;
+    }
+    img {
+      width: 75vw;
+    }
+  </style>
+
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function() {
+      // 경로 확인
+      $('.btn1').on('click', () => {
+        const src = $('img').attr('src'); // src 속성을 읽음
+        $('p').text(`${src}`).css({backgroundColor : '#C4E4FF'});
+      });
+      // 대체 텍스트
+      $('.btn2').on('click', () => {
+        const alt = $('img').attr('alt'); // alt 속성을 읽음
+        $('p').text(`${alt}`).css({backgroundColor : '#FFC94A'});
+      });
+      // 가로 사이즈
+      $('.btn3').on('click', () => {
+        const wt1 = $('img').attr('width'); // img의 width 속성이 존재하지 않기 때문에 읽지 못함 
+        const wt2 = $('img').css('width'); 
+        $('p').text(wt2).css({backgroundColor : '#222831', color: '#fff'});
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>attrEx1</h1>
+  <button class="btn1">경로 확인</button>
+  <button class="btn2">대체 텍스트</button>
+  <button class="btn3">이미지 가로 사이즈</button>
+
+  <img src="./images/img1.jpg" alt="중꺾마 뜻 이미지">
+
+  <p>이 곳에 출력 됩니다</p>
+</body>
+</html>

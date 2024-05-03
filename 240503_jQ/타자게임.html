@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    #header {
+      background: #FFEC9E;
+      color: #fff;
+      line-height: 80px;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    #text {
+      color: #8EACCD;
+      font-size: 6rem;
+      padding: 30px;
+      font-weight: bold;
+    }
+
+    p {
+      padding: 10px;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    input {
+      line-height: 40px;
+      width: 400px;
+      padding-left: 20px;
+      border-radius: 10px;
+      font-size: 1.3rem;
+    }
+
+    button {
+      line-height: 40px;
+      width: 100px;
+      border-radius: 10px;
+      background-color: #B4B4B8;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+      1. 20개의 영단어가 랜덤으로 등장합니다.
+
+      2. 30초의 시간이 주어지며 1초씩 줄어듭니다. 30초의 시간이 지나면 게임이 종료됩니다.
+
+      3. 정답을 맞히면 점수가 1점씩 늘어납니다.
+
+      4. 게임 시작 전엔 "게임 시작", 게임 중일 땐 "게임 중", 게임 종료 시 "게임 종료" 문구가 적힌 버튼을 만들어 주세요.
+   -->
+  <div id="header">
+    재밌는 타자게임⌨️
+  </div>
+  <div>
+    <div id="text">
+      display
+    </div>
+    <p><input type="text" id="inputText"></p>
+    <p>남은시간: <span id="time">0</span>초 점수: <span id="score">0</span>점 </p>
+    <p><button id="gameBtn">게임시작</button></p>
+  </div>
+
+  <script>
+    let displayText = document.querySelector('#text');// 랜덤 영어 단어 뜨는 곳
+    let inputWord = document.querySelector('#inputText');// 사용자가 입력하는 창
+    let scoreDisplay = document.querySelector('#score');// 점수 표시
+    let timeDisplay = document.querySelector('#time');// 남은시간 표시
+    let btn = document.querySelector('#gameBtn');// 게임 상태 확인 버튼, 게임 시작/게임 중/ 게임 종료
+    let score = 0;// 숫자로 초기화
+    let time = 30;// 시작할 때의 시간, 30초
+    let isPlaying;// 게임 진행
+    let timeInterval;// 1초마다 시간 체크
+    // 글자배열
+    let texts = [
+      'display', 'float', 'background', 'color', 'position', 'clear', 'flex', 'textalign', 'fontweight', 'top',
+      'apple', 'style', 'Hippopotomonstrosesquippedaliophobia'/*긴 단어에 대한 공포*/, 'stress', 'hover', 'JavaScript',
+      'Floccinaucinihilipilification'/*소용없다고 생각함*/, 'document', 'input', 'reverberated'
+    ]
+    let randomNum = Math.floor(Math.random() * texts.length);
+    displayText.innerHTML = texts[randomNum];
+
+    btn.addEventListener('click', function () {// 게임시작 버튼을 클릭하면
+      if (isPlaying) return; // isPlaying 값을 true로 할당
+      btn.innerHTML = '게임중'; // 버튼의 값을 게임중으로 변경
+      isPlaying = true;   // 게임진행중
+      timeDisplay.innerHTML = time;   // 초기타임 지정
+      timeInterval = setInterval(timer, 1000);   // 1초마다 timer 함수를 실행
+    })
+    function timer() { // 타이머 함수
+      // 삼항 연산자. time(=30초)이 0 이상일 때 ture의 값 = 1초씩 줄어듬 : false일 때의 값 = 게임 종료
+      time > 0 ? time-- : isPlaying = false;
+      timeDisplay.innerHTML = time;
+
+      if (!isPlaying) { // 부정 연사자, 게임 종료 시
+        btn.innerHTML = '게임종료'; // 버튼에 게임종료
+        clearInterval(timeInterval);
+        /* 
+          게임 종료시 setInterval() 취소
+          1. 처음엔 작성하지 않았는데, 알림창이 계속 반복되고, 안닫힘. 게임을 새로 시작할 수 없게됨
+          2. 알림창을 지우고 확인해보니, 게임 시작으로 돌아가지 않아서 필수로 작성해야 함
+          그래서 책을 찾아보니, setInterval()함수 적용 시, clearInterval()을 사용하여 setInterval()취소 가능
+        */
+        alert('게임이 종료되었습니다'); //추가적으로 알람창 출력
+      }
+    }
+    inputWord.addEventListener('input', function () {
+      // input에 사용자가 값을 입력할 때의 이벤트 발생을 위해 addEventListener의 종류를 찾아보니 input이 나옴
+      // 'input' = <input>,<textarea>요소 값이 변경되었을 때 
+      if (!isPlaying) return;
+
+      if (displayText.innerHTML === inputWord.value) {  // 랜덤단어 뜨는 곳과 input의 값이 일치할 때
+        score += 1; //  점수를 1씩 더하기
+        let randomNum = Math.floor(Math.random() * texts.length); //랜덤 영단어
+        displayText.innerHTML = texts[randomNum];
+        inputWord.value = ""; // 사용자가 정답을 입력했을 때 작성한 값 초기화
+        scoreDisplay.innerHTML = score; // 정답일 때 점수창에 점수 1 증가해서 html 문서에 나타남
+      }
+    });
+
+    /* 
+      게임 종료 시 게임 종료 상태를 확인하기 어려워, 알림창 추가
+      같은 단어 중복
+    */
+  </script>
+
+</body>
+
+</html>

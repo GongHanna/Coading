@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>slideUpDownEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../assets/styles/reset.css">
+  <style>
+    .side-menu {
+      background-color: antiquewhite;
+      width: 250px;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
+    .side-menu .title {
+      background-color: #481E14;
+      color: #fff;
+      padding: 6px 10px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255,255,255,0.7);
+    }
+    .side-menu .title:hover {
+      background-color: #633529;
+    }
+    .side-menu p {
+      padding: 10px 10px 30px;
+      display: none;
+    }
+
+    /*
+    .menu {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+      width: 50%;
+    }
+    .menu li .title {
+      background-color: #002c12;
+      color: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #fff;
+    }
+    .menu li:last-child .title {
+      border-bottom: none;
+    }
+    .menu .des {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      background-color: #eafac8;
+      padding: 15px;
+      display: none;
+    }
+    */
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function() {
+      /* 첫 번째 제목을 클릭하면 첫번째 p가 내려가고 다른 p는 모두 올라감
+      $('.side-menu li').eq(0).children('h3').on('click', ()=> {
+        $('.side-menu li').eq(0).children('p').slideToggle();
+        $('.side-menu li').eq(1).children('p').slideUp();
+        $('.side-menu li').eq(2).children('p').slideUp();
+        $('.side-menu li').eq(3).children('p').slideUp();
+      });
+      $('.side-menu li').eq(1).children('h3').on('click', ()=> {
+        $('.side-menu li').eq(1).children('p').slideToggle();
+        $('.side-menu li').eq(0).children('p').slideUp();
+        $('.side-menu li').eq(2).children('p').slideUp();
+        $('.side-menu li').eq(3).children('p').slideUp();
+      });
+
+      $('.side-menu h3').on('click', (e) => {
+        $('.side-menu p').slideUp(); 
+        // 내가 클릭한 바로 그 h3의 바로 뒤 형제
+        $(e.target).next().stop().slideToggle();
+      });
+      */
+
+      $('.side-menu h3').on('click', (e) => {
+        $(e.target).next().stop().slideToggle().parent().siblings().find('p').slideUp();
+      });
+
+      // 1. 전부 닫고 내가 클릭한 것만 오픈
+      // 2. method chaning으로 클릭한 것 외 닫기
+    });
+
+    /*
+    $(function() {
+      $('.title1').on('click', ()=> {
+        $('.des1').stop().slideToggle();
+      });
+      $('.title2').on('click', ()=> {
+        $('.des2').stop().slideToggle();
+      });
+      $('.title3').on('click', ()=> {
+        $('.des3').stop().slideToggle();
+      });
+      $('.title4').on('click', ()=> {
+        $('.des4').stop().slideToggle();
+      });
+    });
+    */
+  </script>
+</head>
+
+<body>
+  <ul class="side-menu">
+    <li role="button">
+      <h3 class="title title1">menu1</h3>
+      <p class="des des1">한마디 북간도에 헤일 듯 비둘기들 모두 남은 별들을 있습니다 아침이 부끄러운 피어나듯이 햇살 속에 이제 시간의 소원을 내일 계절이 지나가는 나는 가을로 다하지 시간의 여름 하나 다하지 눈물과</p>
+    </li>
+    <li role="button">
+      <h3 class="title title2">menu2</h3>
+      <p class="des des2">까닭이요 나는 사랑과 가슴속에 이제 쓸쓸함과 시와 사랑과 추억과 아무 시와 가을 속의 서로를 오는 하려다 만 내일 있습니다 한마디 까닭이요 계절이 가을 속의지난 겨울에 호수 속에 이름과 여름 하나 한 마디의 봄이 오면</p>
+    </li>
+    <li role="button">
+      <h3 class="title title3">menu3</h3>
+      <p class="des des3">한 마디의 햇살 속에 남은가을로 모두 아침이 이듬 해 북간도에 동경과 바람들과하늘에 하려다 만 여름 하나 닮아 서로를 헤는 것은 계십니다 별빛들 이름과 닮아 사랑과 우는 벌레는 릴케의 지나가는 닮아 햇살 속에 여름 하나 이듬 해</p>
+    </li>
+    <li role="button">
+      <h3 class="title title4">menu4</h3>
+      <p class="des des4">피어나듯이 서로를 계절이 여름 하나 계절이 닮아 바람들과 기울어진 추억과지저귀는 바깥에서 불러봅니다 아침이 피어나듯이 북간도에 계절이 담아바람들과 까닭이요 모두</p>
+    </li>
+  </ul>
+</body>
+</html>
