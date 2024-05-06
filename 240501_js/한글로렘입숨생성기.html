@@ -5,11 +5,51 @@
   <meta charset="utf-8">
   <title>한글로렘입숨생성기</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+  <style>
+    body {
+      margin: 0;
+    }
+    h1 {
+      background-color: #9ccaff;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    form {
+      position: absolute;
+      left: 50%; top: 13%;
+      transform: translateX(-50%);
+    }
+    form #amount {
+      border: 1px solid #000;
+      outline: none;
+      padding: 7px;
+      margin: 10px;
+    }
+    form button {
+      background-color: #fff;
+      border: 1px solid #000;
+      padding: 6px 10px;
+    }
+    form button:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .result_text {
+      background-color: #fffbe6;
+      margin: 110px auto;
+      line-height: 1.5;
+      text-align: justify;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
+  <h1>한글 입숨 생성</h1>
   <form>
-    <input type="number" id="amount"> 
+    <input type="number" id="amount" placeholder="숫자를 입력해주세요">
     <!-- 사용자가 입력하는 숫자 창 -->
 
     <button type="submit" class="create_btn">생성</button>
@@ -17,7 +57,8 @@
     <button type="submit" class="middle_btn">중간</button>
     <button type="submit" class="long_btn">길게</button>
   </form>
-  <p class="result_text"></p>
+
+  <p class="result_text">내용이 표시됩니다</p>
 
   <script>
     /* 
