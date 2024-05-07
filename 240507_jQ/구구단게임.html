@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>구구단 게임</title>
+  <style>
+    body {
+      background-color: #efefef;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #eca8b2;
+      color: #fff;
+      margin: 0 auto;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    .question {
+      width: 150px;
+      margin: 50px auto 20px;
+      padding: 10px;
+      border: 3px solid palevioletred;
+      background-color: #f8ebed;
+      border-radius: 15px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    input {
+      width: 220px;
+      height: 20px;
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+    }
+
+    .time {
+      font-size: 1.5rem;
+    }
+
+    .time span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>구구단을 외자</h1>
+  <div id="question" class="question"></div>
+  <input type="text" id="answer" placeholder="정답을 입력하세요.">
+  <button onclick="checkAnswer()">제출</button>
+  <p id="result" class="answer"></p>
+  <p id="timer" class="time">남은 시간: <span id="time">30</span>초</p>
+
+  <script>
+    let question, answer;
+    let timeLeft = 30;
+    let timerId;
+    let correctAnswers = 0;
+    let answerHistory = document.createElement('div'); // 정답 내용을 누적할 변수
+
+    window.onload = function () {
+      document.body.appendChild(answerHistory); // 정답 히스토리를 문서에 추가
+      startGame();
+      timerId = setInterval(updateTimer, 1000);
+      // 남은 시간을 표시하는 요소를 마지막으로 옮김
+      document.body.appendChild(document.getElementById('timer'));
+    }
+
+    function startGame() {
+      generateQuestion();
+      timeLeft = 30;
+      updateTimer();
+      document.getElementById('result').innerText = '';
+      document.getElementById('answer').value = '';
+      document.getElementById('answer').disabled = false; // 입력창 활성화
+    }
+
+    function generateQuestion() {
+      const num1 = Math.floor(Math.random() * 9) + 1;
+      const num2 = Math.floor(Math.random() * 9) + 1;
+      question = `${num1} x ${num2}`;
+      answer = num1 * num2;
+      document.getElementById('question').innerText = question;
+    }
+
+    function checkAnswer() {
+      const userAnswer = parseInt(document.getElementById('answer').value);
+      const resultElement = document.getElementById('result');
+      if (userAnswer === answer) {
+        resultElement.innerText = '정답입니다!';
+        correctAnswers++;
+      } else {
+        resultElement.innerText = '틀렸습니다. 게임 종료!';
+        endGame(); // 틀렸을 때 게임 종료
+        return;
+      }
+
+      // 정답 내용 누적
+      const answerItem = document.createElement('p');
+      answerItem.innerText = `${question} = ${answer}`;
+      answerHistory.appendChild(answerItem);
+
+      if (correctAnswers === 5) {
+        resultElement.innerText = '축하합니다. 모든 문제를 맞췄습니다!';
+        endGame(); // 모든 문제를 맞췄을 때 게임 종료
+        return;
+      }
+
+      // 정답 맞췄을 때 다음 문제 출력
+      setTimeout(startGame, 1000);
+    }
+
+    function updateTimer() {
+      timeLeft--;
+      document.getElementById('time').innerText = timeLeft;
+      if (timeLeft === 0) {
+        clearInterval(timerId);
+        document.getElementById('result').innerText = '시간 초과! 다시 시도하세요.';
+        endGame(); // 제한 시간이 끝났을 때 게임 종료
+      }
+    }
+
+    function endGame() {
+      clearInterval(timerId);
+      document.getElementById('answer').disabled = true; // 입력창 비활성화
+    }
+  </script>
+
+</body>
+
+</html>

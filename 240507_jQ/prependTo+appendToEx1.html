@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>prependTo+appendToEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .box {
+      list-style: none;
+      margin: 50px auto;
+      padding: 0;
+      font-weight: bold;
+      font-size: 1.3rem;
+      border: 3px solid #000;
+      width: 200px; height: 200px;
+      text-align: center;
+      line-height: 200px;
+      overflow: hidden;
+    }
+
+    .box .item1 {
+      background-color: #EEC759;
+    }
+
+    .box .item2 {
+      background-color: #88AB8E;
+    }
+
+    .box .item3 {
+      background-color: #FF90BC;
+    }
+
+    .box .item4 {
+      background-color: #8ACDD7;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>prependTo+appendToEx1</h1>
+  <ul class="box">
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+  </ul>
+
+  <script>
+    // .appendTo();
+    const boxChange = () => $('.box li').first().appendTo('.box');
+
+    setInterval(boxChange, 2000);
+
+
+    /*
+    $(function () {
+
+      function movingBox() { 
+        $('.box li').eq(0).appendTo('.box');
+        setTimeout(() => movingBox(), 1500);
+      };
+
+      movingBox(0);
+    });
+    */
+  </script>
+</body>
+
+</html>

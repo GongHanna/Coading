@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>prependTo+appendToEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .gallery {
+      position: relative;
+      width: 500px; height: 480px;
+      margin: 50px auto;
+      border: 6px solid #000;
+      overflow: hidden;
+    }
+    .gallery li.style {
+      padding: 0;
+      list-style: none;
+    }
+    .gallery li img.style1 {
+      width: 100%;
+      vertical-align: top;
+    }
+    .gallery ul {
+      margin: 0; padding: 0;
+      list-style: none;
+    }
+    .gallery .btn-group li {
+      background-color: #000;
+      color: #fff;
+      font-weight: bold;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 1.7rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    .gallery .btn-group li:last-child {
+      right: 0;
+    }
+    .gallery .img-wrapper li img {
+      width: 100%;
+      vertical-align: top;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>prependTo+appendToEx2</h1>
+  <div class="gallery">
+    <ul class="btn-group">
+      <li>&lt;</li>
+      <li>&gt;</li>
+    </ul>
+    <ul class="img-wrapper">
+      <li><img src="./imgaes/1.jpg" alt="img1"></li>
+      <li><img src="./imgaes/2.jpg" alt="img2"></li>
+      <li><img src="./imgaes/3.jpg" alt="img3"></li>
+      <li><img src="./imgaes/4.jpg" alt="img4"></li>
+    </ul>
+  </div>
+
+  <script>
+    $('.btn-group li').on('click', () => {
+      $('.img-wrapper li').eq(0).appendTo('.gallery');
+      $('.gallery li').addClass('style');
+      $('.gallery li img').addClass('style1');
+    });
+  </script>
+</body>
+</html>

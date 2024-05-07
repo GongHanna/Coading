@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>타이머</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <script src="../../assets/jquery-3.7.1.min.js"></script>
+  <style>
+    h1 {
+      color: pink;
+      background-color: #000;
+      margin: 0;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .time {
+      font-size: 1.3rem;
+    }
+
+    .timer {
+      font-size: 1.8rem;
+    }
+
+    .comment {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>어서와~ 즐거운 자바스크립트 수업시간이야^^</h1>
+  <p class="comment"></p>
+  <p class="timer"></p>
+  <p class="time">현재 시간:</p>
+  <script>
+    (function time() {
+
+      const now = new Date();
+      let hour = now.getHours();
+      let min = now.getMinutes().toString().padStart(2, '0');
+      let sec = now.getSeconds().toString().padStart(2, '0');
+
+      const output = `현재 시간: ${hour}:${min}:${sec}`;
+
+      document.querySelector('.time').innerText = output;
+
+      setTimeout(time, 1000);
+
+      const ranC = bgc();
+      document.body.style.backgroundColor = ranC;
+    })();
+
+    (function RemainingTime() {
+      const now = new Date();
+      const nowYear = now.getFullYear();
+      const nowMonth = now.getMonth();
+      const nowDate = now.getDate();
+      const nowHours = now.getHours();
+      const nowMinutes = now.getMinutes();
+      const nowSeconds = now.getSeconds();
+
+      if ((nowHours == 9 && nowMinutes < 30) || nowHours < 9) {
+        const t = new Date(nowYear, nowMonth, nowDate, 9, 30);
+        const d = t.getTime() - now.getTime();
+
+        const Hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const Minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+        const Seconds = Math.floor((d % (1000 * 60)) / 1000).toString().padStart(2, 0);
+
+        const output = `${(Hours * 60) + Minutes} : ${Seconds}`;
+        document.querySelector('.timer').innerText = output;
+        document.querySelector('.comment').innerText = '자 곧 시작이닷~!';
+      }
+
+      if ((nowHours == 17 && nowMinutes >= 30) || nowHours > 17) {
+        const t = new Date(nowYear, nowMonth, nowDate + 1, 9, 30);
+        const d = t.getTime() - now.getTime();
+
+        const Hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const Minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+        const Seconds = Math.floor((d % (1000 * 60)) / 1000).toString().padStart(2, 0);
+
+        const output = `${(Hours * 60) + Minutes} : ${Seconds}`;
+
+        document.querySelector('.timer').innerText = output;
+        document.querySelector('.comment').innerText = '자 곧 시작이닷~!';
+      }
+      setTimeout(RemainingTime, 1000);
+    })();
+
+    (function lesson() {
+
+      const now = new Date();
+      const nowYear = now.getFullYear();
+      const nowMonth = now.getMonth();
+      const nowDate = now.getDate();
+      const nowHours = now.getHours();
+      const nowMinutes = now.getMinutes();
+      const nowSeconds = now.getSeconds();
+
+      const first = new Date(nowYear, nowMonth, nowDate, 10, 20);
+      const firstbreak = new Date(nowYear, nowMonth, nowDate, 10, 30);
+      const second = new Date(nowYear, nowMonth, nowDate, 11, 20);
+      const secondbreak = new Date(nowYear, nowMonth, nowDate, 11, 30);
+      const third = new Date(nowYear, nowMonth, nowDate, 12, 20);
+      const thirdbreak = new Date(nowYear, nowMonth, nowDate, 12, 30);
+      const fourth = new Date(nowYear, nowMonth, nowDate, 13, 20);
+      const fourthbreak = new Date(nowYear, nowMonth, nowDate, 13, 30);
+      const fifth = new Date(nowYear, nowMonth, nowDate, 14, 20);
+      const fifthbreak = new Date(nowYear, nowMonth, nowDate, 14, 30);
+      const sixth = new Date(nowYear, nowMonth, nowDate, 15, 20);
+      const sixthbreak = new Date(nowYear, nowMonth, nowDate, 15, 30);
+      const seventh = new Date(nowYear, nowMonth, nowDate, 16, 20);
+      const seventhbreak = new Date(nowYear, nowMonth, nowDate, 16, 30);
+      const eighth = new Date(nowYear, nowMonth, nowDate, 17, 20);
+      const eighthbreak = new Date(nowYear, nowMonth, nowDate, 17, 30);
+
+      const end1 = first.getTime() - now.getTime();
+      const end11 = firstbreak.getTime() - now.getTime();
+      const Minutes1 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds1 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output1 = `${Minutes1} : ${Seconds1}`;
+      const Minutes11 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds11 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output11 = `${Minutes11} : ${Seconds11}`;
+
+      const end2 = second.getTime() - now.getTime();
+      const end22 = secondbreak.getTime() - now.getTime();
+      const Minutes2 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds2 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output2 = `${Minutes1} : ${Seconds1}`;
+      const Minutes22 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds22 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output22 = `${Minutes11} : ${Seconds11}`;
+
+      const end3 = third.getTime() - now.getTime();
+      const end33 = thirdbreak.getTime() - now.getTime();
+      const Minutes3 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds3 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output3 = `${Minutes1} : ${Seconds1}`;
+      const Minutes33 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds33 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output33 = `${Minutes11} : ${Seconds11}`;
+
+      const end4 = fourth.getTime() - now.getTime();
+      const end44 = fourthbreak.getTime() - now.getTime();
+      const Minutes4 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds4 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output4 = `${Minutes1} : ${Seconds1}`;
+      const Minutes44 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds44 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output44 = `${Minutes11} : ${Seconds11}`;
+
+      const end5 = fifth.getTime() - now.getTime();
+      const end55 = fifthbreak.getTime() - now.getTime();
+      const Minutes5 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds5 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output5 = `${Minutes1} : ${Seconds1}`;
+      const Minutes55 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds55 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output55 = `${Minutes11} : ${Seconds11}`;
+
+      const end6 = sixth.getTime() - now.getTime();
+      const end66 = sixthbreak.getTime() - now.getTime();
+      const Minutes6 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds6 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output6 = `${Minutes1} : ${Seconds1}`;
+      const Minutes66 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds66 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output66 = `${Minutes11} : ${Seconds11}`;
+
+      const end7 = seventh.getTime() - now.getTime();
+      const end77 = seventhbreak.getTime() - now.getTime();
+      const Minutes7 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds7 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output7 = `${Minutes1} : ${Seconds1}`;
+      const Minutes77 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds77 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output77 = `${Minutes11} : ${Seconds11}`;
+
+      const end8 = eighth.getTime() - now.getTime();
+      const end88 = eighthbreak.getTime() - now.getTime();
+      const Minutes8 = Math.floor((end1 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds8 = Math.floor((end1 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output8 = `${Minutes1} : ${Seconds1}`;
+      const Minutes88 = Math.floor((end11 % (1000 * 60 * 60)) / (1000 * 60));
+      const Seconds88 = Math.floor((end11 % (1000 * 60)) / 1000).toString().padStart(2, 0);
+      const output88 = `${Minutes11} : ${Seconds11}`;
+
+      const ranC = bgc();
+
+      if ((nowHours == 9 && nowMinutes >= 30) || (nowHours > 9 && nowMinutes < 30) && (nowHours == 10 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '1교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output1;
+        if (nowHours == 10 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output11;
+        }
+      } else if ((nowHours == 10 && nowMinutes >= 30) || (nowHours > 10 && nowMinutes < 30) && (nowHours == 11 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '2교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output2;
+        if (nowHours == 11 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output22;
+        }
+      } else if ((nowHours == 11 && nowMinutes >= 30) || (nowHours > 11 && nowMinutes < 30) && (nowHours == 12 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '3교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output3;
+        if (nowHours == 12 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output33;
+        }
+      } else if ((nowHours == 12 && nowMinutes >= 30) || (nowHours > 12 && nowMinutes < 30) && (nowHours == 13 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '4교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output4;
+        if (nowHours == 13 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output44;
+        }
+      } else if ((nowHours == 13 && nowMinutes >= 30) || (nowHours > 13 && nowMinutes < 30) && (nowHours == 14 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '5교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output5;
+        if (nowHours == 14 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output55;
+        }
+      } else if ((nowHours == 14 && nowMinutes >= 30) || (nowHours > 14 && nowMinutes < 30) && (nowHours == 15 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '6교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output6;
+        if (nowHours == 15 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output66;
+        }
+      } else if ((nowHours == 15 && nowMinutes >= 30) || (nowHours > 15 && nowMinutes < 30) && (nowHours == 16 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '7교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output7;
+        if (nowHours == 16 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output77;
+        }
+      } else if ((nowHours == 16 && nowMinutes >= 30) || (nowHours > 16 && nowMinutes < 30) && (nowHours == 17 && nowMinutes < 20)) {
+        document.querySelector('.comment').innerText = '8교시 수업 시작^^';
+        document.querySelector('.timer').innerText = output8;
+        if (nowHours == 17 && nowMinutes >= 20) {
+          document.querySelector('.comment').innerText = '제발 좀 쉬어';
+          document.querySelector('.timer').innerText = output88;
+        }
+      }
+
+      setTimeout(lesson, 1000);
+    })();
+
+    function bgc() {
+      const randomcolor = Math.floor(Math.random() * 16777215).toString(16);
+
+      return "#" + randomcolor;
+    }
+
+
+  </script>
+</body>
+
+</html>

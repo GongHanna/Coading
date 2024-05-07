@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>toggleClassEx</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+  <style>
+    .btn {
+      border: 2px solid #000;
+      padding: 5px 7px;
+      background-color: #fff;
+    }
+    .btn:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .box {
+      border: 2px solid #ff8080;
+      width: 100px; height: 100px;
+      background-color: #F3CA52;
+      margin: 20px auto;
+      transition: .5s;
+    }
+    .box.bg {
+      width: 400px;
+      background-color: #03AED2;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function() {
+      $('.btn').on('click', () => {
+        $('.box').toggleClass('bg');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>toggleClassEx</h1>
+  <button class="btn">toggle</button>
+
+  <div class="box"></div>
+</body>
+</html>

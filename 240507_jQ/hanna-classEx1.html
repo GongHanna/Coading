@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>classEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="../assets/styles/reset.css">
+  <style>
+    .tab-menu {
+      display: flex;
+      margin: 50px auto;
+      width: 70vw;
+      position: relative;
+    }
+    .tab-menu li {
+      width: calc(70vw / 3);
+    }
+    .tab-menu #tab-html p {
+      position: absolute;
+    }
+    .tab-menu #tab-css p {
+      display: none;
+    }
+    .tab-menu #tab-js p {
+      display: none;
+    }
+    .tab-menu li .title {
+      text-transform: uppercase;
+      background-color: #A3D8FF;
+      padding: 10px 20px;
+      border-radius: 20px 20px 0 0;
+      text-align: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .tab-menu li p {
+      background-color: #A3D8FF;
+      padding: 10px 20px;
+    }
+    .tab-menu li p strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .tab-menu li p span {
+      line-height: 1.5;
+    }
+    .tab-menu #tab-html p.active {
+      position: absolute;
+      left: 0;
+      display: block;
+      background-color: #FFCBCB;
+    }
+    .tab-menu #tab-css p.click {
+      position: absolute;
+      left: 0;
+      display: block;
+      background-color: #FFCBCB;
+    }
+    .tab-menu #tab-js p.click {
+      position: absolute;
+      left: 0;
+      display: block;
+      background-color: #FFCBCB;
+    }
+    .tab-menu p.none {
+      display: none;
+    }
+    .tab-menu .title.style {
+      background-color: #FFCBCB;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+
+  <script>
+    $(function () {
+      $('.title').eq(0).on('click', () => { //html click
+        $('.tab-menu #tab-html p').addClass('active');
+        $('.tab-menu .title').eq(0).addClass('style');
+
+        $('.tab-menu #tab-css p').removeClass('click');
+        $('.tab-menu .title').eq(1).removeClass('style');
+
+        $('.tab-menu #tab-js p').removeClass('click');
+        $('.tab-menu .title').eq(2).removeClass('style');
+      }); 
+
+      $('.title').eq(1).on('click', () => { //css click
+        $('.tab-menu #tab-html p').addClass('none');
+        $('.tab-menu .title').eq(0).removeClass('style');
+
+        $('.tab-menu #tab-css p').addClass('click');
+        $('.tab-menu .title').eq(1).addClass('style');
+
+        $('.tab-menu #tab-js p').removeClass('click');
+        $('.tab-menu .title').eq(2).removeClass('style');
+      });
+
+      $('.title').eq(2).on('click', () => { //JavaScript click
+        $('.tab-menu #tab-css p').removeClass('click');
+        $('.tab-menu .title').eq(1).removeClass('style');
+
+        $('.tab-menu #tab-js p').addClass('click');
+        $('.tab-menu .title').eq(2).addClass('style');
+
+        $('.tab-menu #tab-html p').addClass('none');
+        $('.tab-menu .title').eq(0).removeClass('style');
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <ul class="tab-menu">
+    <li id="tab-html" class="active">
+      <h2 class="title">html5</h2>
+      <p>
+        <strong>html5 Tutorial</strong>
+        <span>슬퍼하는 피어나듯이 지난 겨울에 바깥에서 이름과 사랑과 닮아 쉬이 햇살 속에 아침이 눈물과 북간도에 피어나듯이 헤일 듯 지저귀는 여름 하나 많은 추억과 합니다 차오르는 차오르는 눈물과 추억과 소원을 기울어진 봄이 오면</span>
+      </p>
+    </li>
+    <li id="tab-css">
+      <h2 class="title">css3</h2>
+      <p>
+        <strong>css3 Tutorial</strong>
+        <span>시간의 소학교 까닭입니다 합니다 달의 부끄러운 하나둘 합니다 새겨지는 많은 별을 한 마디의 하나둘 한마디 이듬 해 꽃들 속에서 하나둘 청춘이 새겨지는 북간도에 무덤 가을 속의 서로를 시선과 오는 닮아</span>
+      </p>
+    </li>
+    <li id="tab-js">
+      <h2 class="title">JavaScript</h2>
+      <p>
+        <strong>JS Tutorial</strong>
+        <span>속의 말 가슴속에 이국 소녀들의 북간도에 어머니 남은 바람들과 담아 헤는 것은 바람들과 하나둘 까닭입니다 닮아 가을 속의 쓸쓸함과 많은 시선과 바깥에서 시간의 시간의 햇살 속에 쓸쓸함과 하나둘 시선과 이름과</span>
+      </p>
+    </li>
+  </ul>
+</body>
+</html>
