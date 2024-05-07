@@ -12,14 +12,6 @@
       border: 6px solid #000;
       overflow: hidden;
     }
-    .gallery li.style {
-      padding: 0;
-      list-style: none;
-    }
-    .gallery li img.style1 {
-      width: 100%;
-      vertical-align: top;
-    }
     .gallery ul {
       margin: 0; padding: 0;
       list-style: none;
@@ -66,9 +58,7 @@
 
   <script>
     $('.btn-group li').on('click', () => {
-      $('.img-wrapper li').eq(0).appendTo('.gallery');
-      $('.gallery li').addClass('style');
-      $('.gallery li img').addClass('style1');
+      $('.img-wrapper li').eq(0).appendTo('.img-wrapper');
     });
   </script>
 </body>
