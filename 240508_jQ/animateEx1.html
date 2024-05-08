@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>animateEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #82a4ec;
+      position: relative;
+    }
+
+    button {
+      padding: 5px 10px;
+      border: 3px solid #000;
+      background-color: #fff;
+      font-size: 1.1rem;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <button id="btn1">왼쪽</button>
+  <button id="btn2">오른쪽</button>
+
+  <div class="box">애니메이션</div>
+
+  <script>
+    // 왼쪽 버튼 클릭 했을 때
+    $("#btn1").on('click', () => {
+      // 마이너스 대입 연산자, 왼쪽 기준
+      $('.box').animate({ left: "-=50px" });
+    });
+    // 오른쪽 버튼 클릭 했을 때
+    $("#btn2").on('click', () => {
+      // 플러스 대입 연산자, 왼쪽 기준
+      $('.box').animate({ left: "+=50px" });
+    });
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode
+    // (e.key === 'enter') || (e.key === 13)
+    $(document).keydown((e) => {
+      switch (e.key) {
+        case "ArrowLeft":
+          $('.box').animate({ left: "-=50px" });
+          break;
+
+        case "ArrowRight":
+          $('.box').animate({ left: "+=50px" });
+          break;
+      }
+    });
+
+  </script>
+</body>
+
+</html>

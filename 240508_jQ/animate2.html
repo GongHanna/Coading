@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>animate2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    .box { 
+      width: 100px; height: 100px;
+      background-color: #9ba9c7;
+      position: relative;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <h1>animate2</h1>
+  <button id="btn1">실행</button>
+  <button id="btn2">순차실행1</button>
+  <button id="btn3">순차실행2</button>
+
+  <div class="box">애니메이션</div>
+
+  <script>
+    // 첫번째 버튼 클릭 시, width, height, margin-top, 오른쪽으로 이동
+    $('#btn1').on('click', () => {
+      $('.box').animate({
+        width : 300,
+        height : 300,
+        marginTop : 100,
+        left: 300
+      }, 800, 'linear');
+    });
+
+    $('#btn2').on('click', () => {
+      $('.box').animate({ width: 300 }, 300, 'linear', () => {
+        $('.box').animate({ height: 300}, 400, 'easeOutCubic', () => {
+          $('.box').animate({ marginTop: 100}, 500, 'easeInBounce', () => {
+            $('.box').animate({ transform: 'translateX(300px)'}, 1000, 'easeInOutElastic');
+          });
+        });
+      });
+    });
+
+    $('#btn3').on('click', () => {
+      $('.box').animate({ width: 300 }, 300, 'linear').animate({ height: 300}, 400, 'easeOutCubic').animate({ marginTop: 100}, 500, 'easeInBounce').animate({ left: 300 }, 1000).css({ backgroundColor : '#5BBCFF'});
+    });
+  </script>
+</body>
+</html>

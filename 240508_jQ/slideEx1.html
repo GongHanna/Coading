@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>slideEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body {
+      margin: 0;
+    }
+    ul {
+      margin: 0; padding: 0;
+      list-style: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+      position: absolute;
+      z-index: -99;
+      transition: .3s;
+      opacity: 0;
+    }
+    .gallery {
+      width: 100%;
+      height: 70vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery .btn-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      width: 100%; height: 100%;
+    }
+    .gallery .btn-group li {
+      background-color: rgba(0,0,0,0.7);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center;
+      width: 50px; height: 50px;
+      line-height: 50px;
+      cursor: pointer;
+      transition: .2s;
+      user-select: none;
+    }
+    /* .gallery .img-group li {
+      width: 100%; height: 50vh;
+      color: #fff;
+      font-size: 10rem;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+    .gallery .img-group li:nth-child(1) {background-color: aqua;}
+    .gallery .img-group li:nth-child(2) {background-color: yellow;}
+    .gallery .img-group li:nth-child(3) {background-color: violet;}
+    .gallery .img-group li:nth-child(4) {background-color: brown;} */
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <div class="gallery">
+    <ul class="btn-group">
+      <li>&lt;</li>
+      <li>&gt;</li>
+    </ul>
+    <ul class="img-group">
+      <li><img src="./images/11.jpg" alt="img1"></li>
+      <li><img src="./images/22.jpg" alt="img2"></li>
+      <li><img src="./images/33.jpg" alt="img3"></li>
+      <li><img src="./images/44.jpg" alt="img4"></li>
+      <!-- <li>bg1</li>
+      <li>bg2</li>
+      <li>bg3</li>
+      <li>bg4</li> -->
+    </ul>
+  </div>
+
+  <script>
+    const imgChange = () => $('.img-group li').first().appendTo('.img-group').children('img').animate({ opacity : 1 });
+    setInterval(imgChange, 2000);
+
+    $('.btn-group li').first().on('click', () => {
+      $('.img-group li:last-child').prependTo('.img-group').children('img').animate({ opacity : 1 });
+    });
+    $('.btn-group li').last().on('click', () => {
+      $('.img-group li:first-child').appendTo('.img-group').children('img').animate({ opacity : 1 });
+    });
+  </script>
+</body>
+</html>

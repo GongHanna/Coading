@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>animateEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    ul { list-style: none; margin: 0; padding: 0; }
+    img { width: 100%; vertical-align: top; }
+
+    .container {
+      width: 80vw;
+      min-width: 400px;
+      margin: 50px auto;
+      border: 3px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .container .btn-group {
+      display: flex; 
+      justify-content: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      z-index: 999;
+    }
+    .container .btn-group li {
+      text-indent: -9999px;
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 20px; height: 20px;
+      margin: 6px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .container .btn-group li:hover {
+      background-color: rgb(255, 255, 255);
+    }
+    .container .img-group {
+      display: flex;
+      outline: 3px solid rgba(255, 0, 0, 0.5);
+      width: 400%; /* img 개수. 부모인 .container의 4배 */
+      position: relative;
+    }
+    .container .img-group li {
+      width: 25%; /* 부모인 ul을 기준으로 1/4을 차지해야 하므로 */
+    }
+    /*
+    .gallery {
+      width: 500px; height: 500px;
+      margin: 50px auto;
+      border: 3px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery img {
+      width: 500px; height: 500px;
+      vertical-align: top;
+    }
+    .gallery .btn-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      width: 100%; height: 100%;
+    }
+    .gallery .btn-wrapper div {
+      background-color: rgba(225, 225, 225, 0.7);
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      margin: 0 5px 10px;
+      cursor: pointer;
+    }
+    .gallery .btn-wrapper div:hover {
+      background-color: #fff;
+    }
+    .gallery .img-wrapper {
+      display: flex;
+    }
+    */
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="btn-group">
+      <li>첫번째 이미지 버튼</li>
+      <li>두번째 이미지 버튼</li>
+      <li>세번째 이미지 버튼</li>
+      <li>네번째 이미지 버튼</li>
+    </ul>
+    <ul class="img-group">
+      <li><img src="./images/1.jpg" alt="img1"></li>
+      <li><img src="./images/2.jpg" alt="img2"></li>
+      <li><img src="./images/3.jpg" alt="img3"></li>
+      <li><img src="./images/4.jpg" alt="img4"></li>
+    </ul>
+  </div>
+  <!-- <div class="gallery">
+    <div class="btn-wrapper">
+      <div class="btn1"></div>
+      <div class="btn2"></div>
+      <div class="btn3"></div>
+      <div class="btn4"></div>
+    </div>
+
+    <div class="img-wrapper">
+      <div class="img1"><img src="./images/1.jpg" alt="img1"></div>
+      <div class="img2"><img src="./images/2.jpg" alt="img2"></div>
+      <div class="img3"><img src="./images/3.jpg" alt="img3"></div>
+      <div class="img4"><img src="./images/4.jpg" alt="img4"></div>
+    </div>
+  </div> -->
+
+  <script>
+    /*
+    $('.btn-group li').eq(0).on('click', () => {
+      // $('.img-group').animate({ left : 0 }, 300, 'linear');
+      $('.img-group').animate({ marginLeft : 0 }, 300, 'linear');
+    });
+    $('.btn-group li').eq(1).on('click', () => {
+      $('.img-group').animate({ marginLeft : '-100%' }, 300, 'linear');
+    });
+    $('.btn-group li').eq(2).on('click', () => {
+      $('.img-group').animate({ marginLeft : '-200%' }, 300, 'linear');
+    });
+    $('.btn-group li').eq(3).on('click', () => {
+      $('.img-group').animate({ marginLeft : '-300%' }, 300, 'linear');
+    });
+    */
+
+    $('.btn-group li').on('click', (e) => { // 내가 클릭한 그 요소의 인덱스 번호를 가져와서 작업
+      const idx = $(e.target).index();
+      console.log(idx);
+      // $('.img-group').animate({ marginLeft : -100 * idx + '%' }, 300, 'linear');
+      const containerWt = $('.container').width(); // px로 반환
+      console.log(containerWt);
+      $('.img-group').animate({ marginLeft : -containerWt * idx + 'px' }, 300, 'linear');
+    });
+  </script>
+</body>
+</html>
