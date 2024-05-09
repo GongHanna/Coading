@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>slideEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body {
+      margin: 0;
+    }
+    .simple-slide {
+      width: 100%;
+      margin: 0 auto;
+      height: 80vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .simple-slide ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-indent: -999px;
+    }
+    .simple-slide .slide-wrapper .slide-item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: no-repeat 50% / cover;
+      top: 0;
+      left: 0;
+      background: no-repeat 50% / cover;
+      transition: 0.4s;
+      transform: translateX(100%);
+    }
+    .simple-slide .slide-wrapper .slide-item.active {
+      transform: translateX(0);
+    }
+    .simple-slide .slide-wrapper #bg1 {
+      background-image: url(https://placehold.co/1000x600/DD761C/1B3C73?text=bg1);
+    }
+    .simple-slide .slide-wrapper #bg2 {
+      background-image: url(https://placehold.co/1000x600/6DC5D1/1B3C73?text=bg2);
+    }
+    .simple-slide .slide-wrapper #bg3 {
+      background-image: url(https://placehold.co/1000x600/FFAA80/1B3C73?text=bg3);
+    }
+    .simple-slide .slide-wrapper #bg4 {
+      background-image: url(https://placehold.co/1000x600/7469B6/1B3C73?text=bg4);
+    }
+    .simple-slide .slide-button {
+      position: absolute;
+      bottom: 10px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .simple-slide .slide-button li {
+      width: 25px; height: 10px;
+      margin: 5px;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .simple-slide .slide-button li.color {
+      background-color: rgb(7, 0, 110);
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <!-- 자동으로 옆으로 움직임 버튼과 같이/ 옆으로 넘어감, 버튼 클릭하면 그 페이지로 이동, 마우스를 위해 올리면 멈춤(clearInterval) -->
+  <div class="simple-slide">
+    <ul class="slide-wrapper">
+      <li class="slide-item active" id="bg1">bg1</li>
+      <li class="slide-item" id="bg2">bg2</li>
+      <li class="slide-item" id="bg3">bg3</li>
+      <li class="slide-item" id="bg4">bg4</li>
+    </ul>
+    <ul class="slide-button">
+      <li id="btn1">버튼1</li>
+      <li id="btn2">버튼2</li>
+      <li id="btn3">버튼3</li>
+      <li id="btn4">버튼4</li>
+    </ul>
+  </div>
+
+  <script>
+    let idx = 0;
+    function nextSlide() {
+      $('.slide-wrapper .slide-item').eq(idx).removeClass('active');
+      $('.simple-slide .slide-button li').eq(idx).removeClass('color');
+
+      idx++; 
+
+      const slideItems = $('.slide-wrapper .slide-item').length;
+
+      if (idx >= slideItems) {
+        idx = 0; 
+      }
+
+      $('.slide-wrapper .slide-item').eq(idx).addClass('active');
+      $('.simple-slide .slide-button li').eq(idx).addClass('color');
+    };
+
+    const prevSlide = () => {
+      $('.slide-wrapper .slide-item').eq(idx).removeClass('active');
+      $('.simple-slide .slide-button li').eq(idx).removeClass('color');
+
+      idx--;
+
+      if(idx < 0) {
+        idx = $('.slide-wrapper .slide-item').length - 1;
+      }
+
+      $('.slide-wrapper .slide-item').eq(idx).addClass('active');
+      $('.simple-slide .slide-button li').eq(idx).addClass('color');
+    };
+    setInterval(nextSlide, 3000);
+  </script>
+</body>
+</html>

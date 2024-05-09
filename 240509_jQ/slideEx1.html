@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>slideEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .simple-slide {
+      width: 100%;
+      margin: 0 auto;
+      height: 60vh;
+      position: relative;
+    }
+
+    .simple-slide ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .simple-slide .slide-wrapper .slide-item {
+      text-indent: -999px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* 전부 다 같은 위치에 두려고 함 */
+      background: no-repeat 50% / cover;
+      transition: 0.4s;
+      opacity: 0;
+    }
+
+    .simple-slide .slide-wrapper #bg1 {
+      background-image: url(https://placehold.co/1000x600/DD761C/fff?text=bg1);
+    }
+
+    .simple-slide .slide-wrapper #bg2 {
+      background-image: url(https://placehold.co/1000x600/6DC5D1/fff?text=bg2);
+    }
+
+    .simple-slide .slide-wrapper #bg3 {
+      background-image: url(https://placehold.co/1000x600/FFAA80/fff?text=bg3);
+    }
+
+    .simple-slide .slide-wrapper #bg4 {
+      background-image: url(https://placehold.co/1000x600/7469B6/fff?text=bg4);
+    }
+
+    .simple-slide .slide-wrapper .slide-item.active {
+      opacity: 1;
+    }
+
+    .simple-slide .slide-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .simple-slide .slide-button li {
+      cursor: pointer;
+      user-select: none;
+      background-color: rgba(255, 255, 255, 0.6);
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .simple-slide .slide-button li:hover {
+      background-color: rgba(255, 255, 255, 1);
+      font-size: 2rem;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <script src="../assets/jquery-ui.min.js"></script>
+</head>
+
+<body>
+  <div class="simple-slide">
+    <ul class="slide-wrapper">
+      <li class="slide-item active" id="bg1">bg1</li>
+      <li class="slide-item" id="bg2">bg2</li>
+      <li class="slide-item" id="bg3">bg3</li>
+      <li class="slide-item" id="bg4">bg4</li>
+    </ul>
+    <ul class="slide-button">
+      <li id="prevBtn">&lt;</li>
+      <li id="nextBtn">&gt;</li>
+    </ul>
+  </div>
+
+  <script>
+    // next 버튼 클릭 시 이후 == 슬라이드 움직임과 동일
+    let idx = 0;
+    function nextSlide() {
+      $('.slide-wrapper .slide-item').eq(idx).removeClass('active');
+
+      idx++; // 버튼을 클릭하면 idx 증가
+
+      const slideItems = $('.slide-wrapper .slide-item').length;
+
+      if (idx >= slideItems) {
+        idx = 0; // 초기화. 0, 1, 2, 3만 반복되게
+      }
+
+      $('.slide-wrapper .slide-item').eq(idx).addClass('active');
+      // 순서 중요. 먼저 class 지움 ->  index 숫자 증가 -> 조건문 사용해 0,1,2,3까지 제한 -> 클래스 추가
+    }
+
+    const prevSlide = () => {
+      $('.slide-wrapper .slide-item').eq(idx).removeClass('active');
+      idx--;
+
+      if(idx < 0) { // 인덱스 번호가 0보다 작아지면 안됨
+        idx = $('.slide-wrapper .slide-item').length - 1;
+      }
+
+      $('.slide-wrapper .slide-item').eq(idx).addClass('active');
+    }
+
+    // ()까지 붙이면 바로 호출되서 작동되기 때문에 클릭 시 작동이 되게 이름만 작성
+    $('#nextBtn').on('click', nextSlide);
+
+    // prev 버튼 클릭 시 이전
+    $('#prevBtn').on('click', prevSlide);
+
+    setInterval(nextSlide, 3000);
+  </script>
+</body>
+
+</html>
