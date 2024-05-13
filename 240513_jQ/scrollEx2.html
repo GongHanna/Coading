@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>scrollEx2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body { margin: 0; }
+    header {
+      width: 100%;
+      border-bottom: 3px solid #000;
+      position: fixed;
+      top: 0; left: 0;
+      transition: .3s;
+    }
+    header .global-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px; 
+      height: 60px;
+      background-color: #ffe5c9;
+    }
+    header .global-menu li a {
+      text-decoration: none;
+      color: inherit;
+      text-transform: capitalize;
+      margin: 10px;
+      font-weight: bold;
+    }
+    main {
+      height: 200vh;
+      padding-top: 200px;
+      background-color: #f7bbbb;
+    }
+    main h2 {
+      text-align: center;
+      font-size: 3rem;
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <ul class="global-menu">
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </header>
+  <main>
+    <h2>scrollEx2</h2>
+  </main>
+
+  <script>
+    // 스크롤이 내려가면 헤더가 사라지고, 스크롤이 올라가면 헤더가 내려옴
+    // addEventListener('scroll', ()=>{})
+    
+    // 브라우저를 열면 바로 읽음. 보통은 0
+    let prevScroll = window.scrollY;
+    console.log('prevScroll', prevScroll);
+
+    $(window).on('scroll', () => {
+      // 스크롤을 하면, scrollY의 값 반환
+      let currentScroll = window.scrollY;
+      console.log('currentScroll', currentScroll);
+
+      if(prevScroll > currentScroll) { // 스크롤을 올리면 헤더가 보임
+        // $('header').show();
+        // $('header').slideDown();
+        $('header').css({ top: 0});
+      } else { // 스크롤을 올리면 헤더가 숨김
+        // $('header').hide();
+        // $('header').slideUp();
+        $('header').css({ top: -80});
+      }
+
+      // prev에 현재 스크롤 값 재할당
+      prevScroll = currentScroll;
+      console.log('재할당 된 prevScroll', prevScroll);
+    });
+  </script>
+</body>
+</html>

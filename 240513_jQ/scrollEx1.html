@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>scrollEx1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    /* html { scroll-behavior: smooth; } */
+
+    .box { height: 300vh; }
+    .go-to-up {
+      text-decoration: none;
+      position: fixed;
+      right: 40px; bottom: 40px;
+      font-size: 3rem;
+
+      transition: .3s;
+      animation: raccoon infinite .3s ease-in-out;
+      opacity: 0;
+      pointer-events: none; /* 마우스 성격 제어 */
+    }
+    @keyframes raccoon {
+      0%, 100% {
+        transform: translateX(5px) rotate(5deg);
+      }
+      50% {
+        transform: translateX(0) rotate(-5deg);
+      }
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <div class="box">
+    <h1>scrollEx1</h1>
+  </div>
+
+  <a href="#" class="go-to-up">🦝</a>
+
+  <script>
+    // 버튼을 클릭했을 때 스크롤이 부드럽게 맨 위로 올라가고 버튼 사라짐
+
+    $(window).on('scroll', (e) => {
+      /* scrollTop은 대상 객체 필요
+      const scrollTop = $(e.target).scrollTop();
+      if(scrollTop > 300) {
+        $('.go-to-up').css({ opacity: 1, pointerEvents: 'auto' });
+      } else {
+        $('.go-to-up').css({ opacity: 0, pointerEvents: 'none' });
+      }
+      */
+
+      if(scrollY > 300) {
+        $('.go-to-up').css({ opacity: 1, pointerEvents: 'auto' });
+      } else {
+        $('.go-to-up').css({ opacity: 0, pointerEvents: 'none' });
+      }
+    });
+
+    // const goToUp = document.querySelector('.go-to-up');
+    $('.go-to-up').on('click', (e) => {
+      e.preventDefault();
+      // $('html, body').animate({ scrollTop: 0 });
+      scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+  </script>
+</body>
+</html>
