@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/*----- header -----*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #164863;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 20px;
+}
+header .title {
+  user-select: none;
+  /* pointer-events: none; 마우스 이벤트 제어 */
+}
+header .title strong {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 16px;
+  margin-right: 10px;
+}
+header .title span {
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+
+/*- nav -*/
+header .menu-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 모바일 메뉴 */
+header .menu-wrapper .mobile-button {
+  background-color: #427D9D;
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+
+  display: none;
+}
+header .menu-wrapper .mobile-button span {
+  display: block;
+  width: 25px; height: 2px;
+  background-color: #fff;
+}
+header .menu-wrapper .mobile-button .bar2 {
+  width: 20px;
+  margin: 6px 0;
+}
+header .menu-wrapper .mobile-button.toggle-btn .bar1 {
+  transform: translateY(8px) rotate(45deg);
+}
+header .menu-wrapper .mobile-button.toggle-btn .bar2 {
+  transform: scale(0);
+}
+header .menu-wrapper .mobile-button.toggle-btn .bar3 {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* pc 메뉴 */
+header .menu-wrapper .global-menu {
+  display: flex;
+  gap: 30px;
+}
+
+/*- 스크롤시 header 변경 -*/
+header.active {
+  height: 80px;
+  background-color: #7C81AD;
+  box-shadow: 0 1px 2px rgba(0,0,0,.7); /* box-shadow는 border와 달리 요소의 크기에 영향을 주지 않음  */
+}
+header.active .title span {
+  opacity: 0;
+}
+
+/*- PC header -*/
+/* @media screen and (width < 768px) {} */
+@media screen and (max-width: 768px) {
+  /* 모바일 메뉴 */
+  header .menu-wrapper .mobile-button {
+    display: grid;
+  }
+  header .menu-wrapper .global-menu {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #292727;
+    color: #fff;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    flex-flow: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  header .menu-wrapper .global-menu  a {
+    display: block;
+    opacity: 0;
+  }
+  header .menu-wrapper .global-menu .show-menu {
+    height: 200px;
+    padding: 10px;
+  }
+  header .menu-wrapper .global-menu .show-menu a {
+    opacity: 1;
+  }
+}
+
+/*----- slide -----*/
+.slide-wrapper { 
+  background-color: #F9F3CC;
+  margin-top: 80px;
+  height: 50vh;
+  font-size: 3rem;
+}
+
+/*----- contents -----*/
+article {
+  font-size: 3rem;
+  height: calc(100vh - 80px);
+}
+#content1 { background-color: #FF6969; }
+#content2 { background-color: #B5CB99; }
+#content3 { background-color: #AED2FF; }
+#content4 { background-color: #F4E869; }
