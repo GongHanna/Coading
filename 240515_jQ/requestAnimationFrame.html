@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>requestAnimationFrame</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    /* * {
+      cursor: none;
+    } */
+    body {
+      margin: 0;
+      height: 100vh;
+      cursor: none;
+    }
+    .emoji {
+      background-color: rgba(255, 105, 180,0.8);
+      box-shadow: 0 0 5px rgb(179, 56, 117),  0 0 10px rgba(255, 105, 180,1);
+      padding: 4px;
+      border-radius: 50%;
+      position: fixed;
+      top: 20px; left: 20px;
+      font-size: 2rem;
+      pointer-events: none;
+
+      will-change: transform;
+      /* 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
+        will-change : css로 웹사이트 성능 향상
+          -> 실제로 요구되기 전에 미리 준비하고 있도록 브라우저에게 알림
+        auto; 기본값
+        scroll-position; 스크롤 위치 바꿈
+        contents; 컨텐츠 바꿈
+        그 외 css 속성 사용 가능
+      */
+    }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <h1>window.requestAnimationFrame()</h1>
+  <h2>화면에 프레임이 실행되기 전 함수 호출</h2>
+  <a href="https://developer.mozilla.org/ko/docs/Web/API/window/requestAnimationFrame" target="_blank">MDN</a>
+
+  <div class="emoji">✨</div>
+
+  <script>
+    /* 
+      requestAnimationFrame(callback);
+        ㄴ 콜백함수: 애니메이션 업데이트 할 때 호출할 함수
+        ㄴ 반환값 : 요청 id인 long 정수 값(0이 아닌 값)
+    */
+     const emoji = document.querySelector('.emoji');
+     $('.emoji');
+   
+    // 마우스 커서 좌표
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    // $(window).on('mousemove', () => {})
+    addEventListener('mousemove', (e) => {
+      mouseX = e.clientX - 35;
+      mouseY = e.clientY - 35;
+      console.log(mouseX, mouseY);
+    });
+
+    // 마우스 커서를 따라 다니는 이모지 좌표
+    let emojiX = 0;
+    let emojiY = 0;
+
+    // 호출
+    const emojiMov = () => {
+      requestAnimationFrame(emojiMov); // 연속 호출 필요. 다음 프레임 요청
+
+      emojiX += (mouseX - emojiX) * 0.1;
+      emojiY += (mouseY - emojiY) * 0.1;
+
+      emoji.style.transform = `translate(${emojiX}px, ${emojiY}px)`;
+    }
+
+    emojiMov();
+  </script>
+</body>
+</html>

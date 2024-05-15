@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>horizontalScrolling2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+    body{ 
+      margin: 0;
+      overflow-x: hidden;
+      font-size: 1.5rem;
+      font-weight: bold; 
+    }
+    body * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      list-style: none;
+    }
+    .box {
+      height: 100vh;
+      background-color: #68D2E8;
+    }
+    .box:nth-of-type(1) { background-color: #C73659; }
+    .box:nth-of-type(2) { background-color: #FFDB5C; }
+    .box:nth-of-type(3) { background-color: #40A578; }
+
+    .horizontal-container {
+      width: 100%;
+      position: relative;
+      text-align: center;
+    }
+    .horizontal-container .sticky-box {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .horizontal-container .sticky-box .horizontal-inner-box {
+      position: absolute;
+      display: flex;
+      width: 300%;
+    }
+    .horizontal-container .sticky-box .horizontal-inner-box li {
+      width: 100%;
+      height: 100vh;
+    }
+    .horizontal-container .sticky-box .horizontal-inner-box .row1 { background-color: #F8C794; }
+    .horizontal-container .sticky-box .horizontal-inner-box .row2 { background-color: #E3FEF7; }
+    .horizontal-container .sticky-box .horizontal-inner-box .row3 { background-color: #C6EBC5; }
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <section class="box">
+    <h1>box1</h1>
+  </section>
+  <!-- 가로 스크롤 영역 -->
+  <div class="horizontal-container">
+    <!-- pos: sticky -->
+    <div class="sticky-box">
+      <!-- 실제 가로로 움직이는 영역 -->
+      <ul class="horizontal-inner-box">
+        <li class="row1">row-box1</li>
+        <li class="row2">row-box2</li>
+        <li class="row3">row-box3</li>
+      </ul>
+    </div>
+  </div>
+  <section class="box">
+    <h1>box3</h1>
+  </section>
+  <section class="box">
+    <h1>box4</h1>
+  </section>
+
+  <script>
+    const horizontalContainer = document.querySelector('horizontal-container');
+    const stickyBox = document.querySelector('.sticky-box');
+    const innerBox = document.querySelector('.horizontal-inner-box');
+
+    // addEventListener('scroll', scrolled);
+  </script>
+</body>
+</html>

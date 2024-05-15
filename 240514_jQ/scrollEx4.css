@@ -74,11 +74,18 @@ header .menu-wrapper .global-menu {
 /*- 스크롤시 header 변경 -*/
 header.active {
   height: 80px;
-  background-color: #7C81AD;
-  box-shadow: 0 1px 2px rgba(0,0,0,.7); /* box-shadow는 border와 달리 요소의 크기에 영향을 주지 않음  */
+  background-color: #ff0080;
+  box-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+header.active .title {
+  user-select: none;
+  /* pointer-events: none; 마우스 이벤트 제어 */
 }
 header.active .title span {
   opacity: 0;
+}
+header.active + .slide-wrapper {
+  margin-top: 80px;
 }
 
 /*- PC header -*/
@@ -90,7 +97,7 @@ header.active .title span {
   }
   header .menu-wrapper .global-menu {
     position: absolute;
-    top: 100px;
+    top: 100%;
     left: 0;
     background-color: #292727;
     color: #fff;
@@ -102,15 +109,15 @@ header.active .title span {
     justify-content: center;
     text-align: center;
   }
-  header .menu-wrapper .global-menu  a {
+  header .menu-wrapper .global-menu a {
     display: block;
     opacity: 0;
   }
-  header .menu-wrapper .global-menu .show-menu {
+  header .menu-wrapper .global-menu.show-menu {
     height: 200px;
     padding: 10px;
   }
-  header .menu-wrapper .global-menu .show-menu a {
+  header .menu-wrapper .global-menu.show-menu a {
     opacity: 1;
   }
 }
@@ -118,7 +125,7 @@ header.active .title span {
 /*----- slide -----*/
 .slide-wrapper { 
   background-color: #F9F3CC;
-  margin-top: 80px;
+  margin-top: 100px;
   height: 50vh;
   font-size: 3rem;
 }
