@@ -5,11 +5,11 @@
   <title>horizontalScrolling2</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <style>
-    body{ 
-      margin: 0;
+    body { 
+      margin:0; 
       overflow-x: hidden;
       font-size: 1.5rem;
-      font-weight: bold; 
+      font-weight: bold;
     }
     body * {
       box-sizing: border-box;
@@ -18,11 +18,11 @@
     }
     .box {
       height: 100vh;
-      background-color: #68D2E8;
+      background-color: #5BBCFF;
     }
-    .box:nth-of-type(1) { background-color: #C73659; }
-    .box:nth-of-type(2) { background-color: #FFDB5C; }
-    .box:nth-of-type(3) { background-color: #40A578; }
+    .box:nth-of-type(1) { background-color: #86469C; }
+    .box:nth-of-type(2) { background-color: #BC7FCD; }
+    .box:nth-of-type(3) { background-color: #FB9AD1; }
 
     .horizontal-container {
       width: 100%;
@@ -43,16 +43,16 @@
       width: 100%;
       height: 100vh;
     }
-    .horizontal-container .sticky-box .horizontal-inner-box .row1 { background-color: #F8C794; }
-    .horizontal-container .sticky-box .horizontal-inner-box .row2 { background-color: #E3FEF7; }
-    .horizontal-container .sticky-box .horizontal-inner-box .row3 { background-color: #C6EBC5; }
+    .horizontal-container .sticky-box .horizontal-inner-box .row1 { background-color: #03AED2; }
+    .horizontal-container .sticky-box .horizontal-inner-box .row2 { background-color: #68D2E8; }
+    .horizontal-container .sticky-box .horizontal-inner-box .row3 { background-color: #FDDE55; }
   </style>
   <script src="../assets/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
   <section class="box">
-    <h1>box1</h1>
+    <h2>box1</h2>
   </section>
   <!-- 가로 스크롤 영역 -->
   <div class="horizontal-container">
@@ -67,18 +67,37 @@
     </div>
   </div>
   <section class="box">
-    <h1>box3</h1>
+    <h2>box3</h2>
   </section>
   <section class="box">
-    <h1>box4</h1>
+    <h2>box4</h2>
   </section>
 
   <script>
-    const horizontalContainer = document.querySelector('horizontal-container');
+    const horizontalContainer = document.querySelector('.horizontal-container');
     const stickyBox = document.querySelector('.sticky-box');
     const innerBox = document.querySelector('.horizontal-inner-box');
 
-    // addEventListener('scroll', scrolled);
+    const calcHt = (elem) => {
+      // scrollWidth : 스크롤바에 의해 감춰진 영역 포함 반환
+      // document.documentElement.clientHeight(clientWidth) : 콘텐츠가 실제로 들어가게 될 영역의 너비와 높이 값을 반환
+      return elem.scrollWidth - document.documentElement.clientWidth + document.documentElement.clientHeight;
+    }
+
+    horizontalContainer.style.height = `${calcHt(innerBox)}px`;
+
+    console.log(calcHt(innerBox));
+
+    const scrolled = () => {
+      console.log('stickyBox.offsetTop: ', stickyBox.offsetTop);
+      innerBox.style.transform = `translateX(-${stickyBox.offsetTop}px)`;
+    }
+    /* 
+      JS.offsetTop; 상대값. offset의 가장 가까운 포지션 값을 기준. 없는 경우 body 기준
+      jQuery.offset().top; 절대값 반환. body 기준
+    */
+
+    addEventListener('scroll', scrolled);
   </script>
 </body>
 </html>
