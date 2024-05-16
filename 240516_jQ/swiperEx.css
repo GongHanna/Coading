@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* main-swiper */
+.main-swiper {
+  width: 90vw;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #ddd;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  color: #fff;
+  position: relative;
+}
+.main-swiper .swiper-wrapper li {
+  background: no-repeat 50% / cover;
+}
+.main-swiper .swiper-wrapper .bg1 { background-image: url(https://placehold.co/100x400/002379/fff?text=bg1); }
+.main-swiper .swiper-wrapper .bg2 { background-image: url(https://placehold.co/100x400/FF5F00/fff?text=bg2); }
+.main-swiper .swiper-wrapper .bg3 { background-image: url(https://placehold.co/100x400/A91D3A/fff?text=bg3); }
+.main-swiper .swiper-wrapper .bg4 { background-image: url(https://placehold.co/100x400/03AED2/fff?text=bg4); }
+
+/* 텍스트 및 배경 */
+.main-swiper .swiper-wrapper li > * {
+  position: absolute;
+}
+.main-swiper .swiper-wrapper li .bg-box {
+  background-color: rgba(0,0,0,0.5);
+  width: 400px;
+  height: 200px;
+  padding: 10px;
+  right: 5%;
+  bottom: 5%;
+}
+.main-swiper .swiper-wrapper .title {
+  bottom: 43%; right: 46%;
+  font-size: 1.5rem;
+}
+.main-swiper .swiper-wrapper .subtitle {
+  bottom: 40%; left: 53%;
+}
+.main-swiper .swiper-wrapper .text {
+  top: 56%; left: 53%;
+}
+/* 숫자 pagination */
+.main-swiper .main-page-no {
+  width: 80px; height: 80px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 50%;
+  position: absolute;
+  top: 30px; left: 30px;
+  letter-spacing: 2px;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset,20px);
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset,20px);
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: "👈";
+  opacity: 0.6;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: "👉";
+  opacity: 0.6;
+}
+.swiper-button-prev:hover::after,
+.swiper-rtl:hover .swiper-button-next:hover:after,
+.swiper-button-next:hover::after,
+.swiper-rtl:hover .swiper-button-prev:hover:after {
+  transform: translateY(-6px);
+  opacity: 1;
+}

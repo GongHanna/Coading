@@ -17,42 +17,65 @@
   <!-- https://swiperjs.com/get-started#initialize-swiper -->
 
   <!-- Swiper -->
-  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper main-swiper">
-    <div class="parallax-bg" style="
+  <div class="swiper main-swiper">
+    <!-- 배경 고정되어 있고 글자만 움직일 때
+      <div class="parallax-bg" style="
           background-image: url(https://swiperjs.com/demos/images/nature-1.jpg);
-        " data-swiper-parallax="-23%"></div>
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">Slide 1</div>
-        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-        <div class="text" data-swiper-parallax="-100">
-          <p>
-            담아 쓸쓸함과 소학교 이듬 해 우는 벌레는 이제 피어나듯이 시간의 한마디 남은 삶 속의 시간의 부끄러운 쉬이 합니다 속의 말 별빛들 가을로 다하지 가을로 지저귀는 계절이 한 마디의 청춘이 햇살 속에 기울어진 동경과 하나둘 가을로 봄이 오면 우정의 별들을 모두 다하지 걱정도 가슴속에 청춘이 사랑과 지나가는 오는 나는 이제 슬퍼하는 시간의 많은
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">Slide 2</div>
-        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-        <div class="text" data-swiper-parallax="-100">
-          <p>
-            사랑과 내일 무덤 호수 속에 오는 닮아 이국 소녀들의 소학교 이국 소녀들의 추억과 아침이 다하지 가슴속에 어머니 별들을 담아 가슴속에 지난 겨울에 이듬 해 이제 릴케의 달의 아침이 속의 말 소학교 삶 속의 합니다 없이 피어나듯이 하려다 만 삶 속의 시선과 지저귀는 언덕 시와 지나가는 서로를 별을 민들레는 아직 동경과 호수 속에
-          </p>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">Slide 3</div>
-        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-        <div class="text" data-swiper-parallax="-100">
-          <p>
-            계절이 불러봅니다 나는 계십니다 별을 지저귀는 오는 이제 봅니다 까닭입니다 눈물과 사랑과 삶 속의 지나가는 아침이 소학교 쉬이 쉬이 지저귀는 별 하나에 이름과 합니다 북간도에 계절이 나는 쓸쓸함과 눈물과 없이 합니다 청춘이 가슴속에 하나둘 동경과 헤는 것은 햇살 속에 하려다 만 서로를 봄이 오면 쉬이 담아 이듬 해 새겨지는 바람들과 헤는 것은 달의 릴케의 모두 어머니 많은 부끄러운
-          </p>
-        </div>
-      </div>
-    </div>
+        " data-swiper-parallax="-23%"></div> 
+      -->
+    <ul class="swiper-wrapper">
+      <!-- 각 각의 슬라이드 .swiper-slide -->
+      <li class="swiper-slide bg1">
+        <div class="bg-box" data-swiper-parallax="-900"></div>
+        <h2 class="title" data-swiper-parallax="-300">title 1</h2>
+        <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        <p class="text" data-swiper-parallax="-100">
+          아무 한마디 내일 한마디 이듬 해 담아 헤일 듯 걱정도 우정의 어머니 오는 헤는 것은 우정의 릴케의 비둘기들 별을 가을 속의 없이 아침이 이국 소녀들의 동경과 달의 이국 소녀들의 피어나듯이 릴케의 별을 아니다
+        </p>
+      </li>
+      <li class="swiper-slide bg2">
+        <section class="section-box" data-swiper-parallax="-900">
+          <h2 class="title">title 2</h2>
+          <h3 class="sub-title">Subtitle</h3>
+          <p class="text">오는 하늘에 추억과 시간의 이듬 해 우정의 꽃들 속에서 속의 말 바람들과 나는 많은 합니다 릴케의 지나가는 아직 쓸쓸함과 호수 속에 쉬이 눈물과 눈물과 서로를 많은 아침이 가을로 부끄러운 모두 언덕 차오르는</p>
+        </section>
+      </li>
+      <li class="swiper-slide bg3">
+        <div class="bg-box" data-swiper-parallax="-900"></div>
+        <h2 class="title" data-swiper-parallax="-300">title 3</h2>
+        <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        <p class="text" data-swiper-parallax="-100">
+          별빛들 합니다 지난 겨울에 계절이 아무 헤일 듯 봅니다 소원을 별을 헤일 듯 비둘기들 지나가는 있습니다 한 마디의 바깥에서 별을 닮아 쓸쓸함과 아직 무덤 계절이 호수 속에 여름 하나 없이 추억과 아침이 담아 새겨지는 삶 속의
+        </p>
+      </li>
+      <li class="swiper-slide bg4">
+        <div class="bg-box" data-swiper-parallax="-900"></div>
+        <h2 class="title" data-swiper-parallax="-300">title 4</h2>
+        <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+        <p class="text" data-swiper-parallax="-100">
+          삶 속의 시와 추억과 청춘이 달의 동경과 한마디 지난 겨울에 많은 릴케의 이제 꽃들 속에서 이름과 합니다 기울어진 북간도에 모두 삶 속의 있습니다 모두 서로를 한 마디의 시와 아직 소원을 시와 있습니다 추억과 없이 별을
+        </p>
+      </li>
+    </ul>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination main-page-no"></div>
+  </div>
+
+  <!-- 두번째 스와이퍼의 이름 변경 -->
+  <div class="swiper sub-swiper">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide">
+        <img src="https://placehold.co/600x400/7469B6/fff?text=img1" alt="img1">
+      </li>
+      <li class="swiper-slide">
+        <img src="https://placehold.co/600x400/7AB2B2/fff?text=img2" alt="img2">
+      </li>
+      <li class="swiper-slide">
+        <img src="https://placehold.co/600x400/7ABA78/fff?text=img3" alt="img3">
+      </li>
+    </ul>
+    <div class="swiper-pagination sub-page-no"></div>
   </div>
 </body>
 </html>
