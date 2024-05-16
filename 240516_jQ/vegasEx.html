@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>vegasEx</title>
@@ -12,13 +13,20 @@
   <!-- 내가 작업한 스타일 -->
   <style>
     .container {
-      width: 100%;
-      height: 100vh;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      border: 3px solid #000;
+      margin: 50px auto;
+      position: relative;
+    }
+    .btn {
+      background-color: #fff;
+      border: 3px solid #000;
+      width: 150px; height: 150px;
+      border-radius: 50%;
       display: grid;
       place-items: center;
-    }
-    .container .btn {
-      border : 3px solid #000;
       font-weight: bold;
       padding: 10px 20px;
       font-size: 1.2rem;
@@ -31,6 +39,13 @@
       background-color: #000;
       color: #fff;
     }
+    .container .vegas-timer {
+      top: 0;
+      height: 10px;
+    }
+    .container .vegas-timer-progress {
+      background-color: #000;
+    }
   </style>
 
   <!-- jQuery -->
@@ -40,29 +55,35 @@
   <!-- 내가 작업한 script -->
   <!-- <script src="" defer></script> -->
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('.container').vegas({
-        delay: 7000,
-        timer: false,
+        delay: 3000,
+        timer: true,
         shuffle: true,
-        firstTransition: 'faed',
+        firstTransition: 'fade',
         firstTransitionDuration: 5000,
-        transition: 'slideDown2',
-        transitionDuration: 2000,
+        transition: 'slideLeft2',
+        /*transitionDuration: 2000,  생략가능. */
+        overlay: './overlays/08.png',
         slides: [
-        { src: "./images/bg1.png" },
-        { src: "./images/bg2.png" },
-        { src: "./images/bg3.png" },
-        { src: "./images/bg4.png" }
-    ]
-});
+          { src: "./images/bg1.png" },
+          { src: "./images/bg2.png" },
+          { src: "./images/bg3.png" },
+          { src: "./images/bg4.png" }
+        ]
+      });
     });
   </script>
 </head>
 
 <body>
+  <!-- 
+    https://vegas.jaysalvat.com/ 
+    https://github.com/jaysalvat
+  -->
   <div class="container">
     <a href="#" class="btn">버튼</a>
   </div>
 </body>
+
 </html>
