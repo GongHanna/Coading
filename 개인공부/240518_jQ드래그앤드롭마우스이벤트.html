@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>240518_jQ드래그앤드롭마우스이벤트</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <style>
+
+  </style>
+  <script src="../assets/jquery-3.7.1.min.js"></script>
+  <!-- https://ssseulan222.tistory.com/5 출처 -->
+</head>
+
+<body>
+  <!-- 2가지 div 박스에 여러 개의 li를 드래그 앤 드롭 -->
+  <!-- 
+    1. 드래그 앤 드롭은 '드래그할 대상'과 '드롭될 대상' 2가지가 필요함
+      ㄴ '드래그할 대상'과 '대상'에는 자바스크립트를 이용해 각각 아이디로 이벤트 리스너를 걸어준다.
+      ㄴ 클래스 네임으로는 이벤트가 안 걸려서 선택됐을 때 각각 아이디가 있어야 한다
+      ㄴ 또한 , 드래그 할 대상에는 draggable을 추가해주어야 한다
+
+    A. 드래그할 대상
+      1. dragstart : 드래그할 대상을 잡고 움직이기 시작할 때 이벤트가 발생한다.
+      2. drag : 마우스가 드래그 할 대상을 놓지 않고 잡고 있을 때 계속 발생하낟.
+      3. dragend : 모든 드래그와 드롭이 끝났을 때 발생한다.
+
+    B. 드롭될 대상
+      1. dragenter : 마우스가 드롭될 대상 경계에 진입될 때 이벤트가 발생한다.
+      2. dragover : 마우스가 드롭될 대상 위에 머무를 때 계속 발생한다.
+      3. drop : 마우스가 드래그할 대상을 드롭했을 때 발생한다.
+      4. dragleave : 마우스가 드롭될 대상을 벗어났을 때 발생한다.
+   -->
+  <div id="div1" class="box">
+    <ul id="ul1" class="ul">
+      <li id="li1" class="list">li 1</li>
+      <li id="li2" class="list">li 2</li>
+      <li id="li3" class="list">li 3</li>
+    </ul>
+  </div>
+  <div id="div2" class="box">
+    <ul id="ul2" class="ul">
+    </ul>
+  </div>
+
+  <script>
+    // 이벤트 리스너 추가 및 draggable 토글 되는 자바스크립트
+    $(document).ready(function () {
+      // li에 이벤트 추가
+      for (var i = 1; i <= 3; i++) {
+        var id = 'li' + i;
+        document.getElementById(id).addEventListener('dragstart', dragstart);
+        document.getElementById(id).addEventListener('drag', drag);
+        document.getElementById(id).addEventListener('dragend', dragend);
+      }
+
+      // div에 이벤트 추가
+      for (var i = 1; i <= 2; i++) {
+        var id = 'div' + i;
+        document.getElementById('div1').addEventListener('dragenter', dragenter);
+        document.getElementById('div1').addEventListener('dragover', dragover);
+        document.getElementById('div1').addEventListener('drop', drop);
+        document.getElementById('div1').addEventListener('dragleave', dragleave);
+      }
+
+      // 선택된 li에 draggable = true & 선택 해제 된 li에 draggable = false
+      $('ul').on('click', 'li', function () {
+        $(this).toggleClass('selected');
+        if ($(this).is('.selected')) {
+          $(this).attr('draggable', true);
+        } else {
+          $(this).attr('draggable', false);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
