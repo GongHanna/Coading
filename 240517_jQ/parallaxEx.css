@@ -10,6 +10,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&family=Lobster&display=swap');
 
 /* common */
+body::-webkit-scrollbar {
+  /* 스크롤바 숨김 */
+  display: none; 
+}
 body {
   font-family: "Kanit", Arial, Helvetica, sans-serif;
   font-weight: 400;
