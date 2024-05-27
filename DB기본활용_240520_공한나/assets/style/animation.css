@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* 로딩 페이지 애니메이션 */
+@keyframes jumb {
+  0% {
+    transform: translateY(0px)
+  } 50% {
+    transform: translateY(-30px);
+  } 100% {
+    transform: translateY(0px)
+  }
+}
+
+/* 격자무늬 움직임 */
+@keyframes grid-move {
+  0% { background-position: 300px 300px; } 
+  100% { background-position: 500px 500px; }
+}
+
+/* 반짝반짝 */
+@keyframes glitter {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*- 메인 이미지 움직임 -*/
+@keyframes main-img-mov {
+  0%, 100% {
+    transform: translateX(5px) rotate(-7deg);
+  } 50% {
+    transform: translateX(0) rotate(7deg);
+  }
+}
+
+/* brand-intro-lilybyred 데코 이미지 움직임 */
+@keyframes brand-mov {
+  0%, 100% {
+    transform: translateY(5px);
+  } 50% {
+    transform: translateY(0);
+  }
+}
+
+/* svg 차례대로 움직임 */
+@keyframes drawing {
+  0% {
+    stroke-dashoffset: 500;
+  } 50% {
+    stroke-dashoffset: 0;
+  } 100% {
+    stroke-dashoffset: -500;
+  }
+}
+
+/* main-page 릴리바이레드 핑크색 박스 움직임 */
+@keyframes moving-box {
+  0% { width: 0; }
+  100% { width: 250px; }
+}
+@keyframes event-moving-box {
+  0% { width: 0; }
+  100% { width: 30%; }
+}
+/* 웰컴투릴리바이레드 움직임 */
+@keyframes main-title-mov {
+  0% { opacity: 0; } 
+  100% { opacity: 1; }
+}
+
+/* 텍스트가 차레대로 나열되는 움직임 */
+@keyframes text-move {
+  0% { transform: translateY(100%); } 
+  100% { transform: translateY(0); }
+}
+
+/* 가로로 흐르는 텍스트 */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

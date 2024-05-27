@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/***** tablet *****/
+@media (min-width: 834px) {
+
+  /****** menu *******/
+  .sub-shop-wrapper {
+    padding: 180px 0px 50px;
+  }
+
+  .sub-shop-wrapper .sub-shop-box .main-title {
+    font-weight: 700;
+    margin: 0px auto 25px;
+  }
+
+  .sub-shop-wrapper .sub-shop-box .main-list {
+    font-size: 16px;
+    width: 500px;
+  }   
+
+  .sub-shop-wrapper .main-btn .btn-arrange {
+    margin-left: 50px;
+  }
+
+  .sub-shop-wrapper .main-btn .btn-arr {
+    margin-right: 50px;
+  }
+
+  /* 상품 나열 */
+
+  .sub-shop-wrapper .product {
+    padding: 0px 50px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+  }
+
+  .sub-shop-wrapper .product-box {
+    width: 24%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  .sub-shop-wrapper .product-box:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .sub-shop-wrapper .product-box h3 {
+    font-size: var(--font-pc-sm);
+    font-weight: 400;
+    margin: 15px 0px 10px;
+  }
+
+  .sub-shop-wrapper .product-box p {
+    font-size: var(--font-pc-sm);
+  }
+
+  /* 더보기 버튼 */
+  .sub-shop-wrapper .more-btn {
+    padding: 15px 70px 15px 40px;
+    font-size: var(--font-pc-);
+  }
+}
+
+/***** pc *****/
+@media (min-width: 1200px) {
+
+  /****** menu *******/
+  .sub-shop-wrapper {
+    padding: 200px 0px 50px;
+  }
+
+  .sub-shop-wrapper .sub-shop-box .main-title {
+    font-weight: 700;
+    margin: 0px auto 25px;
+  }
+
+  .sub-shop-wrapper .sub-shop-box .main-list {
+    font-size: 18px;
+    margin: 0 auto 60px;
+    width: 500px;
+  }
+
+  .sub-shop-wrapper .main-btn .btn-arrange {
+    margin-left: 80px;
+  }
+
+  .sub-shop-wrapper .main-btn .btn-arr {
+    margin-right: 80px;
+  }
+  
+  /* 상품 나열 */
+  .sub-shop-wrapper .product {
+    padding: 0px 80px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+  }
+
+  .sub-shop-wrapper .product-box {
+    width: 24%;
+    margin: 0;
+    margin-bottom: 48px;
+  }
+
+  .sub-shop-wrapper .product-box:nth-of-type(odd) {
+    margin-right: 0;
+  }
+
+  .sub-shop-wrapper .product-box h3 {
+    font-size: var(--font-pc-sm);
+    font-weight: 400;
+    margin: 15px 0px 10px;
+  }
+
+  .sub-shop-wrapper .product-box p {
+    font-size: var(--font-pc-sm);
+  }
+
+  /* 더보기 버튼 */
+
+  .sub-shop-wrapper .more-btn {
+    padding: 20px 70px 20px 50px;
+    font-size: var(--font-pc-lg);
+  }
+}

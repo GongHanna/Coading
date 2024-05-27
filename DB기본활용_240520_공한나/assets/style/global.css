@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+body {
+  font-family: var(--font-m-ko);
+  cursor: url(../../images/cursor-heart.png), pointer;
+}
+
+section {
+  margin: 0 30px;
+}
+
+/***** 로딩 페이지 *****/
+.loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(../../images/loading-star.svg) no-repeat 50%, var(--color-primary);
+  font-family: var(--font-pc-ko);
+  font-weight: 200;
+  font-size: 10px;
+}
+.loading-page .loading-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading-page.hide {
+  display: none;
+}
+
+.back span {
+  font-size: 3em;
+  color: #fff;
+  display: table-cell;
+  padding: 0 15px;
+  line-height: 100px;
+  animation: jumb 2s infinite;
+}
+
+.back span:nth-child(1) {
+  animation-delay: 0s;
+}
+.back span:nth-child(2) {
+  animation-delay: .1s;
+}
+.back span:nth-child(3) {
+  animation-delay: .2s;
+}
+.back span:nth-child(4) {
+  animation-delay: .3s;
+}
+.back span:nth-child(5) {
+  animation-delay: .4s;
+}
+.back span:nth-child(6) {
+  animation-delay: .5s;
+}
+.back span:nth-child(7) {
+  animation-delay: .6s;
+}
+
+/***** 모바일 버전 *****/
+/***** header *****/
+header {
+  font-family: var(--font-m-en);
+  background-color: var(--color-primary);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  font-size: 15px;
+  width: 80%;
+  height: 50px;
+  border-radius: 25px;
+  margin: 20px auto;
+  padding: 0 10px;
+  border: 1px solid rgba(254, 241, 195, 0.5);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .4s;
+  z-index: 999;
+}
+header .logo a img {
+  display: none;
+}
+header .global-menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .global-menu li {
+  width: calc(100% / 3);
+  position: relative;
+}
+header .global-menu li svg {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  z-index: -99;
+}
+/*- svg 나타남 -*/
+header .global-menu li svg.event {
+  display: block;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawing 3s linear 1;
+}
+header .global-menu li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+/***** 스크롤시 header 변경 *****/
+header.active {
+  margin: 0;
+  padding: 0 20px;
+  width: 100%;
+  border-radius: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  color: var(--color-primary);
+  font-family: var(--font-m-kr);
+  font-weight: var(--font-regular);
+  text-transform: uppercase;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+}
+header.active .logo a img {
+  display: block;
+}
+header.active .global-menu li {
+  margin: 0 10px;
+  position: relative;
+}
+header.active .global-menu li svg {
+  display: none;
+}
+header.active img {
+  width: 80px;
+}
+
+
+/***** footer *****/
+footer {
+  font-family: var(--font-m-ko);
+  margin: 50px 30px;
+}
+
+/*- contact -*/
+footer .contact-wrapper {
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  background: url(../../images/main-grid.svg) 50% / contain, url(../../images/footer-backgroud-lets-talk.png) no-repeat 50% 85% / contain, var(--color-primary);
+  position: relative;
+}
+
+footer .contact-wrapper .footer-contact {
+  font-family: var(--font-m-en);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 28px;
+  padding-top: 200px;
+  line-height: 1.5;
+}
+footer .contact-wrapper .footer-contact .footer-contact-num {
+  transition: .4s;
+}
+footer .contact-wrapper .footer-contact .footer-contact-email {
+  transition: .4s;
+}
+/*- 마우스 허버 이벤트 -*/
+footer .contact-wrapper .footer-contact .footer-contact-num:hover {
+  transform: skew(-10deg, 1deg) rotateY(-20deg) scale(1.05);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+footer .contact-wrapper .footer-contact .footer-contact-email:hover {
+  transform: skew(15deg, 1deg) rotateY(-20deg) scale(1.05);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/*- 말풍선 박스 -*/
+footer .contact-wrapper .contact-box {
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-footer);
+  width: 230px; height: 180px;
+  padding: 20px 0px 30px;
+  border-radius: 20px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-70%);
+}
+
+footer .contact-wrapper .contact-box::after {
+  content: "";
+  background-color: var(--color-footer);
+  position: absolute;
+  bottom: -20px;
+  right: 60px;
+  border-top: solid 20px var(--color-footer);
+  border-left: solid 50px var(--color-primary);
+}
+
+footer .contact-wrapper .contact-box .contact-num {
+  font-size: 30px;
+  font-family: var(--font-m-en);
+}
+
+footer .contact-wrapper .contact-box .contact-sub {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+  padding-left: 60px;
+  margin: 3px 25px 15px;
+  background: url(../../images/footer-icon-call.svg) no-repeat 10%;
+}
+
+footer .contact-wrapper .contact-box .contact-btn {
+  background-color: var(--color-white);
+  color: var(--color-footer);
+  font-size: var(--font-m-sm);
+  font-weight: 500;
+  padding: 5px 30px;
+  border-radius: 7px;
+}
+
+footer .contact-wrapper .contact-box .footer-eyes {
+  position: absolute;
+  top: 80px;
+  left: 75%;
+  z-index: 99;
+}
+/*- 움직이는 눈알 -*/
+footer .contact-wrapper .contact-box .eyes {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: -20px; left: 90%;
+  transform: rotate(5deg);
+  z-index: 999;
+  width: 130px;
+}
+footer .contact-wrapper .contact-box .eye {
+  position: relative;
+  top: 60%;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+footer .contact-wrapper .contact-box .eye:before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 13px;
+  width: 25px;
+  height: 25px;
+  background: #333;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*- footer address -*/
+footer address {
+  font-style: normal;
+  margin: 30px auto;
+  text-align: center;
+  color: #888888;
+  font-size: 11px;
+}
+footer address .adress {
+  font-size: 11px;
+}
+footer address .copy {
+  font-size: 12px;
+  font-weight: var(--font-bold);
+  margin-top: 25px;
+}
+
+/***** tablet *****/
+@media (min-width: 834px) {
+  /***** header *****/
+  header {
+    width: 40%;
+    left: 90%;
+    transform: translateX(-90%);
+  }
+
+  /***** footer *****/
+  footer {
+    margin: 0 50px;
+    padding: 100px 0px 40px;
+  }
+  /*- contact -*/
+  footer .contact-wrapper {
+    height: 350px;
+  }
+  footer .contact-wrapper .footer-contact {
+    text-align: left;
+    font-size: 35px;
+    padding: 120px 0px 0px 50px;
+  }
+  /*- 말풍선 박스 -*/
+  footer .contact-wrapper .contact-box {
+    width: 250px;
+    height: 190px;
+    padding: 15px 20px 20px;
+    top: -70px;
+    left: 70%;
+  }
+  footer .contact-wrapper .contact-box::after {
+    bottom: -19px;
+  }
+  footer .contact-wrapper .contact-box .contact-num {
+    font-size: 33px;
+    margin: 10px 0px 0px;
+  }
+  footer .contact-wrapper .contact-box .contact-sub {
+    font-size: 13px;
+    margin: 5px 0px 20px;
+  }
+  footer .contact-wrapper .contact-box .contact-btn {
+    font-size: var(--font-pc-md);
+    padding: 5px 25px 10px;
+  }
+  footer .contact-wrapper .contact-box .footer-eyes {
+    top: 120px;
+    left: 100%;
+  }
+  /*- 움직이는 눈알 -*/
+  footer .contact-wrapper .contact-box .eyes {
+    top: 0px; left: 120%;
+  }
+  /*- footer address -*/
+  footer address {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer address .address-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    text-align: left;
+  }
+  footer address .address-list li:last-child {
+    margin-left: 10px;
+  }
+  footer address .copy {
+    margin: 0;
+    text-align: right;
+  }
+}
+
+/***** pc *****/
+@media (min-width: 1200px) {
+  /***** footer *****/
+  footer {
+    margin: 0 80px;
+    padding: 80px 0px 40px;
+  }
+  /*- contact -*/
+  footer .contact-wrapper .footer-contact {
+    text-align: left;
+    font-size: 35px;
+    padding: 120px 0px 0px 60px;
+  }
+  /*- 말풍선 박스 -*/
+  footer .contact-wrapper .contact-box {
+    left: 80%;
+  }
+  footer .contact-wrapper .contact-box::after {
+    bottom: -20px;
+  }
+  /*- footer address -*/
+  footer address {
+    margin: 30px auto;
+    text-align: center;
+  }
+  footer address .adress {
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    list-style: none;
+    display: flex;
+    text-align: left;
+  }
+}

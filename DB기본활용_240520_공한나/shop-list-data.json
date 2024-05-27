@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "url": "./images/shop-romentictint.jpg",
+    "hover": "./images/shop-romentictint-hover.jpg",
+    "title": "[회원only] 릴리바이레드 로맨틱 라이어 무스 틴트",
+    "discount": "51%", 
+    "discountPrice" : "4,900원",
+    "price": "10,000원"
+  },
+  {
+    "id": 2,
+    "url": "./images/shop-ninetonine.jpg",
+    "hover": "./images/shop-ninetonine-hover.jpg",
+    "title": "[회원only] 스태리아이즈 나인투나인 젤 아이라이너",
+    "discount": "51%", 
+    "discountPrice" : "4,900원",
+    "price": "10,000원"
+  },
+  {
+    "id": 3,
+    "url": "./images/shop-cotingtint.jpg",
+    "hover": "./images/shop-cotingtint.jpg",
+    "title": "[회원only] 릴리바이레드 앙큼 라이어 코팅 틴트",
+    "discount": "51%", 
+    "discountPrice" : "4,900원",
+    "price": "10,000원"
+  },
+  {
+    "id": 4,
+    "url": "./images/shop-ninetonine-survival.jpg",
+    "hover": "./images/shop-ninetonine-survival-hover.jpg",
+    "title": "[회원only] 릴리바이레드 나인투나인 서바이벌 컬러카라",
+    "discount": "50%", 
+    "discountPrice" : "6,000원",
+    "price": "12,000원"
+  },
+  {
+    "id": 5,
+    "url": "./images/shop-mood.jpg",
+    "hover": "./images/shop-mood-hover.jpg",
+    "title": "[회원only] 무드치트킷",
+    "discount": "63%", 
+    "discountPrice" : "9,900원",
+    "price": "27,000원"
+  },
+  {
+    "id": 6,
+    "url": "./images/shop-glittercrash.jpg",
+    "hover": "./images/shop-glittercrash.jpg",
+    "title": "[회원only] 릴리바이레드 글리터존 크래쉬",
+    "discount": "92%", 
+    "discountPrice" : "990원",
+    "price": "13,000원"
+  },
+  {
+    "id": 7,
+    "url": "./images/shop-hardflat.jpg",
+    "hover": "./images/shop-hardflat-hover.jpg",
+    "title": "[회원only] 릴리바이레드 하드플랫 브로우펜슬",
+    "discount": "61%", 
+    "discountPrice" : "3,900원",
+    "price": "10,000원"
+  },
+  {
+    "id": 8,
+    "url": "./images/shop-watertint.jpg",
+    "hover": "./images/shop-watertint.jpg",
+    "title": "[회원only] 릴리바이레드 쥬시 라이어 워터 틴트",
+    "discount": "51%", 
+    "discountPrice" : "4,900원",
+    "price": "10,000원"
+  },
+  {
+    "id": 9,
+    "url": "./images/shop-lovebeam.jpg",
+    "hover": "./images/shop-lovebeam-hover.jpg",
+    "title": "[회원only] 릴리바이레드 러브빔 치크",
+    "discount": "55%", 
+    "discountPrice" : "5,900원",
+    "price": "13,000원"
+  },
+  {
+    "id": 10,
+    "url": "./images/shop-lovebeam-boam.jpg",
+    "hover": "./images/shop-lovebeam-boam-hover.jpg",
+    "title": "[회원only] 릴리바이레드 러브빔 치크밤",
+    "discount": "92%", 
+    "discountPrice" : "990원",
+    "price": "13,000원"
+  },
+  {
+    "id": 11,
+    "url": "./images/shop-magnetfit.jpg",
+    "hover": "./images/shop-magnetfit.jpg",
+    "title": "[회원only] 릴리바이레드 마그넷 핏 리퀴드 컨실러",
+    "discount": "46%", 
+    "discountPrice" : "5,900원",
+    "price": "11,000원"
+  },
+  {
+    "id": 12,
+    "url": "./images/shop-fixingtint.jpg",
+    "hover": "./images/shop-fixingtint-hover.jpg",
+    "title": "[회원only] 릴리바이레드 글래시 레이어 픽싱 틴트",
+    "discount": "58%", 
+    "discountPrice" : "5,000원",
+    "price": "12,000원"
+  },
+  {
+    "id": 13,
+    "url": "./images/shop-littlebity.jpg",
+    "hover": "./images/shop-littlebity-hover.jpg",
+    "title": "[회원only] 릴리바이레드 리틀 비티 모먼트 섀도우",
+    "discount": "59%", 
+    "discountPrice" : "4,500원",
+    "price": "10,900원"
+  }
+]
