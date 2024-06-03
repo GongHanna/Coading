@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text Slider</title>
+  <style>
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .slider-1 {
+      max-width: 600px;
+      margin: 100px auto;
+      overflow: hidden;
+      border: 1px solid #f1f1f1;
+
+    }
+
+    .slider-1 .slider {
+      animation: slider-1 12s infinite ease-in-out;
+      display: flex;
+
+      /* 오른쪽으로 슬라이드하려면
+      애니메이션(transform) 값을 양수로 변경
+      flex-direction: row-reverse;
+      */
+    }
+
+    .slider-1 p {
+      background: #000;
+      flex-shrink: 0;
+      padding: 72px 0;
+      width: 100%;
+      text-align: center;
+      font-size: 45px;
+      color: #f1f1f1;
+    }
+  /* 
+   5% 임의 값
+   80(%) / 4 = 20(%) 각 멈춤의 값
+  */
+
+    @keyframes slider-1 {
+
+      0%,
+      20% {
+        transform: translateX(0);
+      }
+
+      25%,
+      45% {
+        transform: translateX(-100%);
+      }
+
+      50%,
+      70% {
+        transform: translateX(-200%);
+      }
+
+      75%,
+      95% {
+        transform: translateX(-300%);
+      }
+
+      100% {
+        transform: translateX(-400%);
+      }
+    }
+
+    /* Verticale */
+
+    .slider-2 {
+      max-width: 600px;
+      height: 200px;
+      margin: 100px auto;
+      overflow: hidden;
+      border: 1px solid #f1f1f1;
+    }
+
+    .slider-2 .slider {
+      height: 100%;
+      animation: slider-2 12s infinite ease-in-out;
+
+      /* Pour inverser l'animation */
+      /* display: flex; 
+  flex-direction: column-reverse; */
+    }
+
+    .slider-2 p {
+      flex-shrink: 0;
+      padding: 72px 0;
+      width: 100%;
+      text-align: center;
+      font-size: 45px;
+      color: #f1f1f1;
+    }
+
+    @keyframes slider-2 {
+
+      0%,
+      20% {
+        transform: translateY(0);
+      }
+
+      25%,
+      45% {
+        transform: translateY(-100%);
+      }
+
+      50%,
+      70% {
+        transform: translateY(-200%);
+      }
+
+      75%,
+      95% {
+        transform: translateY(-300%);
+      }
+
+      100% {
+        transform: translateY(-400%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Horizontal -->
+  <div class="slider-container slider-1">
+    <div class="slider">
+      <p>Texte template 1</p>
+      <p>Texte template 2</p>
+      <p>Texte template 3</p>
+      <p>Texte template 4</p>
+      <p>Texte template 1</p>
+    </div>
+  </div>
+
+  <!-- Vertical -->
+  <!-- <div class="slider-container slider-2">
+    <div class="slider">
+      <p>Texte template 1</p>
+      <p>Texte template 2</p>
+      <p>Texte template 3</p>
+      <p>Texte template 4</p>
+      <p>Texte template 1</p>
+    </div>
+  </div> -->
+
+</body>
+
+</html>
