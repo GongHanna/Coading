@@ -38,8 +38,9 @@ header .menu-wrapper {
 
 /* 모바일 메뉴 */
 header .menu-wrapper .mobile-button {
-  background-color: #427D9D;
-  width: 50px; height: 50px;
+  background-color: #427d9d;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: grid;
   place-content: center;
@@ -48,7 +49,8 @@ header .menu-wrapper .mobile-button {
 }
 header .menu-wrapper .mobile-button span {
   display: block;
-  width: 25px; height: 2px;
+  width: 25px;
+  height: 2px;
   background-color: #fff;
 }
 header .menu-wrapper .mobile-button .bar2 {
@@ -75,7 +77,7 @@ header .menu-wrapper .global-menu {
 header.active {
   height: 80px;
   background-color: #ff0080;
-  box-shadow: 0 1px 2px rgba(0,0,0,.7);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
 header.active .title {
   user-select: none;
@@ -123,8 +125,8 @@ header.active + .slide-wrapper {
 }
 
 /*----- slide -----*/
-.slide-wrapper { 
-  background-color: #F9F3CC;
+.slide-wrapper {
+  background-color: #f9f3cc;
   margin-top: 100px;
   height: 50vh;
   font-size: 3rem;
@@ -135,7 +137,15 @@ article {
   font-size: 3rem;
   height: calc(100vh - 80px);
 }
-#content1 { background-color: #FF6969; }
-#content2 { background-color: #B5CB99; }
-#content3 { background-color: #AED2FF; }
-#content4 { background-color: #F4E869; }
+#content1 {
+  background-color: #ff6969;
+}
+#content2 {
+  background-color: #b5cb99;
+}
+#content3 {
+  background-color: #aed2ff;
+}
+#content4 {
+  background-color: #f4e869;
+}
