@@ -5,16 +5,19 @@
   width: 100%;
   height: 85px;
   position: fixed;
+  top: 0; left: 0;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 150px;
+  padding: 0 310px;
   border-bottom: 1px solid transparent;
+  z-index: 9999;
 }
 .header .logo {
   background: url(../../images/logo-purunet.png) no-repeat 50% /contain;
-  height: 85px; width: 160px;
+  height: 85px;
+  width: 160px;
 }
 .header .logo a {
   display: block;
@@ -23,22 +26,24 @@
 .header .camping::before {
   content: "";
   background: url(../../images/kamping-kor.png) no-repeat 50% /contain;
-  height: 40px; width: 80px;
+  height: 30px;
+  width: 60px;
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .header .camping::after {
   content: "";
   background: url(../../images/arrow-next-green.png) no-repeat 50% / cover;
-  height: 10px; width: 6px;
+  height: 10px;
+  width: 6px;
   position: absolute;
   right: -45px;
   top: 50%;
   transform: translateY(-50%);
 }
 .header .camping {
-  /* height: 85px; width: 80px; */
   text-indent: -9999px;
   position: relative;
 }
@@ -54,15 +59,17 @@
 .header .global-menu .main-title {
   position: relative;
 }
-.header .global-menu .main-title > a {
+.header .global-menu .main-title>a {
   display: block;
   padding: 0 40px;
-  height: 85px; line-height: 85px;
+  height: 85px;
+  line-height: 85px;
 }
 /* sub-menu */
 .header .global-menu .main-title .sub-menu {
   position: absolute;
-  top: 85.5px; left: 0;
+  top: 85.5px;
+  left: 0;
   background-color: #fff;
   color: var(--subMenu-color);
   font-size: 15px;
@@ -79,14 +86,15 @@
   content: "";
   background-color: #fff;
   position: absolute;
-  top: 0; left: -1200%;
+  top: 0;
+  left: -1200%;
   width: 300vw;
   height: 300px;
   z-index: -9;
   box-shadow:
-  0px 5.6px 16.1px -69px rgba(0, 0, 0, 0.02),
-  0px 32.5px 14.5px -69px rgba(0, 0, 0, 0.03),
-  0px 71px 17px -69px rgba(0, 0, 0, 0.05);
+    0px 5.6px 16.1px -69px rgba(0, 0, 0, 0.02),
+    0px 32.5px 14.5px -69px rgba(0, 0, 0, 0.03),
+    0px 71px 17px -69px rgba(0, 0, 0, 0.05);
 }
 .header .global-menu .main-title .sub-menu li {}
 .header .global-menu .main-title .sub-menu li a {
@@ -181,6 +189,7 @@
 .footer .family-wrapper .family-list li a::after {
   content: "";
   background: url(../../images/icon-fav.png) no-repeat 50%;
-  width: 20px; height: 20px;
+  width: 20px;
+  height: 20px;
   position: absolute;
 }
