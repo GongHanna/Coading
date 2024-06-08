@@ -10,6 +10,7 @@ body {
   word-break: keep-all;
   color: var(--primary-black);
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 section {

@@ -1,2 +1,29 @@
 @charset "utf-8";
 
+/* notice-btn svg ani */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  } 100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* svg 차례대로 움직임 */
+@keyframes drawing {
+  0% {
+    stroke-dashoffset: 500;
+  } 100% {
+    stroke-dashoffset: -500;
+  }
+}
+
+@keyframes drop-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  } 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
