@@ -149,17 +149,32 @@
 .footer .footer-text-wrapper .sns-wrapper .kakao {
   background-image: url(../../images/ico-kakao.png);
 }
+.footer .footer-text-wrapper .sns-wrapper .kakao:hover {
+  background-image: url(../../images/kakao-icon.svg);
+}
 .footer .footer-text-wrapper .sns-wrapper .blog {
   background-image: url(../../images/ico-blog.png);
+}
+.footer .footer-text-wrapper .sns-wrapper .blog:hover {
+  background-image: url(../../images/naver-icon.svg);
 }
 .footer .footer-text-wrapper .sns-wrapper .instagram {
   background-image: url(../../images/ico-ist.png);
 }
+.footer .footer-text-wrapper .sns-wrapper .instagram:hover {
+  background-image: url(../../images/instagram-icon.svg);
+}
 .footer .footer-text-wrapper .sns-wrapper .facebook {
   background-image: url(../../images/ico-fb.png);
 }
+.footer .footer-text-wrapper .sns-wrapper .facebook:hover {
+  background-image: url(../../images/facebook-icon.svg);
+}
 .footer .footer-text-wrapper .sns-wrapper .youtube {
   background-image: url(../../images/ico-yt.png);
+}
+.footer .footer-text-wrapper .sns-wrapper .youtube:hover {
+  background-image: url(../../images/youtube-icon.svg);
 }
 .footer .footer-text-wrapper .sns-wrapper li a {
   display: block;
