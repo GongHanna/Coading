@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>slideEx2</title>
@@ -8,6 +9,7 @@
     body {
       margin: 0;
     }
+
     .simple-slide {
       width: 100%;
       margin: 0 auto;
@@ -15,12 +17,14 @@
       position: relative;
       overflow: hidden;
     }
+
     .simple-slide ul {
       list-style: none;
       margin: 0;
       padding: 0;
       text-indent: -999px;
     }
+
     .simple-slide .slide-wrapper .slide-item {
       width: 100%;
       height: 100%;
@@ -32,21 +36,27 @@
       transition: 0.4s;
       transform: translateX(100%);
     }
+
     .simple-slide .slide-wrapper .slide-item.active {
       transform: translateX(0);
     }
+
     .simple-slide .slide-wrapper #bg1 {
       background-image: url(https://placehold.co/1000x600/DD761C/1B3C73?text=bg1);
     }
+
     .simple-slide .slide-wrapper #bg2 {
       background-image: url(https://placehold.co/1000x600/6DC5D1/1B3C73?text=bg2);
     }
+
     .simple-slide .slide-wrapper #bg3 {
       background-image: url(https://placehold.co/1000x600/FFAA80/1B3C73?text=bg3);
     }
+
     .simple-slide .slide-wrapper #bg4 {
       background-image: url(https://placehold.co/1000x600/7469B6/1B3C73?text=bg4);
     }
+
     .simple-slide .slide-button {
       position: absolute;
       bottom: 10px;
@@ -54,11 +64,14 @@
       justify-content: center;
       width: 100%;
     }
+
     .simple-slide .slide-button li {
-      width: 25px; height: 10px;
+      width: 25px;
+      height: 10px;
       margin: 5px;
       background-color: rgba(255, 255, 255, 0.5);
     }
+
     .simple-slide .slide-button li.color {
       background-color: rgb(7, 0, 110);
     }
@@ -90,12 +103,12 @@
       $('.slide-wrapper .slide-item').eq(idx).removeClass('active');
       $('.simple-slide .slide-button li').eq(idx).removeClass('color');
 
-      idx++; 
+      idx++;
 
       const slideItems = $('.slide-wrapper .slide-item').length;
 
       if (idx >= slideItems) {
-        idx = 0; 
+        idx = 0;
       }
 
       $('.slide-wrapper .slide-item').eq(idx).addClass('active');
@@ -108,7 +121,7 @@
 
       idx--;
 
-      if(idx < 0) {
+      if (idx < 0) {
         idx = $('.slide-wrapper .slide-item').length - 1;
       }
 
@@ -118,4 +131,5 @@
     setInterval(nextSlide, 3000);
   </script>
 </body>
+
 </html>

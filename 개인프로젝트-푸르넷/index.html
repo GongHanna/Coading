@@ -26,8 +26,6 @@
   <script src="./assets/js/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/jquery-ui.min.js"></script>
   <!-- pulgIn -->
-  <!-- <script src="./assets/js/gsap.min.js"></script>
-  <script src="./assets/js/ScrollTrigger.min.js"></script> -->
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <!-- page 별 사용되는 js -->
   <script defer src="./assets/js/global.js"></script>
@@ -198,7 +196,7 @@
     <h2 class="intro-title">230만 학부모가 선택한 <span>푸르넷</span></h2>
     <p class="intro-desc">* 2023년 기준. 단, 수상은 2024년, 재가입률은 2021년 기준</p>
     <ul class="intro-wrapper swiper-wrapper">
-      <li class="intro-list swiper-slide">
+      <li class="intro-list swiper-slide next-style">
         <img src="./images/cont1-point1.png" alt="icon1">
         <h3 class="title">누적 회원 수</h3>
         <p class="desc">
@@ -209,7 +207,8 @@
         <img src="./images/cont1-point2.png" alt="icon2">
         <h3 class="title">누적 공부방 수</h3>
         <p class="desc">
-          <strong class="num-count" data-end="2">2</strong><span>만</span><strong class="num-count" data-end="5">5</strong><span>천+</span>
+          <strong class="num-count" data-end="2">2</strong><span>만</span><strong class="num-count"
+            data-end="5">5</strong><span>천+</span>
         </p>
       </li>
       <li class="intro-list swiper-slide">
@@ -251,6 +250,35 @@
   </section>
 
   <section class="auto-slide">
+    <!-- svg animation -->
+    <div class="svg-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="67" viewBox="0 0 35 67" fill="none" class="arrow">
+        <path stroke="#FFAEBA" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round"
+          d="M5.14276 61C4.14276 47.1667 7.94275 16.6 31.1428 5" class="path path2"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="153" height="107" viewBox="0 0 153 107" fill="none"
+        class="heart-arrow">
+        <path stroke="#FFAEBA" stroke-width="10" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"
+          d="M6 89.3407C6 89.3407 20.8421 44.8903 63.2481 36.4235C105.654 27.9568 128 49.5039 124.737 66.0572C120.496 82.9907 105.654 76.6406 92.9323 72.4072C92.9323 82.9907 84.4511 106.274 69.609 99.9242C54.7669 93.5741 47.3459 67.1155 79.1504 29.0151C98.2331 5.73152 115.195 -0.61855 147 9.9649"
+          class="path path1"></path>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="trans"
+        class="point-circle">
+        <path
+          d="M22.6572 24.4233C27.5809 20.7812 28.6199 13.8372 24.9778 8.91346C21.3356 3.98973 14.3917 2.95077 9.46793 6.59288C4.5442 10.235 3.50525 17.179 7.14735 22.1027C10.7895 27.0264 17.7334 28.0654 22.6572 24.4233Z"
+          fill="#00A791"></path>
+        <path
+          d="M11.1737 19.6566C13.9852 18.6988 17.1107 19.1668 19.5184 20.9049C19.8781 21.1644 20.3569 20.8103 20.214 20.3903C19.2563 17.5789 19.7241 14.4529 21.4627 12.0457C21.7223 11.686 21.3682 11.2072 20.9482 11.3501C18.1366 12.3079 15.0112 11.8399 12.6031 10.1013C12.2434 9.84171 11.7646 10.1959 11.9075 10.6158C12.8652 13.4273 12.3974 16.5533 10.6592 18.961C10.3992 19.3202 10.7537 19.7995 11.1737 19.6566Z"
+          fill="white"></path>
+      </svg>
+    </div>
+    <!-- pagination -->
+    <ul class="pagination">
+      <li class="pagination-btn click-btn">1</li>
+      <li class="pagination-btn">2</li>
+      <li class="pagination-btn">3</li>
+    </ul>
+    <!-- contents -->
     <div class="frist-slide slide-box">
       <div class="text-wrapper">
         <h2 class="title">학습에 시스템을 더한
@@ -261,35 +289,8 @@
         <p class="des">자기주도학습 습관을 기르는 데<br>
           최적화된 학습 시스템</p>
       </div>
-      <div class="img-wrapper">
-        <img src="./images/cont2-slide1.webp" alt="slide1" class="slide-img">
-        <svg class="slide-svg" xmlns="http://www.w3.org/2000/svg" width="525" height="524" viewBox="0 0 525 524"
-          fill="none">
-          <path
-            d="M12.3718 279.191C122.831 314.323 210.044 401.374 245.252 511.57C250.516 528.03 273.761 528.03 279.024 511.57C314.232 401.349 401.471 314.298 511.905 279.191C528.4 273.939 528.4 250.744 511.905 245.491C401.446 210.359 314.232 123.308 279.024 13.0874C273.761 -3.37288 250.516 -3.37288 245.252 13.0874C210.044 123.308 122.805 210.359 12.3718 245.491C-4.12395 250.718 -4.12395 273.939 12.3718 279.191Z"
-            fill="#FFCED5"></path>
-        </svg>
-        <img src="./images/slide-bg-svg.svg" alt="bg-svg" class="bg-svg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="67" viewBox="0 0 35 67" fill="none" class="arrow">
-          <path stroke="#FFAEBA" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round"
-            d="M5.14276 61C4.14276 47.1667 7.94275 16.6 31.1428 5" class="path path2"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="153" height="107" viewBox="0 0 153 107" fill="none"
-          class="heart-arrow">
-          <path stroke="#FFAEBA" stroke-width="10" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"
-            d="M6 89.3407C6 89.3407 20.8421 44.8903 63.2481 36.4235C105.654 27.9568 128 49.5039 124.737 66.0572C120.496 82.9907 105.654 76.6406 92.9323 72.4072C92.9323 82.9907 84.4511 106.274 69.609 99.9242C54.7669 93.5741 47.3459 67.1155 79.1504 29.0151C98.2331 5.73152 115.195 -0.61855 147 9.9649"
-            class="path path1"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="trans"
-          class="slide-svg1">
-          <path
-            d="M22.6572 24.4233C27.5809 20.7812 28.6199 13.8372 24.9778 8.91346C21.3356 3.98973 14.3917 2.95077 9.46793 6.59288C4.5442 10.235 3.50525 17.179 7.14735 22.1027C10.7895 27.0264 17.7334 28.0654 22.6572 24.4233Z"
-            fill="#00A791"></path>
-          <path
-            d="M11.1737 19.6566C13.9852 18.6988 17.1107 19.1668 19.5184 20.9049C19.8781 21.1644 20.3569 20.8103 20.214 20.3903C19.2563 17.5789 19.7241 14.4529 21.4627 12.0457C21.7223 11.686 21.3682 11.2072 20.9482 11.3501C18.1366 12.3079 15.0112 11.8399 12.6031 10.1013C12.2434 9.84171 11.7646 10.1959 11.9075 10.6158C12.8652 13.4273 12.3974 16.5533 10.6592 18.961C10.3992 19.3202 10.7537 19.7995 11.1737 19.6566Z"
-            fill="white"></path>
-        </svg>
-      </div>
+      <img src="./images/cont2-slide1.webp" alt="slide1" class="slide-img">
+
     </div>
     <div class="second-slide slide-box">
       <div class="text-wrapper">
@@ -303,35 +304,7 @@
         <span class="keword2">과제 관리</span>
         <span class="keword3">문제 은행 & 나만의 오답 노트</span>
       </div>
-      <div class="img-wrapper">
-        <img src="./images/cont2-slide2.webp" alt="slide2" class="slide-img">
-        <svg class="slide-svg" xmlns="http://www.w3.org/2000/svg" width="525" height="524" viewBox="0 0 525 524"
-          fill="none">
-          <path
-            d="M12.3718 279.191C122.831 314.323 210.044 401.374 245.252 511.57C250.516 528.03 273.761 528.03 279.024 511.57C314.232 401.349 401.471 314.298 511.905 279.191C528.4 273.939 528.4 250.744 511.905 245.491C401.446 210.359 314.232 123.308 279.024 13.0874C273.761 -3.37288 250.516 -3.37288 245.252 13.0874C210.044 123.308 122.805 210.359 12.3718 245.491C-4.12395 250.718 -4.12395 273.939 12.3718 279.191Z"
-            fill="#004D5D"></path>
-        </svg>
-        <img src="./images/slide-bg-svg.svg" alt="bg-svg" class="bg-svg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="67" viewBox="0 0 35 67" fill="none" class="arrow">
-          <path stroke="#FFAEBA" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round"
-            d="M5.14276 61C4.14276 47.1667 7.94275 16.6 31.1428 5" class="path path2"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="153" height="107" viewBox="0 0 153 107" fill="none"
-          class="heart-arrow">
-          <path stroke="#FFAEBA" stroke-width="10" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"
-            d="M6 89.3407C6 89.3407 20.8421 44.8903 63.2481 36.4235C105.654 27.9568 128 49.5039 124.737 66.0572C120.496 82.9907 105.654 76.6406 92.9323 72.4072C92.9323 82.9907 84.4511 106.274 69.609 99.9242C54.7669 93.5741 47.3459 67.1155 79.1504 29.0151C98.2331 5.73152 115.195 -0.61855 147 9.9649"
-            class="path path1"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="trans"
-          class="slide-svg1">
-          <path
-            d="M22.6572 24.4233C27.5809 20.7812 28.6199 13.8372 24.9778 8.91346C21.3356 3.98973 14.3917 2.95077 9.46793 6.59288C4.5442 10.235 3.50525 17.179 7.14735 22.1027C10.7895 27.0264 17.7334 28.0654 22.6572 24.4233Z"
-            fill="#00A791"></path>
-          <path
-            d="M11.1737 19.6566C13.9852 18.6988 17.1107 19.1668 19.5184 20.9049C19.8781 21.1644 20.3569 20.8103 20.214 20.3903C19.2563 17.5789 19.7241 14.4529 21.4627 12.0457C21.7223 11.686 21.3682 11.2072 20.9482 11.3501C18.1366 12.3079 15.0112 11.8399 12.6031 10.1013C12.2434 9.84171 11.7646 10.1959 11.9075 10.6158C12.8652 13.4273 12.3974 16.5533 10.6592 18.961C10.3992 19.3202 10.7537 19.7995 11.1737 19.6566Z"
-            fill="white"></path>
-        </svg>
-      </div>
+      <img src="./images/cont2-slide2.webp" alt="slide2" class="slide-img">
     </div>
     <div class="last-slide slide-box">
       <div class="text-wrapper">
@@ -342,56 +315,68 @@
         <h3 class="sub-title">Coaching & Care System</h3>
         <p class="des">소규모 그룹 수업으로 인성, 사회 학습부터<br>학업 성취도, 학습 습관까지 1:1 맞춤식 코칭</p>
       </div>
-      <div class="img-wrapper">
-        <img src="./images/cont2-slide3.webp" alt="slide3" class="slide-img">
-        <svg class="slide-svg" xmlns="http://www.w3.org/2000/svg" width="525" height="524" viewBox="0 0 525 524"
-          fill="none">
-          <path
-            d="M12.3718 279.191C122.831 314.323 210.044 401.374 245.252 511.57C250.516 528.03 273.761 528.03 279.024 511.57C314.232 401.349 401.471 314.298 511.905 279.191C528.4 273.939 528.4 250.744 511.905 245.491C401.446 210.359 314.232 123.308 279.024 13.0874C273.761 -3.37288 250.516 -3.37288 245.252 13.0874C210.044 123.308 122.805 210.359 12.3718 245.491C-4.12395 250.718 -4.12395 273.939 12.3718 279.191Z"
-            fill="#00A791"></path>
-        </svg>
-        <img src="./images/slide-bg-svg.svg" alt="bg-svg" class="bg-svg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="67" viewBox="0 0 35 67" fill="none" class="arrow">
-          <path stroke="#FFAEBA" stroke-width="9" stroke-miterlimit="10" stroke-linecap="round"
-            d="M5.14276 61C4.14276 47.1667 7.94275 16.6 31.1428 5" class="path path2"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="153" height="107" viewBox="0 0 153 107" fill="none"
-          class="heart-arrow">
-          <path stroke="#FFAEBA" stroke-width="10" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"
-            d="M6 89.3407C6 89.3407 20.8421 44.8903 63.2481 36.4235C105.654 27.9568 128 49.5039 124.737 66.0572C120.496 82.9907 105.654 76.6406 92.9323 72.4072C92.9323 82.9907 84.4511 106.274 69.609 99.9242C54.7669 93.5741 47.3459 67.1155 79.1504 29.0151C98.2331 5.73152 115.195 -0.61855 147 9.9649"
-            class="path path1"></path>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="trans"
-          class="slide-svg1">
-          <path
-            d="M22.6572 24.4233C27.5809 20.7812 28.6199 13.8372 24.9778 8.91346C21.3356 3.98973 14.3917 2.95077 9.46793 6.59288C4.5442 10.235 3.50525 17.179 7.14735 22.1027C10.7895 27.0264 17.7334 28.0654 22.6572 24.4233Z"
-            fill="#00A791"></path>
-          <path
-            d="M11.1737 19.6566C13.9852 18.6988 17.1107 19.1668 19.5184 20.9049C19.8781 21.1644 20.3569 20.8103 20.214 20.3903C19.2563 17.5789 19.7241 14.4529 21.4627 12.0457C21.7223 11.686 21.3682 11.2072 20.9482 11.3501C18.1366 12.3079 15.0112 11.8399 12.6031 10.1013C12.2434 9.84171 11.7646 10.1959 11.9075 10.6158C12.8652 13.4273 12.3974 16.5533 10.6592 18.961C10.3992 19.3202 10.7537 19.7995 11.1737 19.6566Z"
-            fill="white"></path>
-        </svg>
-      </div>
+      <img src="./images/cont2-slide3.webp" alt="slide3" class="slide-img">
     </div>
   </section>
 
   <!-- 이미지 슬라이드 / json 파일 연결 -->
   <section class="free-experience-slide swiper img-swiper">
+    <!-- svg-point -->
+    <div class="img-svg-wrapper">
+      <svg class="img-point1" width="76" height="79" viewBox="0 0 76 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="color-change"
+          d="M38.074 76.0932C59.0196 76.0932 75.9994 59.1131 75.9994 38.1675C75.9994 17.2217 59.0196 0.241898 38.074 0.241898C17.1283 0.241898 0.148438 17.2217 0.148438 38.1675C0.148438 59.1131 17.1283 76.0932 38.074 76.0932Z"
+          fill="#FFA3B0" />
+        <path
+          d="M16.1876 39.6453C25.8662 42.73 33.5078 50.3736 36.5929 60.0496C37.0542 61.495 39.091 61.495 39.5521 60.0496C42.6371 50.3714 50.281 42.7278 59.9575 39.6453C61.4029 39.1842 61.4029 37.1474 59.9575 36.6863C50.2788 33.6013 42.6371 25.9577 39.5521 16.2796C39.091 14.8343 37.0542 14.8343 36.5929 16.2796C33.5078 25.9577 25.864 33.6013 16.1876 36.6863C14.7422 37.1451 14.7422 39.1842 16.1876 39.6453Z"
+          fill="white" />
+      </svg>
+      <svg class="img-point2" width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_55_19)">
+          <path class="color-change"
+            d="M17.7846 35.5435C27.5684 35.5435 35.4997 27.612 35.4997 17.8282C35.4997 8.04437 27.5684 0.112991 17.7846 0.112991C8.00071 0.112991 0.0693359 8.04437 0.0693359 17.8282C0.0693359 27.612 8.00071 35.5435 17.7846 35.5435Z"
+            fill="#FFA3B0" />
+          <path
+            d="M7.56129 18.5185C12.0822 19.9594 15.6517 23.5298 17.0927 28.0495C17.3082 28.7246 18.2596 28.7246 18.475 28.0495C19.916 23.5287 23.4865 19.9584 28.0065 18.5185C28.6816 18.3031 28.6816 17.3517 28.0065 17.1364C23.4855 15.6953 19.916 12.125 18.475 7.60428C18.2596 6.92917 17.3082 6.92917 17.0927 7.60428C15.6517 12.125 12.0812 15.6953 7.56129 17.1364C6.88615 17.3507 6.88615 18.3031 7.56129 18.5185Z"
+            fill="white" />
+        </g>
+        <defs>
+          <clipPath id="clip0_55_19">
+            <rect width="35.5" height="36.8148" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+      <svg class="img-point3" width="61" height="36" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="color-change" fill-rule="evenodd" clip-rule="evenodd"
+          d="M57.6059 18.2649L55.7729 20.1262L42.1097 34H15.79L4.16669 10.8288L2.98114 8.46527L5.35748 7.30566L11.116 4.49568L13.4862 3.33911L14.623 5.71887L27.347 32.3565L47.1907 11.7076L49.0273 9.79636L50.9138 11.6586L55.7469 16.4297L57.6059 18.2649Z"
+          fill="#FFA3B0" />
+        <path class="color-change"
+          d="M55.7729 20.1262L54.348 18.7228L54.348 18.7228L55.7729 20.1262ZM57.6059 18.2649L59.0309 19.6683L60.4326 18.245L59.011 16.8416L57.6059 18.2649ZM42.1097 34V36H42.9471L43.5347 35.4034L42.1097 34ZM15.79 34L14.0023 34.8968L14.5557 36H15.79V34ZM4.16669 10.8288L2.37899 11.7255L2.37901 11.7256L4.16669 10.8288ZM2.98114 8.46527L2.10404 6.66786L0.286848 7.55461L1.19343 9.36199L2.98114 8.46527ZM5.35748 7.30566L4.4804 5.50824L4.48038 5.50825L5.35748 7.30566ZM11.116 4.49568L11.9931 6.2931L11.116 4.49568ZM13.4862 3.33911L15.2909 2.47704L14.4216 0.657258L12.6091 1.54168L13.4862 3.33911ZM14.623 5.71887L16.4277 4.85683L16.4277 4.85681L14.623 5.71887ZM27.347 32.3565L25.5423 33.2185L26.7874 35.8251L28.789 33.7423L27.347 32.3565ZM47.1907 11.7076L48.6327 13.0934L48.6328 13.0934L47.1907 11.7076ZM49.0273 9.79636L50.4324 8.37303L48.9898 6.94898L47.5853 8.41058L49.0273 9.79636ZM50.9138 11.6586L52.3189 10.2353L52.3189 10.2353L50.9138 11.6586ZM55.7469 16.4297L57.152 15.0064L57.152 15.0064L55.7469 16.4297ZM57.1979 21.5295L59.0309 19.6683L56.1809 16.8616L54.348 18.7228L57.1979 21.5295ZM43.5347 35.4034L57.1979 21.5295L54.348 18.7228L40.6847 32.5966L43.5347 35.4034ZM15.79 36H42.1097V32H15.79V36ZM2.37901 11.7256L14.0023 34.8968L17.5777 33.1032L5.95438 9.93206L2.37901 11.7256ZM1.19343 9.36199L2.37899 11.7255L5.9544 9.93209L4.76885 7.56855L1.19343 9.36199ZM4.48038 5.50825L2.10404 6.66786L3.85824 10.2627L6.23458 9.10308L4.48038 5.50825ZM10.2389 2.69826L4.4804 5.50824L6.23456 9.10309L11.9931 6.2931L10.2389 2.69826ZM12.6091 1.54168L10.2389 2.69826L11.9931 6.2931L14.3633 5.13653L12.6091 1.54168ZM16.4277 4.85681L15.2909 2.47704L11.6816 4.20117L12.8183 6.58094L16.4277 4.85681ZM29.1517 31.4944L16.4277 4.85683L12.8183 6.58091L25.5423 33.2185L29.1517 31.4944ZM45.7486 10.3218L25.9049 30.9707L28.789 33.7423L48.6327 13.0934L45.7486 10.3218ZM47.5853 8.41058L45.7486 10.3218L48.6328 13.0934L50.4694 11.1821L47.5853 8.41058ZM52.3189 10.2353L50.4324 8.37303L47.6223 11.2197L49.5088 13.0819L52.3189 10.2353ZM57.152 15.0064L52.3189 10.2353L49.5088 13.0819L54.3419 17.853L57.152 15.0064ZM59.011 16.8416L57.152 15.0064L54.3418 17.853L56.2009 19.6882L59.011 16.8416Z"
+          fill="#FFA3B0" />
+      </svg>
+    </div>
 
     <!-- 기존 네비게이션 버튼 -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
     <!-- 새로운 네비게이션 버튼 -->
-     <div class="new-swiper-btn-wrapper">
+    <div class="new-swiper-btn-wrapper">
       <div class="new-swiper-button-prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="54" viewBox="0 0 30 54" fill="none"><path d="M26 4C26 4 12.5915 18.0179 4 27C12.5915 35.9821 26 50 26 50" stroke="#00A791" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="stroke: #00A791;"></path></svg>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M48 96C74.5096 96 96 74.5097 96 48C96 21.4903 74.5096 0 48 0C21.4904 0 0 21.4903 0 48C0 74.5097 21.4904 96 48 96ZM61.7649 22.1094C60.1685 20.5824 57.6365 20.6387 56.1095 22.2351L59 25C56.1095 22.2351 56.1094 22.2352 56.1089 22.2357L56.1069 22.2377L56.0997 22.2453L56.0707 22.2756L55.9568 22.3947L55.5165 22.855L53.8801 24.5657L48.3313 30.3668L34.1094 45.2351C32.6302 46.7816 32.6302 49.2184 34.1094 50.7649L48.3313 65.6332L53.8801 71.4343L55.5165 73.145L55.9568 73.6053L56.0707 73.7244L56.0997 73.7547L56.1069 73.7623L56.1089 73.7643C56.1094 73.7648 56.1095 73.7649 59 71L56.1095 73.7649C57.6365 75.3613 60.1685 75.4176 61.7649 73.8906C63.3613 72.3636 63.4176 69.8315 61.8905 68.2351L61.8881 68.2325L61.8809 68.2249L61.8518 68.1946L61.7379 68.0755L61.2976 67.6152L59.6613 65.9044L54.1124 60.1034L42.5353 48L54.1124 35.8966L59.6613 30.0956L61.2976 28.3848L61.7379 27.9245L61.8518 27.8054L61.8809 27.7751L61.8881 27.7675L61.8899 27.7655C61.8901 27.7654 61.8903 27.7652 61.7958 27.6747L61.8905 27.7649C63.4176 26.1685 63.3613 23.6364 61.7649 22.1094Z"
+            fill="white" />
+        </svg>
       </div>
       <div class="new-swiper-button-next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="54" viewBox="0 0 30 54" fill="none"><path d="M4 4C4 4 17.4085 18.0179 26 27C17.4085 35.9821 4 50 4 50" stroke="#00A791" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="stroke: #00A791;"></path></svg>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M48 0C21.4903 0 0 21.4903 0 48C0 74.5097 21.4903 96 48 96C74.5097 96 96 74.5097 96 48C96 21.4903 74.5097 0 48 0ZM34.2351 73.8906C35.8315 75.4176 38.3635 75.3613 39.8906 73.7649L37 71C39.8906 73.7649 39.8906 73.7648 39.8907 73.7647L39.8912 73.7643L39.893 73.7623L39.9003 73.7547L39.9293 73.7244L40.0432 73.6053L40.4835 73.145L42.1199 71.4343L47.6688 65.6332L61.8906 50.7649C63.3698 49.2184 63.3698 46.7816 61.8906 45.2351L47.6688 30.3668L42.1199 24.5658L40.4835 22.855L40.0432 22.3947L39.9293 22.2756L39.9003 22.2453L39.893 22.2377L39.8912 22.2357L39.8907 22.2353C39.8906 22.2352 39.8906 22.2351 37 25L39.8906 22.2351C38.3635 20.6387 35.8315 20.5824 34.2351 22.1094C32.6387 23.6365 32.5824 26.1685 34.1094 27.7649L37 25C34.1094 27.7649 34.1095 27.765 34.1096 27.7651L34.1101 27.7655L34.1119 27.7675L34.1192 27.7751L34.1482 27.8054L34.2621 27.9245L34.7024 28.3848L36.3388 30.0955L41.8876 35.8966L53.4648 48L41.8876 60.1034L36.3388 65.9045L34.7024 67.6152L34.2621 68.0755L34.1482 68.1946L34.1192 68.2249L34.1119 68.2325L34.1101 68.2345L34.1096 68.2349C34.1095 68.235 34.1094 68.2351 37 71L34.1094 68.2351C32.5824 69.8315 32.6387 72.3635 34.2351 73.8906Z"
+            fill="white" />
+        </svg>
       </div>
-     </div>
-    
-
-    <div class="slide-wrapper swiper-wrapper">
+    </div>
+    <div class=" slide-wrapper swiper-wrapper">
       <div class="frist-slide experience swiper-slide">
         <!-- <h2 class="title"></h2>
         <p class="des"></p>
@@ -407,6 +392,7 @@
     </div>
   </section>
 
+  <!-- 학부모 리뷰 / 스크롤 이벤트 -->
   <section class="review">
     <div class="review-bg">
       <svg width="344" height="688" viewBox="0 0 111 222" class="item1-1">
@@ -464,7 +450,7 @@
         <h2 class="title">푸르넷과<br>
           함께한 후기</h2>
       </div>
-      
+
       <div class="card-list-box">
         <div class="card-list blur">
           <!-- 
@@ -489,13 +475,20 @@
     </div>
   </section>
 
+  <!-- 비디오 슬라이드 -->
   <section class="video-slide">
     <div class="video-btn">
-      <div class="video-prev-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="54" viewBox="0 0 30 54" fill="none"><path d="M26 4C26 4 12.5915 18.0179 4 27C12.5915 35.9821 26 50 26 50" stroke="#5562FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="stroke: #5562FF;"></path></svg>
+      <div class="video-prev-btn btn-style">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="54" viewBox="0 0 30 54" fill="none">
+          <path d="M26 4C26 4 12.5915 18.0179 4 27C12.5915 35.9821 26 50 26 50" stroke="#5562FF" stroke-width="8"
+            stroke-linecap="round" stroke-linejoin="round" style="stroke: #5562FF;"></path>
+        </svg>
       </div>
       <div class="video-next-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="54" viewBox="0 0 30 54" fill="none"><path d="M4 4C4 4 17.4085 18.0179 26 27C17.4085 35.9821 4 50 4 50" stroke="#5562FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" style="stroke: #5562FF;"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="54" viewBox="0 0 30 54" fill="none">
+          <path d="M4 4C4 4 17.4085 18.0179 26 27C17.4085 35.9821 4 50 4 50" stroke="#5562FF" stroke-width="8"
+            stroke-linecap="round" stroke-linejoin="round" style="stroke: #5562FF;"></path>
+        </svg>
       </div>
     </div>
     <h2 class="title">교육으로 세상을 바꿉니다</h2>

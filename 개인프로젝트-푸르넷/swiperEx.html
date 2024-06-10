@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>swiperEx1</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+     html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 400px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .bg1 {
+      background: #03AED2;
+    }
+
+    .bg2 {
+      background: #68D2E8;
+    }
+
+    .bg3 {
+      background: #FC4100;
+    }
+
+    .bg4 {
+      background: #059212;
+    }
+
+    .bg5 {
+      background: #06D001;
+    }
+
+    .bg6 {
+      background: #9BEC00;
+    }
+    .bg7 {
+      background: #F3FF90;
+    }
+    .bg8 {
+      background: #FF0000;
+    }
+    .bg9 {
+      background: #FFA27F;
+    }
+    .active-slide {
+      font-size: 36px !important;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide bg1">Slide 1</div>
+      <div class="swiper-slide bg2">Slide 2</div>
+      <div class="swiper-slide bg3">Slide 3</div>
+      <div class="swiper-slide bg4">Slide 4</div>
+      <div class="swiper-slide bg5">Slide 5</div>
+      <div class="swiper-slide bg6">Slide 6</div>
+      <div class="swiper-slide bg7">Slide 7</div>
+      <div class="swiper-slide bg8">Slide 8</div>
+      <div class="swiper-slide bg9">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <script>
+    function myPlugin({ swiper, extendParams, on }) {
+      extendParams({
+        debugger: false,
+      });
+      on('slideChange', () => {
+        if (!swiper.params.debugger) return;
+
+        swiper.slides.forEach(slide => {
+          slide.classList.remove('active-slide');
+        });
+
+        swiper.slides[swiper.activeIndex].classList.add('active-slide');
+      });
+
+    }
+  </script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      modules: [myPlugin],
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      debugger: true,
+    });
+  </script>
+</body>
+
+</html>

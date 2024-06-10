@@ -17,13 +17,13 @@ $(function () {
   });
   */
 
-  $('.global-menu > li > a').on({
-    'mouseenter' : (e) => {
+  $(".global-menu > li > a").on({
+    mouseenter: (e) => {
       // $(e.target).next().stop().slideDown();
-      $('.global-menu .sub-menu').stop().slideDown();
+      $(".global-menu .sub-menu").stop().slideDown();
     },
-    'mouseleave' : () => {
-      $('.global-menu .sub-menu').stop().slideUp();
-    }
+    mouseleave: () => {
+      $(".global-menu .sub-menu").stop().slideUp();
+    },
   });
 });

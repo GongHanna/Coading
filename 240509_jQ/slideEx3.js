@@ -24,7 +24,7 @@ $(function() {
     simpleSlide(current - 1);
   });
 
-  setInterval(() => {
-    simpleSlide(current + 1);
-  }, 3000);
+  // setInterval(() => {
+  //   simpleSlide(current + 1);
+  // }, 3000);
 });

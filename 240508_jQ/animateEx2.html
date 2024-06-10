@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <title>animateEx2</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <style>
-    ul { list-style: none; margin: 0; padding: 0; }
-    img { width: 100%; vertical-align: top; }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
 
     .container {
       width: 80vw;
@@ -16,34 +25,43 @@
       position: relative;
       overflow: hidden;
     }
+
     .container .btn-group {
-      display: flex; 
+      display: flex;
       justify-content: center;
       position: absolute;
       bottom: 10px;
       width: 100%;
       z-index: 999;
     }
+
     .container .btn-group li {
       text-indent: -9999px;
       background-color: rgba(255, 255, 255, 0.7);
-      width: 20px; height: 20px;
+      width: 20px;
+      height: 20px;
       margin: 6px;
       border-radius: 50%;
       cursor: pointer;
     }
+
     .container .btn-group li:hover {
       background-color: rgb(255, 255, 255);
     }
+
     .container .img-group {
       display: flex;
       outline: 3px solid rgba(255, 0, 0, 0.5);
-      width: 400%; /* img 개수. 부모인 .container의 4배 */
+      width: 400%;
+      /* img 개수. 부모인 .container의 4배 */
       position: relative;
     }
+
     .container .img-group li {
-      width: 25%; /* 부모인 ul을 기준으로 1/4을 차지해야 하므로 */
+      width: 25%;
+      /* 부모인 ul을 기준으로 1/4을 차지해야 하므로 */
     }
+
     /*
     .gallery {
       width: 500px; height: 500px;
@@ -136,8 +154,9 @@
       // $('.img-group').animate({ marginLeft : -100 * idx + '%' }, 300, 'linear');
       const containerWt = $('.container').width(); // px로 반환
       console.log(containerWt);
-      $('.img-group').animate({ marginLeft : -containerWt * idx + 'px' }, 300, 'linear');
+      $('.img-group').animate({ marginLeft: -containerWt * idx + 'px' }, 300, 'linear');
     });
   </script>
 </body>
+
 </html>
