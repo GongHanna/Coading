@@ -1,11 +1,37 @@
 @charset "utf-8";
 
-/* notice-btn svg ani */
-@keyframes rotate {
+/* main-page 푸르넷 svg 색상 변경 */
+@keyframes slide-down {
   0% {
-    transform: rotate(0);
+    transform: translateY(-100%);
   } 100% {
-    transform: rotate(360deg);
+    transform: translateY(0);
+  }
+}
+/* main-content-right 애니 */
+@keyframes slide-over {
+  0% {
+    transform: translateX(0);
+  } 100% {
+    transform: translateX(100%);
+  }
+}
+/* main-content-right svg 애니 */
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* main-page line 움직임 */
+@keyframes line-motion {
+  0% {
+    height: 0;
+  } 100% {
+    height: 100%;
   }
 }
 
@@ -17,13 +43,28 @@
     stroke-dashoffset: 0;
   }
 }
-
+/* svg 바운스 효과 */
 @keyframes drop-down {
   0% {
     opacity: 0;
     transform: translateY(-30px);
+  } 80% {
+    opacity: 1;
+    transform: translateY(0);
+  } 90% {
+    opacity: 1;
+    transform: translateY(-10px);
   } 100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* notice-btn svg ani */
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  } 100% {
+    transform: rotate(1turn);
   }
 }

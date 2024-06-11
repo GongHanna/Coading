@@ -5,9 +5,14 @@
   display: flex;
   padding: 85px 0;
 }
+/* 오른쪽 contetns */
 .main-contents .main-contents-right {
-  width: 50%;
+  /* flex-grow: 1; */
+  width: 100%;
   padding-left: 390px;
+  position: absolute;
+  left: 0; top: -200%;
+  transition: .4s;
 }
 .main-contents .main-contents-right .main-title {
   font-size: 48px;
@@ -23,23 +28,83 @@
 }
 .main-contents .main-contents-right .svg-box .star {
   position: absolute;
-  top: 0;
-  left: 45%;
+  top: 0; left: 16%;
 }
+/* 왼쪽 svg contents */
 .main-contents .main-contents-left {
-  width: 50%;
+  /* flex-grow: 1; */
+  /* background-color: rgba(255, 255, 0, 0.514); */
+  width: 100vw;
   position: relative;
   padding-left: 100px;
+  height: inherit;
+  margin: auto auto;
+}
+.main-contents .main-contents-left .line {
+  transition: all 1s cubic-bezier(.45,.05,.55,.95);
+  position: absolute;
+  z-index: 99;
+  /* animation: line-motion .3s ease 1s forwards; */
+}
+.main-contents .main-contents-left .line1 {
+  top: 8%; left: 45%;
+}
+.main-contents .main-contents-left .line2 {
+  top: 5%; left: 65%;
+}
+.main-contents .main-contents-left .line2::after {
+  content: "";
+  background: url(./images/line-star.png) no-repeat 50% / contain;
+  position: absolute;
+  width: 23px; height: 25px;
+  bottom: -110px; left: -25px;
+}
+.main-contents .main-contents-left .line3 {
+  top: 5%; right: 25%;
+}
+.main-contents .main-contents-left .line4 {
+  bottom: 35%; left: 40%;
+}
+.main-contents .main-contents-left .line5 {
+  bottom: 23%; left: 47%;
+}
+.main-contents .main-contents-left .line5::after {
+  content: "";
+  background: url(./images/line-star.png) no-repeat 50% / contain;
+  position: absolute;
+  width: 29px; height: 32px;
+  bottom: 0; left: 90px;
+}
+.main-contents .main-contents-left .line6 {
+  bottom: 35%; right: 20%;
+}
+.main-contents .main-contents-left .line6::after {
+  content: "";
+  background: url(./images/line-star.png) no-repeat 50% / contain;
+  position: absolute;
+  width: 43px; height: 47px;
+  top: 115px; left: -45px;
 }
 .main-contents .main-contents-left svg {
   position: absolute;
 }
 .main-contents .main-contents-left .line-svg {
-  top: 25%;
+  top: 20%; left: 55%;
+  z-index: 9;
 }
 .main-contents .main-contents-left .object-svg {
-  top: 26.1%;
-  left: 120px;
+  top: 21.1%; left: 56%;
+}
+/* loading-animation */
+.main-contents.load-ani .main-contents-right {
+  top: 0;
+  /* animation: slide-down 1s 3.1s linear forwards; */
+}
+.main-contents.load-ani .main-contents-right .svg-box .star {
+  animation: opacity .5s linear 5.3s forwards, rotate 2s linear 5.3s infinite;
+}
+.main-contents.load-ani .main-contents-right .svg-box  .purunet-svg rect {
+  animation: slide-over 1s linear 4.2s forwards;
 }
 
 /***** company-introduction *****/
@@ -116,13 +181,13 @@
   opacity: 0;
 }
 .svg-animation1 {
-  animation: drawing 2s 1 linear;
+  animation: drawing 1.6s 1 linear forwards;
 }
 .svg-animation2 {
-  animation: drawing 1s 0.8s 1 linear;
+  animation: drawing .6s 0.8s 1 linear forwards;
 }
 .svg-animation3 {
-  animation: drop-down 1s 1s 1 linear;
+  animation: drop-down .5s 1.1s 1 linear forwards;
 }
 .auto-slide .slide-box {
   width: 1280px;
@@ -292,14 +357,16 @@
 
 /***** review *****/
 .review {
-  height: 105vh;
-  overflow: hidden;
-  position: sticky;
+  /* height: 105vh; */
+  height: auto;
+  position: relative;
 }
 .review .review-bg {
-  position: absolute;
+  /* position: absolute; */
+  position: sticky;
   top: 0; left: 0;
-  height: 100%;
+  height: 105vh;
+  overflow: hidden;
   width: 100%;
 }
 .review .review-bg > svg {
@@ -314,11 +381,11 @@
 }
 .review .review-bg .item1-3 {
   width: 173.23px;
-  bottom: -3.5%; left: 60%;
+  bottom: -3%; left: 60%;
 }
 .review .review-bg .item1-4 {
   width: 173.23px;
-  bottom: -3.5%; left: 69%;
+  bottom: -3%; left: 69%;
 }
 .review .review-bg .item1-5 {
   width: 238.767px;
@@ -334,7 +401,7 @@
 }
 .review .review-bg .item1-8 {
   width: 185.6px;
-  bottom: -5%; left: 20px;
+  bottom: -12%; left: 20px;
 }
 .review .review-bg .point-item1 {
   bottom: 16%; left: 24%;
@@ -353,17 +420,22 @@
   display: flex;
   width: 1200px;
   margin: 0 auto;
+  gap: 100px;
+  height: inherit;
+  margin-top: -100vh;
 }
 .review .sticky-box {
-  /* background-color: antiquewhite; */
+  /* background-color: #d8d8d8; */
+  margin: 155px 0 40px;
+  /* height: max-content; */
 }
 .review .sticky-box .title {
   font-size: 78px;
   font-weight: 700;
-  margin: 140px 100px 0 0;
   position: sticky;
-  top: 50%;
+  top: 50%; left: 0;
   transform: translateY(-50%);
+  padding-top: 300px;
 }
 .review .card-list-box {
   display: flex;
@@ -371,9 +443,10 @@
   flex-wrap: wrap;
   gap: 16px;
   max-width: 740px;
+  height: max-content;
   position: relative;
-  z-index: 99;
-  margin-top: 380px;
+  /* z-index: 99; */
+  padding: 300px 0 155px;
 }
 .review .card-wrapper .card-list {
   height: 403px;
@@ -382,6 +455,7 @@
   background-color: #fff;
   border-radius: var(--primary-border-radius);
   padding: 46px 34px 47px 48px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .15);
 }
 /* .blur 스크롤 이벤트 */
 .review .card-wrapper .card-list.blur {

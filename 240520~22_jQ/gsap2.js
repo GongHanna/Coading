@@ -183,7 +183,6 @@ txtAniLis.forEach((txt) => {
 });
 
 // .list-items
-
 gsap.utils.toArray('.list-items .list-item').forEach((elem, idx)=>{
   ScrollTrigger.create({
     trigger: elem,

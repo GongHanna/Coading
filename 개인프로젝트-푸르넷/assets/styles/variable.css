@@ -18,6 +18,10 @@ section {
   height: 95vh;
 }
 
+svg path {
+  transition: fill 0.5s ease;
+}
+
 /* 변수 설정 */
 :root {
   /* fonts */
