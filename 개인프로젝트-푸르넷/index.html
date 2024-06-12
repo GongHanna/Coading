@@ -11,7 +11,7 @@
   <meta property="og:title" content="푸르넷 공부방">
   <meta property="og:url" content="https://gonghanna.github.io/Portfolio/">
   <meta property="og:image" content="https://gonghanna.github.io/Portfolio/images/">
-  <meta property="og:description" content="">
+  <meta property="og:description" content="퍼블리싱 기술을 그대로 구현한 페이지입니다.">
   <meta property="og:type" content="website">
   <!-- reset css -->
   <link rel="stylesheet" href="./assets/styles/reset.css">
@@ -27,8 +27,6 @@
   <script src="./assets/js/jquery-ui.min.js"></script>
   <!-- pulgIn -->
   <script src="./assets/js/swiper-bundle.min.js"></script>
-  <script src="./assets/js/gsap.min.js"></script>
-  <script src="./assets/js/ScrollTrigger.min.js"></script>
   <!-- page 별 사용되는 js -->
   <script defer src="./assets/js/global.js"></script>
   <script defer src="./index.js"></script>
@@ -37,49 +35,51 @@
 <body>
   <header class="header">
     <h1 class="logo"><a href="./index.html">로고</a></h1>
+    <!-- 대메뉴 -->
     <ul class="global-menu">
-      <li class="main-title"><a href="#">푸르넷 소개</a>
+      <li class="main-title"><a href="#">푸르넷 소개</a></li>
+      <li class="main-title"><a href="#">푸르넷 후기</a></li>
+      <li class="main-title"><a href="#">무료체험</a></li>
+      <li class="main-title"><a href="#">교사모집</a></li>
+      <li class="main-title"><a href="#">고객센터</a></li>
+    </ul>
+    <!-- 소메뉴 -->
+    <div class="sub-menu-wrapper">
+      <div class="sub-menu-box">
         <ul class="sub-menu">
           <li><a href="#">푸르넷 소개</a></li>
           <li><a href="#">유아</a></li>
           <li><a href="#">초등</a></li>
           <li><a href="#">중등</a></li>
         </ul>
-      </li>
-      <li class="main-title"><a href="#">푸르넷 후기</a>
         <ul class="sub-menu">
           <li><a href="#">학부모 후기</a></li>
           <li><a href="#">선생님 후기</a></li>
         </ul>
-      </li>
-      <li class="main-title"><a href="#">무료체험</a>
         <ul class="sub-menu">
           <li><a href="#">푸르넷</a></li>
           <li><a href="#">잉글리시버디</a></li>
           <li><a href="#">캠핑</a></li>
         </ul>
-      </li>
-      <li class="main-title"><a href="#">교사모집</a>
         <ul class="sub-menu">
           <li><a href="#">모집공고</a></li>
           <li><a href="#">사업설명회</a></li>
           <li><a href="#">지원하기</a></li>
         </ul>
-      </li>
-      <li class="main-title"><a href="#">고객센터</a>
         <ul class="sub-menu">
           <li><a href="#">공지사항</a></li>
           <li><a href="#">FAQ</a></li>
           <li><a href="#">문의하기</a></li>
           <li><a href="#">지점/선생님 찾기</a></li>
         </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
+
     <a href="#" class="camping">캠핑 바로가기</a>
   </header>
 
   <!-- contents -->
-  <section class="main-contents load-ani">
+  <section class="main-contents">
     <div class="main-contents-right">
       <h2 class="main-title">대한민국 교육 브랜드 1위</h2>
       <div class="svg-box">
@@ -189,14 +189,15 @@
           stroke-width="0.99"></path>
         <path d="M283.604 488H252.848" stroke="#231815" stroke-width="0.99"></path>
         <path d="M314.797 27.6283L364.03 27.6283L364.03 80.2188" stroke="#231815" stroke-width="0.99"></path>
-      </svg> <svg width="368" height="455" viewBox="0 0 368 455" fill="none" xmlns="http://www.w3.org/2000/svg"
+      </svg>
+      <svg width="368" height="455" viewBox="0 0 368 455" fill="none" xmlns="http://www.w3.org/2000/svg"
         class="object-svg">
         <ellipse cx="319.53" cy="47.8803" rx="47.53" ry="47.81" fill="#D1D1D1" class="object3 blue"></ellipse>
         <ellipse cx="77.815" cy="380.165" rx="73.815" ry="74.095" fill="#999999" class="object4 pink"></ellipse>
         <path fill-rule="evenodd" clip-rule="evenodd"
           d="M6.58789 77.3996L29.3475 77.3996V94.4684V103.984V121.053L6.58789 121.053V155.148H42.8762H112.479H148.173V121.053L125.541 121.053V103.984H125.541V77.3996L148.173 77.3996V43.3047H112.479H42.8767H6.58789V77.3996ZM65.3128 77.3996V94.4684V103.984V121.053H89.7777V94.4684H89.7782V77.3996H65.3128Z"
           fill="#4B4B4B" class="object1 green"></path>
-        <rect x="54.7744" y="62.3359" width="44.6171" height="74.9568" fill="#4B4B4B" class="object1 green"></rect>
+        <rect x="54.7744" y="62.3359" width="44.6171" height="74.9568" fill="#4B4B4B" class="object1"></rect>
         <path
           d="M40.5451 100.695C56.9122 105.91 69.835 118.833 75.0518 135.191C75.8317 137.634 79.2761 137.634 80.056 135.191C85.2729 118.829 98.1994 105.906 114.563 100.695C117.007 99.915 117.007 96.4717 114.563 95.692C98.1956 90.4767 85.2729 77.5541 80.056 61.192C79.2761 58.7485 75.8317 58.7485 75.0518 61.192C69.835 77.5541 56.9085 90.4767 40.5451 95.692C38.1009 96.468 38.1009 99.915 40.5451 100.695Z"
           fill="white"></path>
@@ -227,6 +228,7 @@
     </div>
   </section>
 
+  <!-- 스와이퍼, 숫자 카운트 이벤트 -->
   <section class="company-introduction swiper main-swiper">
     <h2 class="intro-title">230만 학부모가 선택한 <span>푸르넷</span></h2>
     <p class="intro-desc">* 2023년 기준. 단, 수상은 2024년, 재가입률은 2021년 기준</p>
@@ -284,6 +286,7 @@
     </ul>
   </section>
 
+  <!-- 자동 슬라이드 -->
   <section class="auto-slide">
     <!-- svg animation -->
     <div class="svg-wrapper">
@@ -413,12 +416,6 @@
     </div>
     <div class=" slide-wrapper swiper-wrapper">
       <div class="frist-slide experience swiper-slide">
-        <!-- <h2 class="title"></h2>
-        <p class="des"></p>
-        <div class="img-wrapper">
-          <img src="" alt="">
-        </div>
-        <a href="# " class="application-btn"></a> -->
       </div>
       <div class="second-slide experience swiper-slide">
       </div>
@@ -486,13 +483,9 @@
           함께한 후기</h2>
       </div>
 
+      <!-- json 파일 연결 -->
       <div class="card-list-box">
         <div class="card-list blur">
-          <!-- 
-          <p class="parents"><img src="" alt=""></p>
-          <p class="review-desc"></p>
-          <p class="location"></p>
-          <p class="name"><span></span></p> -->
         </div>
         <div class="card-list">
         </div>
@@ -595,6 +588,7 @@
     </div>
   </section>
 
+  <!-- notice / contact -->
   <section class="contact">
     <ul class="notice-wrapper">
       <li class="title">공지사항

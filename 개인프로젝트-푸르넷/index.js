@@ -1,6 +1,10 @@
 /* main-page animation */
 $(window).on("load", () => {
-  // $(".main-contents .main-contents-right").slideDown();
+  $(".main-contents .main-contents-left .line").addClass("line-ani");
+  $(".main-contents .main-contents-left .line-svg, .main-contents .main-contents-left .object-svg").addClass("svg-ani");
+  $(".main-contents .main-contents-left").addClass("mov-box");
+  $(".main-contents .main-contents-right").addClass("mov-text");
+  $(".main-contents .main-contents-right .svg-box").addClass("right-svg-ani");
 });
 
 /* company-introduction 슬라이드 */
@@ -209,15 +213,12 @@ function updateBackgroundAndSvgColors(realIndex) {
   let bgColor, svgColor;
 
   if (realIndex === 0) {
-    // 첫 번째 슬라이드
     bgColor = "var(--primary-color)";
     svgColor = "";
   } else if (realIndex === 1) {
-    // 두 번째 슬라이드
     bgColor = "var(--cont4-bgColor2)";
     svgColor = "var(--primary-color)";
   } else if (realIndex === 2) {
-    // 마지막 슬라이드
     bgColor = "var(--cont4-bgColor3)";
     svgColor = "";
   }
@@ -266,18 +267,18 @@ $(window).scroll(function () {
       $(".item1-3 path, .item1-4 path").css({ fill: "#FE696B" });
       $(".item1-5 path").css({ fill: "#5BC3F0" });
     } else {
-      $(".item1-3 path, .item1-4 path").css({ fill: "" }); // 원래 색상으로 복원
-      $(".item1-5 path").css({ fill: "" }); // 원래 색상으로 복원
+      $(".item1-3 path, .item1-4 path").css({ fill: "" });
+      $(".item1-5 path").css({ fill: "" });
     }
 
     if ($cards.eq(3).offset().top - $cards.eq(3).outerHeight() / 2 <= scrollPosition) {
       $(".item1-7 path").css({ fill: "#00A791" });
     } else {
-      $(".item1-7 path").css({ fill: "" }); // 원래 색상으로 복원
+      $(".item1-7 path").css({ fill: "" });
     }
   }
 
-  updateActiveCard(); // 스크롤할 때마다 활성 카드 업데이트
+  updateActiveCard();
 });
 
 /* 비디오 슬라이드 */
@@ -288,18 +289,18 @@ $(function () {
   const $nextBtn = $(".video-slide .video-btn .video-next-btn");
   const totalSlides = $(".video-slide .video-box").length;
 
-  // 슬라이드 이동 함수
+  // 슬라이드 이동
   const moveSlide = (index) => {
     $videoSlide.css({ marginLeft: -100 * index + "%" });
 
-    // 다음 버튼 조건에 따른 클래스 추가/제거
+    // 다음 버튼
     if (index === totalSlides - 1) {
       $nextBtn.addClass("btn-style");
     } else {
       $nextBtn.removeClass("btn-style");
     }
 
-    // 이전 버튼 조건에 따른 클래스 추가/제거
+    // 이전 버튼
     if (index === 0) {
       $prevBtn.addClass("btn-style");
     } else {
@@ -310,7 +311,7 @@ $(function () {
   // SVG 애니메이션 함수
   const animateSvgs = () => {
     const $svgs = $(".video-slide .video-slide-wrapper .slider-points svg");
-    $svgs.stop(true, true).hide(); // 현재 실행 중인 애니메이션 중지하고 모든 SVG 숨기기
+    $svgs.stop(true, true).hide();
 
     $svgs.each(function (index) {
       $(this).delay(300 * index).fadeIn(300);
@@ -323,7 +324,7 @@ $(function () {
     if (current < totalSlides - 1) {
       current++;
       moveSlide(current);
-      animateSvgs(); // SVG 애니메이션 실행
+      animateSvgs();
     }
   });
 
@@ -333,7 +334,7 @@ $(function () {
     if (current > 0) {
       current--;
       moveSlide(current);
-      animateSvgs(); // SVG 애니메이션 실행
+      animateSvgs();
     }
   });
 });

@@ -11,12 +11,12 @@ $(".header .logo").on("click", (e) => {
   });
 });
 
-// .global-menu에 마우스를 올리면 .sub-menu가 내려옴
-$(".header .global-menu").on({
+// .header에 마우스를 올리면 .sub-menu가 내려옴
+$(".header").on({
   mouseenter: () => {
-    $(".global-menu .sub-menu").stop().slideDown();
+    $(".header .sub-menu-wrapper").stop().slideDown();
   },
   mouseleave: () => {
-    $(".global-menu .sub-menu").stop().slideUp();
+    $(".header .sub-menu-wrapper").stop().slideUp();
   },
 });

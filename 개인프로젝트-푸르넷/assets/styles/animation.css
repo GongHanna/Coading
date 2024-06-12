@@ -1,14 +1,16 @@
 @charset "utf-8";
 
-/* main-page 푸르넷 svg 색상 변경 */
-@keyframes slide-down {
+/* main-page text ani */
+@keyframes text-down {
   0% {
-    transform: translateY(-100%);
+    opacity: 0;
+    margin-top: -30%;
   } 100% {
-    transform: translateY(0);
+    opacity: 1;
+    margin-top: 0;
   }
 }
-/* main-content-right 애니 */
+/* main-page 푸르넷 svg 색상 변경  */
 @keyframes slide-over {
   0% {
     transform: translateX(0);
@@ -16,7 +18,8 @@
     transform: translateX(100%);
   }
 }
-/* main-content-right svg 애니 */
+
+/* 반짝임 애니 */
 @keyframes opacity {
   0% {
     opacity: 0;
@@ -26,12 +29,60 @@
   }
 }
 
-/* main-page line 움직임 */
-@keyframes line-motion {
+/* line-mov */
+@keyframes line-mov1 {
   0% {
-    height: 0;
+    margin-left: 0;
   } 100% {
-    height: 100%;
+    margin-left: 150px;
+  }
+}
+@keyframes line-mov2 {
+  0% {
+    margin-left: 0;
+  } 100% {
+    margin-left: 100px;
+  }
+}
+@keyframes line-mov3 {
+  0% {
+    margin-right: 0;
+  } 100% {
+    margin-right: 150px;
+  }
+}
+
+/* main svg 컬러 변경 */
+@keyframes svg-blue {
+  100% {
+    fill : #4CBEED;
+  }
+}
+@keyframes svg-pink {
+  100% {
+    fill : var(--cont7-bgColor2);
+  }
+}
+@keyframes svg-green {
+  100% {
+    fill : var(--primary-color);
+  }
+}
+@keyframes svg-lightblue {
+  100% {
+    fill : #BDE7F9;
+  }
+}
+@keyframes svg-red {
+  100% {
+    fill : #E84660;
+  }
+}
+@keyframes mov-box {
+  0% {
+    transform: translateX(0);
+  } 100% {
+    transform: translateX(15%);
   }
 }
 

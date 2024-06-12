@@ -7,12 +7,12 @@
 }
 /* 오른쪽 contetns */
 .main-contents .main-contents-right {
-  /* flex-grow: 1; */
   width: 100%;
   padding-left: 390px;
   position: absolute;
-  left: 0; top: -200%;
   transition: .4s;
+  margin-top: -30%;
+  opacity: 0;
 }
 .main-contents .main-contents-right .main-title {
   font-size: 48px;
@@ -29,11 +29,10 @@
 .main-contents .main-contents-right .svg-box .star {
   position: absolute;
   top: 0; left: 16%;
+  opacity: 0;
 }
 /* 왼쪽 svg contents */
 .main-contents .main-contents-left {
-  /* flex-grow: 1; */
-  /* background-color: rgba(255, 255, 0, 0.514); */
   width: 100vw;
   position: relative;
   padding-left: 100px;
@@ -41,16 +40,17 @@
   margin: auto auto;
 }
 .main-contents .main-contents-left .line {
+  stroke-dashoffset: 500;
+  stroke-dasharray: 500;
   transition: all 1s cubic-bezier(.45,.05,.55,.95);
   position: absolute;
   z-index: 99;
-  /* animation: line-motion .3s ease 1s forwards; */
 }
 .main-contents .main-contents-left .line1 {
-  top: 8%; left: 45%;
+  top: 8%; left: 20%;
 }
 .main-contents .main-contents-left .line2 {
-  top: 5%; left: 65%;
+  top: 5%; left: 45%;
 }
 .main-contents .main-contents-left .line2::after {
   content: "";
@@ -58,15 +58,16 @@
   position: absolute;
   width: 23px; height: 25px;
   bottom: -110px; left: -25px;
+  opacity: 0;
 }
 .main-contents .main-contents-left .line3 {
-  top: 5%; right: 25%;
+  top: 5%; right: 30%;
 }
 .main-contents .main-contents-left .line4 {
-  bottom: 35%; left: 40%;
+  bottom: 35%; left: 15%;
 }
 .main-contents .main-contents-left .line5 {
-  bottom: 23%; left: 47%;
+  bottom: 23%; left: 23%;
 }
 .main-contents .main-contents-left .line5::after {
   content: "";
@@ -74,9 +75,10 @@
   position: absolute;
   width: 29px; height: 32px;
   bottom: 0; left: 90px;
+  opacity: 0;
 }
 .main-contents .main-contents-left .line6 {
-  bottom: 35%; right: 20%;
+  bottom: 35%; right: 30%;
 }
 .main-contents .main-contents-left .line6::after {
   content: "";
@@ -84,27 +86,81 @@
   position: absolute;
   width: 43px; height: 47px;
   top: 115px; left: -45px;
+  opacity: 0;
 }
 .main-contents .main-contents-left svg {
   position: absolute;
 }
 .main-contents .main-contents-left .line-svg {
-  top: 20%; left: 55%;
+  top: 20%; left: 38%;
   z-index: 9;
+  opacity: 0;
 }
 .main-contents .main-contents-left .object-svg {
-  top: 21.1%; left: 56%;
+  top: 21.1%; left: 39%;
+  opacity: 0;
 }
-/* loading-animation */
-.main-contents.load-ani .main-contents-right {
-  top: 0;
-  /* animation: slide-down 1s 3.1s linear forwards; */
+/* 애니메이션 */
+.main-contents .main-contents-left .line5.line-ani {
+  animation: drawing 0.7s linear forwards, line-mov1 0.7s 0.9s linear forwards;
 }
-.main-contents.load-ani .main-contents-right .svg-box .star {
-  animation: opacity .5s linear 5.3s forwards, rotate 2s linear 5.3s infinite;
+.main-contents .main-contents-left .line4.line-ani {
+  animation: drawing 0.7s 0.2s linear forwards, line-mov1 0.7s 0.9s linear forwards;
 }
-.main-contents.load-ani .main-contents-right .svg-box  .purunet-svg rect {
-  animation: slide-over 1s linear 4.2s forwards;
+.main-contents .main-contents-left .line1.line-ani {
+  animation: drawing 0.7s 0.3s linear forwards, line-mov1 0.7s 0.9s linear forwards;
+}
+.main-contents .main-contents-left .line2.line-ani {
+  animation: drawing 0.7s 0.4s linear forwards, line-mov2 0.7s 0.9s linear forwards;
+}
+.main-contents .main-contents-left .line3.line-ani, 
+.main-contents .main-contents-left .line6.line-ani {
+  animation: drawing 0.7s 0.5s linear forwards, line-mov3 0.7s 0.9s linear forwards;
+}
+.main-contents .main-contents-left .line2.line-ani::after,
+.main-contents .main-contents-left .line5.line-ani::after,
+.main-contents .main-contents-left .line6.line-ani::after {
+  animation: opacity 0.5s linear forwards;
+}
+.main-contents .main-contents-left .line2.line-ani::after {
+  animation-delay: 0.6s;
+}
+.main-contents .main-contents-left .line5.line-ani::after {
+  animation-delay: 0.7s;
+}
+.main-contents .main-contents-left .line6.line-ani::after {
+  animation-delay: 0.8s;
+}
+.main-contents .main-contents-left .line-svg.svg-ani,
+.main-contents .main-contents-left .object-svg.svg-ani {
+  animation:  opacity 0.5s 0.9s linear forwards;
+}
+.main-contents .main-contents-left .object-svg.svg-ani .blue {
+  animation: svg-blue 0.5s 1.1s linear forwards;
+}
+.main-contents .main-contents-left .object-svg.svg-ani .pink {
+  animation: svg-pink 0.5s 1.1s linear forwards;
+}
+.main-contents .main-contents-left .object-svg.svg-ani .green {
+  animation: svg-green 0.5s 1.1s linear forwards;
+}
+.main-contents .main-contents-left .object-svg.svg-ani .lightblue {
+  animation: svg-lightblue 0.5s 1.1s linear forwards;
+}
+.main-contents .main-contents-left .object-svg.svg-ani .red {
+  animation: svg-red 0.5s 1.1s linear forwards;
+}
+.main-contents .main-contents-left.mov-box {
+  animation: mov-box 0.5s 1.3s linear forwards;
+}
+.main-contents .main-contents-right.mov-text {
+  animation: text-down 1s 1.5s linear forwards;
+}
+.main-contents .main-contents-right .svg-box.right-svg-ani  .purunet-svg rect {
+  animation: slide-over 1s linear 3s forwards;
+}
+.main-contents .main-contents-right .svg-box.right-svg-ani .star {
+  animation: opacity .5s linear 4s forwards, rotate 2s linear 4s infinite;
 }
 
 /***** company-introduction *****/
@@ -357,12 +413,10 @@
 
 /***** review *****/
 .review {
-  /* height: 105vh; */
   height: auto;
   position: relative;
 }
 .review .review-bg {
-  /* position: absolute; */
   position: sticky;
   top: 0; left: 0;
   height: 105vh;
@@ -425,9 +479,7 @@
   margin-top: -100vh;
 }
 .review .sticky-box {
-  /* background-color: #d8d8d8; */
   margin: 155px 0 40px;
-  /* height: max-content; */
 }
 .review .sticky-box .title {
   font-size: 78px;
@@ -445,7 +497,6 @@
   max-width: 740px;
   height: max-content;
   position: relative;
-  /* z-index: 99; */
   padding: 300px 0 155px;
 }
 .review .card-wrapper .card-list {
@@ -627,9 +678,6 @@
   padding: 15px;
   transform: translate(-50%, -50%);
 }
-.video-slide .video-slide-wrapper .frist-slide {}
-.video-slide .video-slide-wrapper .second-slide {}
-.video-slide .video-slide-wrapper .last-slide {}
 
 /***** contact *****/
 .contact {
@@ -651,9 +699,6 @@
   display: flex;
   justify-content: space-between;
 }
-.contact .notice-wrapper .title .svg-plus {}
-.contact .notice-wrapper .title .svg-plus svg {}
-.contact .notice-wrapper .notice-list {}
 .contact .notice-wrapper .notice-list a {
   border-radius: var(--primary-border-radius);
   padding: 18.5px 21px;
