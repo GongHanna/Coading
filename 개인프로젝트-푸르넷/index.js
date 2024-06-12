@@ -138,14 +138,14 @@ const showSlide = (index) => {
       svgWrapper.find(".arrow").removeClass("svg-animation1");
       svgWrapper.find(".heart-arrow").removeClass("svg-animation2");
       svgWrapper.find(".point-circle").removeClass("svg-animation3");
-    }, 2000); // 애니메이션 지속 시간에 맞게 설정
+    }, 2000);
   });
 
   // 버튼 활성화 상태 변경
   $slideBtn.removeClass("click-btn").eq(index).addClass("click-btn");
 };
 
-// 클릭 이벤트 핸들러
+// 클릭 이벤트
 $slideBtn.on("click", (e) => {
   const idx = $(e.target).index();
   currentIdx = idx;
@@ -157,7 +157,7 @@ $slideBtn.on("click", (e) => {
   mainAutoSlide = setInterval(autoSlide, 2500);
 });
 
-// 자동 슬라이드 함수
+// 자동 슬라이드
 const autoSlide = () => {
   currentIdx = (currentIdx + 1) % $(".auto-slide .slide-box").length;
   showSlide(currentIdx);
