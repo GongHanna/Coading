@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>변수 복습</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<script src="../asset/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <p>스크립트 전</p>
+  <a href="https://ko.javascript.info/variables" target="_blank">자바스크립트 인포- 변수</a>
+
+  <script>
+    let message; // 변수 생성, 선언
+    message = 'Hello'; // 문자열 저장
+
+    // alert(message); // 변수에 저장된 값 보여줌
+
+    let message2 = 'Hello';
+    // alert(message2);
+
+
+    // 한 줄에 여러 변수 선언이 가능하지만 가독성을 위해 한 줄에는 하나의 변수 작성을 권장
+    let user = 'Hanna', age = 26, message3 = '안녕!';
+
+    let user1 = 'Hanna';
+    let age1 = 26;
+    let message4 = '안녕!';
+
+    let user2 = 'Hanna';
+      age2 = 26;
+      message5 = '안녕!'; 
+
+    let user3 = 'Hanna'
+      , age3 = 26
+      , message6 = '안녕!';
+
+    let msg;
+    msg = 'Hello';
+    msg = '안녕'; // 재할당, 값이 변경되면 이전 데이터는 변수에서 제거
+    // alert(msg);
+
+    let Hello = 'Hello world!';
+    let msg1;
+    msg1 = Hello;
+
+    console.log(Hello); //Hello world!
+    console.log(msg1); //Hello world!
+
+    /* 
+      변수는 한 번만 선언해야 함.
+      같은 변수를 여러번 선언하면 에러 발생.
+
+      let msg = "This";
+      // let을 반복하면 에러가 발생합니다.
+      let msg = "That"; // SyntaxError: 'message' has already been declared
+
+      따라서 변수는 딱 한 번만 선언하고, 선언한 변수를 참조할 때는 let 없이 변수명만 사용해 참조.
+
+      * 변수 명명 규칙 *
+        1. 변수명에는 오직 문자와 숫자, 그리고 기호 $와 _만 들어갈 수 있습니다.
+        ㄴ 유효한 변수명의 예시
+          let $ = 1;
+          let _ = 2;
+          alert($ + _); // 3
+        ㄴ 잘못된 변수명의 예시
+          let 1a; // 변수명은 숫자로 시작해선 안됩니다.
+          let my-name; // 하이픈 '-'은 변수명에 올 수 없습니다.
+        2. 첫 글자는 숫자가 될 수 없습니다.
+        ㄴ 유효한 변수명의 예시
+          let userName;
+          let test1234;
+        3. 여러 단어를 조합하여 변수명을 만들 땐 카멜 표기법이 흔히 사용됨.(첫 단어를 제외한 각 단어의 첫글자를 대문자로 작성하는 표기법)
+        4. 변화화지 않는 변수를 선언할 때는 let 대신 const를 사용.
+        5. 변수명은 간결하고 명확해야 함. 변수가 담고 있는 것이 무엇인지 잘 설명해야 함.
+    */
+
+    const myBirthday = '1998.06.12'; // const로 선언한 변수를 상수라고 부름. 상수는 재할당할 수 없으므로 상수를 변경하려고 하면 에러 발생
+
+
+    /* 
+    admin과 name이라는 변수를 선언하세요.
+    name에 값으로 "John"을 할당해 보세요.
+    name의 값을 admin에 복사해 보세요.
+    admin의 값을 alert 창에 띄워보세요. "John"이 출력되어야 합니다.
+    */
+    let admin;
+    let name;
+    name = 'John';
+    admin = name;
+    // alert(admin);
+
+    /* 
+    현재 우리가 살고있는 행성(planet)의 이름을 값으로 가진 변수를 만들어보세요. 변수 이름은 어떻게 지어야 할까요?
+    웹사이트를 개발 중이라고 가정하고, 현재 접속 중인 사용자(user)의 이름(name)을 저장하는 변수를 만들어보세요. 변수 이름은 어떻게 지어야 할까요?
+    */
+    let planet = "earth";
+    // 정답 : let ourPlanetName = "Earth"; 
+    // planet이라는 간단한 이름을 지어줘도 되지만, 이렇게 하면 어떤 행성(planet)을 언급하는 것인지 모호합니다. 변수명이 아주 길어지지 않는 이상, 설명을 좀 더 곁들어주는 것이 좋습니다.
+    let userName = "GongHanna";
+    // 정답 : let currentUserName = "John";
+    // 여기서도 마찬가지로 userName같이 이름을 짧게 지어주기보다는, 현재 접속 중인 사용자라는 정보를 담고 있는 이름으로 지어주는 것이 좋습니다.
+  </script>
+
+  <p>스크립트 후</p>
+</body>
+</html>

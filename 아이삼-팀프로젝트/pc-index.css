@@ -1,0 +1,660 @@
+@charset "utf-8";
+
+/***** tablet *****/
+@media (min-width: 834px) {
+    /***** main-page *****/
+    .main-page-wrapper .brand-name-box {
+        min-width: 834px;
+    }
+    .main-page-wrapper .brand-name-box .title-box {
+        font-size: 43px;
+    }
+    .main-page-wrapper .brand-name-box .title-box .title-front {
+        top: 62%;
+    }
+    /*- 핑크색 박스 -*/
+    .main-page-wrapper .brand-name-box::after {
+        width: 300px;
+        left: 40%; top: 42%;
+    }
+    /*- 검정색 박스 -*/
+    .main-page-wrapper .brand-name-box::before {
+        left: 18.5%; top: 9%;
+    }
+    /*- 릴리체키샤시 -*/
+    .main-page-wrapper .brand-name-box .main-intro {
+        font-size: 24px;
+        top: 70%; left: 58%;
+    }
+    /*- main-imgs -*/
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="black-star1"] {
+        width: 60px;
+        right: 5%;
+    }
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="black-star2"] {
+        display: block;
+        width: 70px;
+        top: 75%; left: 10%;
+        animation: glitter 1.5s linear infinite;
+    }
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="cherry"] {
+        width: 120px;
+        left: 75%; top: 34%;
+    }
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="tint"] {
+        width: 225px;
+        left: 17%; top: 50%;
+    }
+    .main-page-wrapper .brand-name-box .bg-img-box img {
+        display: block;
+        position: absolute;
+        z-index: 9;
+    }
+    .main-page-wrapper .brand-name-box .bg-img-box img[alt= "main-left"] {
+        left: -170px; top: 10%;
+        width: 50%;
+    }
+    .main-page-wrapper .brand-name-box .bg-img-box img[alt= "main-right"] {
+        right: -200px; top: 30%;
+        width: 50%;
+    }
+    /***** brand-intro / 사용자가 보는 slide 영역  *****/
+    .brand-intro-wrapper {
+        max-width: 834px;
+        height: 100%;
+        margin: 80px auto 0;
+        overflow: unset;
+    }
+    /*- pagenation -*/
+    .brand-intro-wrapper .slide-button {
+        display: none;
+    }
+    /*- 슬라이드 영역 -*/
+    .brand-intro-wrapper .slide-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        padding: 30px;
+    }
+    .brand-intro-wrapper .slide-wrapper .slide-item {
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+      }
+    /*- 릴리바이레드 소개 -*/
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box {
+        margin: 0 auto;
+        height: 100%;
+    }
+    /*- 릴리바이레드 이미지 -*/
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-box {
+        height: 100%;
+        z-index: -99;
+    }
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box img[alt="heart-icon"] {
+        top: 40%; left: 27%;
+      }
+      .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box img[alt="star-icon"] {
+        top: 42%; left: 27%;
+        width: 210px;
+      }
+    /* 움직이는 데코 이미지 */
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box img[alt="dotted-icon"] {
+        left: 13%; bottom: 13%;
+        width: 140px;
+    }
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-img1 {
+        left: 12%; bottom: 0;
+        width: 170px;
+    }
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-img2 {
+        bottom: 0;
+    }
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-img3 {
+        bottom: 0;
+        width: 160px;
+    }
+    /*- 패밀리사이트 소개 -*/
+    .brand-intro-wrapper .slide-wrapper .family-site-box {
+        padding: 30px;
+        width: 80%;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box .brand-box {
+        height: 100%;
+        z-index: -99;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro .brand-logo img {
+        margin: 50px auto 20px;
+        width: 150px;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box img[alt="heart-icon"] {
+        top: 40%;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box img[alt="arrow-icon"] {
+        top: 75%;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro .haterine-logo {
+        margin-top: 30px;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box img.haterine-arrow-icon {
+        top: 70%;
+    }
+
+    /***** event *****/
+    .event-wrapper .event-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 834px;
+    }
+    .event-wrapper .event-box .event-title {
+        width: 35%;
+        margin: 70px auto;
+    }
+    .event-wrapper .event-box .front {
+        left: 10%;
+        transform: translateX(-10%);
+    }
+    .event-wrapper .event-box .back {
+        left: 20%;
+        transform: translateX(-20%);
+    }
+    .event-wrapper .event-box .title {
+        padding-top: 180px;
+    }
+    .event-wrapper .event-box .event-btn:hover {
+        border-radius: 20px;
+    }
+    .event-wrapper img[alt="event-img"] {
+        width: 40%;
+        max-width: 834px;
+        top: 10%; left: 75%;
+        transform: translateX(-50%);
+    }
+    /***** youtube *****/
+    .youtube-wrapper {
+        margin: 100px 0 0;
+    }
+    .youtube-wrapper .edition-box {
+        display: flex;
+        gap: 100px;
+        max-width: 834px;
+        justify-content: center;
+    }
+    .youtube-wrapper .edition-box .edition-box-flex .edition-sub-title::after {
+        content: "";
+        display: inline-block;
+        background-color: rgba(62, 30, 46, 0.6);
+        width: 3px; height: 75px;
+        position: absolute;
+        left: 52%;
+        transform: rotate(-33deg);
+        border-radius: 20px;
+    }
+    .youtube-wrapper .edition-img-box img[alt="icon-star"] {
+        top: 17%; left: 75%;
+    }
+    /***** best seller *****/
+    .best-wrapper {
+        max-width: 834px;
+    }
+    /*- 제품 리스트 -*/
+    .best-wrapper .best-list-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap : 30px
+    }
+    /*- 인스타그램 -*/
+    .insta-wrapper {
+        max-width: 834px;
+    }
+}
+
+/***** pc *****/
+@media (min-width: 1200px) {
+
+    /***** main-page *****/
+    .main-page-wrapper {
+        height: 856px;
+    }
+
+    .main-page-wrapper .brand-name-box {
+        min-width: 1280px;
+    }
+
+    /*- 웰컴 투 릴리바이레드 -*/
+    .main-page-wrapper .brand-name-box .title-box {
+        font-size: 75px;
+    }
+
+    .main-page-wrapper .brand-name-box .title-box .title-back {
+        top: 45%;
+        width: 45%;
+    }
+
+    .main-page-wrapper .brand-name-box .title-box .title-front {
+        top: 57%;
+        width: 50%;
+    }
+
+    /*- 릴리바이레드 핑크색 -*/
+    .main-page-wrapper .brand-name-box::after {
+        width: 430px;
+        height: max-content;
+        position: absolute;
+        top: 36%;
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    /*- 핑크색 뒤로 들어가는 검정 박스 -*/
+    .main-page-wrapper .brand-name-box::before {
+        font-size: 28px;
+        left: 20.7%;
+        top: 9%;
+        transform: rotate(-35deg);
+        width: 800px;
+        height: max-content;
+    }
+
+    /*- 릴리!체키!샤시! -*/
+    .main-page-wrapper .brand-name-box .main-intro {
+        font-size: 45px;
+        top: 65%;
+    }
+
+    /*- main-imgs -*/
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="black-star1"] {
+        width: 9%;
+        right: -5%;
+    }
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="black-star2"] {
+        width: 110px;
+        top: 80%;
+        left: 0;
+    }
+
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="cherry"] {
+        width: 13%;
+        left: 79%;
+        top: 33%;
+    }
+
+    .main-page-wrapper .brand-name-box .main-img-box img[alt="tint"] {
+        width: 28%;
+        left: 7%;
+    }
+    .main-page-wrapper .brand-name-box .bg-img-box img[alt= "main-left"] {
+        left: -310px;
+
+    }
+    .main-page-wrapper .brand-name-box .bg-img-box img[alt= "main-right"] {
+        right: -310px; top: 40%;
+    }
+
+    /***** brand-intro  *****/
+    .brand-intro-wrapper {
+        margin: 130px auto;
+        min-width: 1000px;
+        max-width: 1500px;
+        width: 100%;
+
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none
+    }
+
+    /* 브랜드 영역 */
+    .brand-intro-wrapper .slide-wrapper {
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*- 릴리바이레드 소개 -*/
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box {
+        grid-row: 1 / 4;
+        grid-column: 1;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-box {
+        display: none;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .pc-brand-box {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 712px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -99;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box img[alt="heart-icon"] {
+        top: 41%;
+        left: 37%;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box img[alt="star-icon"] {
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 350px;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box img[alt="dotted-icon"] {
+        bottom: 12%;
+        left: 11%;
+        width: 230px;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-img1 {
+        left: 10%;
+        width: 270px;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-img3 {
+        left: 56%;
+        width: 250px;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro-img-box .brand-img2 {
+        left: 33%;
+        width: 250px;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro li .brand-logo img {
+        width: 170px;
+        margin-top: 120px;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro li strong {
+        font-size: var(--font-pc-md);
+        font-weight: var(--font-bold);
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro li .des {
+        margin: 85px auto 25px;
+        width: 60%;
+        word-break: keep-all;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .lilyByRed-box .brand-intro li .des span {
+        display: inline;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box .brand-box {
+        display: none;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .family-site-box .pc-brand-box {
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -999;
+    }
+
+    /*- 패밀리 사이트 소개 -*/
+    .brand-intro-wrapper .slide-wrapper .family-site-box {
+        padding: 10px 0;
+        margin: 0.3vw auto 0.5vw;
+        height: 100%;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro {
+        text-align: left;
+        padding-left: 2.5vw;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box .brand-box {
+        height: 300px;
+        width: 100%;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro .brand-logo {
+        width: 45%;
+        margin: 0;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro .brand-logo img {
+        margin: 1vw 0 1.2vw;
+        width: inherit;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro .haterine-logo {
+        margin: 10px 0;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro .des {
+        width: 80%;
+        text-align: left;
+        margin: 10px 0 0 0;
+        margin: 10px 0 0;
+        word-break: keep-all;
+        font-size: 14px;
+    }
+
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro .des span {
+        display: inline;
+    }
+
+    /* 바로가기 버튼 */
+    .brand-intro-wrapper .slide-wrapper .family-site-box .go-to-brand {
+        position: absolute;
+        top: 50%;
+        right: 7%;
+        transform: translateY(-50%);
+        display: block;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        text-indent: -9999px;
+        background: url(./images/brand_intro-icon-home.png) no-repeat 50%;
+        transform: scale(1);
+        transition: .4s;
+    }
+    .brand-intro-wrapper .slide-wrapper .family-site-box .go-to-brand:hover {
+        transform: scale(1.2);
+    }
+
+    /* 모바일 요소 제거 */
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box img[alt="heart-icon"],
+    .brand-intro-wrapper .slide-wrapper .family-site-box .brand-intro-img-box img[alt="arrow-icon"] {
+        display: none;
+    }
+
+    /***** event *****/
+    .event-wrapper {
+        padding-top: 25px;
+    }
+
+    /*- 움직이는 텍스트 -*/
+    .event-wrapper .animated-box {
+        padding: 75px 0;
+    }
+
+    .event-wrapper .animated-box .animated-box-track .animated-content {
+        font-size: 50px;
+    }
+
+    /*- 이벤트 내용 -*/
+    .event-wrapper .event-box {
+        min-width: 1200px;
+        max-width: 1500px;
+        width: 80%; height: initial;
+        display: flex;
+        justify-content: space-between;
+        padding: 55px 70px;
+    }
+    .event-wrapper .event-box .event-box-flex {
+        width: 60%;
+    }
+
+    .event-wrapper .event-box .event-title {
+        position: initial;
+        padding: 5px 0; margin: 0 auto;
+        width: 25vw;
+        font-size: 35px;
+    }
+    .event-wrapper .event-box .front {
+        max-width: 70%;
+        transform: rotate(-1deg);
+        position: absolute;
+        top: 13%; left: 15%;
+
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+    .event-wrapper .event-box .back {
+        transform: initial;
+        position: absolute;
+        top: 7%; left: 10%;
+    }
+    .event-wrapper .event-box .title {
+        font-size: 24px;
+        padding-top: 23%; margin-right: 10%;
+        background: url(./images/event-star.svg) no-repeat 50% 110% / 300px;
+    }
+    .event-wrapper .event-box .event-des {
+        padding-top: 3%;
+        font-size: 16px;
+        margin-right: 10%; margin-bottom: 10%;
+    }
+    .event-wrapper img {
+        position: initial;
+        transform: inherit;
+    }
+    .event-wrapper .event-box .event-btn {
+        font-size: 14px;
+        margin-right: 10%;
+    }
+    .event-wrapper img[alt="event-img"] {
+        transform: initial;
+    }
+
+    /***** 유튜브 *****/
+    .youtube-wrapper {
+        margin: 0;
+    }
+    
+    .youtube-wrapper .edition-box {
+        position: relative;
+        min-width: 1200px;
+        max-width: 2000px;
+        justify-content: center;
+        gap: 10%;
+    }
+    .youtube-wrapper .edition-box .edition-des {
+        margin: 10px 0;
+    }
+    .youtube-wrapper .edition-box .edition-box-flex .edition-sub-title::after {
+        content: "";
+        display: inline-block;
+        background-color: rgba(62, 30, 46, 0.6);
+        width: 1px; height: 80px;
+        position: absolute;
+        top: 30%; left: 51%;
+        transform: rotate(-43deg);
+        border-radius: 20px;
+    }
+    .youtube-wrapper .edition-img-box img[alt="icon-star"] {
+        top: 13%; left: 68%;
+    }
+    /*- 유튜브 박스 -*/
+    .youtube-wrapper .video-wrapper {
+        width: 80%;
+        min-width: 395px;
+        margin: 0 auto;
+        padding-bottom: 70px;
+    }
+
+    /***** best seller *****/
+    .best-wrapper .best-text-box .best-main-title {
+        font-size: var(--font-pc-xlg);
+    }
+
+      .best-wrapper .best-text-box .best-sub-title {
+        font-size: var(--font-pc-md);
+      }
+
+    /*- 제품 리스트 -*/
+    .best-wrapper {
+        min-width: 1200px;
+        max-width: 2000px;
+    }
+
+    .best-wrapper .best-list-box {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        margin: 0 60px;
+    }
+
+    .best-wrapper .best-list-box li {
+        padding: 20px;
+    }
+    .best-wrapper .best-list-box li:nth-child(2) .product-img {
+        padding: 30px 0 0 0;
+        width: 200px;
+    }
+    
+    .best-wrapper .best-list-box li:nth-child(3) .product-img {
+        padding: 30px 0 0 0;
+        width: 200px;
+    }
+    .best-wrapper .best-list-box li:nth-child(4) .product-img {
+        padding: 30px 0;
+        width: 200px;
+    }
+    .best-wrapper .best-list-box li .product-img {
+        padding: 0;
+        width: 200px;
+    }
+    .best-wrapper .best-list-box li .product-title {
+        font-size: var(--font-pc-md);
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .best-wrapper .best-list-box li .product-des {
+        font-size: var(--font-pc-sm);
+        width: 70%;
+        margin: 0 auto;
+        word-break: keep-all;
+        font-size: 13px;
+    }
+
+    /***** 인스타 *****/
+    .insta-wrapper {
+        min-width: 1200px;
+        max-width: 2000px;
+    }
+
+    .insta-wrapper .insta-text-box .insta-main-title{
+        font-size: var(--font-pc-xlg);
+      }
+      .insta-wrapper .insta-text-box .insta-sub-title {
+        font-size: var(--font-pc-md);
+      }
+
+    .insta-wrapper .insta-text-box {
+        margin-bottom: 60px;
+    }
+
+    .insta-wrapper .insta-img-box {
+        display: flex;
+        border-radius: 0;
+    }
+
+    /*- 움직이는 텍스트 -*/
+    .insta-animated-box {
+        padding: 90px 0 135px 0;
+    }
+
+    .insta-animated-box .insta-animated-box-track .insta-animated-content {
+        font-size: 80px;
+        -webkit-text-stroke: 2px var(--color-black)
+    }
+}

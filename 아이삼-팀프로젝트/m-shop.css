@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+body {
+    text-align: center;
+    margin: 0px;
+    font-family: "Noto Sans KR", "Noto Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", Arial, sans-serif;
+    width: 100%;
+}
+
+/****** menu *******/
+.sub-shop-wrapper {
+    padding: 120px 0px 50px;
+}
+
+.sub-shop-wrapper .sub-shop-box .main-title {
+    font-size: 30px;
+    color: var(--color-primary);
+    margin: 0px auto 30px;
+}
+
+.sub-shop-wrapper .sub-shop-box .main-list {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 60px;
+    width: calc(100% - 60px);
+    font-size: 14px;
+    color: #6d6d6d;
+}
+
+.sub-shop-wrapper .sub-shop-box .main-list .active {
+    font-weight: 700;
+    color: #222;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.sub-shop-wrapper .main-btn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.sub-shop-wrapper .main-btn .btn-arrange {
+    width: 92px;
+    height: 32px;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    background: url(./images/arrow.png) no-repeat 80% 50%;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.sub-shop-wrapper .main-btn .btn-arrange li {
+    font-size: 11px;
+    font-weight: 400;
+    margin: 7px 22px 0px 0px;
+}
+
+/* 기본적으로 .category 목록을 숨김 */
+.sub-shop-wrapper .main-btn .btn-arrange li .category {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+    border: 1px solid #333;
+    width: 92px;
+}
+
+.sub-shop-wrapper .main-btn .btn-arrange li .category li {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+    margin: 0;
+    background-color: #fff;
+}
+
+.sub-shop-wrapper .main-btn .btn-arrange li .category li:hover {
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    width: 91px;
+}
+
+/* 드롭다운이 열렸을 때 표시 */
+.sub-shop-wrapper .main-btn .btn-arrange li .category.show {
+    display: block;
+}
+
+.sub-shop-wrapper .main-btn .btn-arr {
+    width: 71px;
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+.sub-shop-wrapper .main-btn .btn-arr li {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #000;
+    display: grid;
+    align-items: center;
+}
+
+.sub-shop-wrapper .main-btn .btn-arr li:last-of-type {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #8d8d8d;
+    display: grid;
+    align-items: center;
+}
+
+.sub-shop-wrapper .main-btn .btn-arr li img {
+    margin: 0px auto;
+}
+
+/* 상품 나열 */
+.sub-shop-wrapper .product {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 30px;
+    margin-bottom: 40px;
+}
+
+.sub-shop-wrapper .product-box {
+    width: calc(50% - 8px);
+}
+
+.sub-shop-wrapper .product-box:nth-of-type(odd) {
+    margin-right: 16px;
+}
+
+.sub-shop-wrapper .product-box img {
+    width: 100%;
+}
+
+.sub-shop-wrapper .product-box h3 {
+    font-size: 11px;
+    margin: 10px 0px 6px;
+}
+
+.sub-shop-wrapper .product-box p {
+    font-size: 10px;
+    color: #3E1E2E;
+    font-weight: var(--font-bold);
+}
+
+.sub-shop-wrapper .product-box p strong {
+    color: var(--color-black);
+}
+
+.sub-shop-wrapper .product-box p span {
+    color: #848484;
+    text-decoration: line-through;
+}
+
+  /* 더보기 버튼 */
+.sub-shop-wrapper .more-btn {
+    color: #fff;
+    background-color: var(--color-primary);
+    padding: 12px 50px 12px 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: var(--font-m-sm);
+    background: url(./images/arrow-white.png) no-repeat 80% 50% var(--color-primary);
+    cursor: pointer;
+}
+
+/* 상품 이미지 hover */
+.product-box .hover-img {
+    display: none;
+}
+
+.product-box:hover .main-img {
+    display: none;
+}
+
+.product-box:hover .hover-img {
+    display: block;
+}
+
+.product-box {
+    position: relative;
+    display: inline-block;
+}
+
+.product-box img {
+    width: 100%;
+}
+
+/* 더보기 버튼 누르면 추가 상품 */
+.sub-shop-wrapper .hidden {
+    display: none;
+}
+.sub-shop-wrapper .hidden.show-list {
+    display: block;
+}
+
+.product {
+    list-style: none;
+    padding: 0;
+}
+
+.product-box {
+    margin-bottom: 20px; /* 각 상품 박스 사이의 간격 설정 */
+}

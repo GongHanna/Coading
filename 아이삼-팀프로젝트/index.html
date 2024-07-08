@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>릴리바이레드</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon-.ico" type="image/x-icon">
+  <!-- og -->
+  <meta property="og:title" content="릴리바이레드">
+  <meta property="og:url" content="https://javascript-team-project.github.io/javaScriptTeamProject/">
+  <meta property="og:image" content="https://javascript-team-project.github.io/javaScriptTeamProject/images/meta-img.jpg">
+  <meta property="og:description" content="멀티 컬러 메이크업 브랜드, 릴리바이레드">
+  <meta property="og:type" content="website">
+  <!-- reset css -->
+  <link rel="stylesheet" href="./assets/style/reset.css">
+  <!-- 공통된 css style -->
+  <link rel="stylesheet" href="./assets/style/common.css">
+  <link rel="stylesheet" href="./assets/style/global.css">
+  <link rel="stylesheet" href="./assets/style/animation.css">
+  <!-- page 별 css style -->
+  <link rel="stylesheet" href="./m-index.css">
+  <link rel="stylesheet" href="./pc-index.css">
+  <!-- jQuery -->
+  <script src="./assets/style/jquery-3.6.0.min.js"></script>
+  <script src="./assets/style/jquery-ui.min.js"></script>
+  <!-- page 별 사용되는 js -->
+  <script defer src="./index.js"></script>
+  <!-- jQuery UI CSS -->
+  <link rel="stylesheet" href="./assets/style/jquery-ui.css">
+</head>
+
+<body>
+  <!-- 로딩 페이지 -->
+  <div class="loading-page">
+    <span class="loading-txt back">
+      <span>L</span>
+      <span>o</span>
+      <span>a</span>
+      <span>d</span>
+      <span>i</span>
+      <span>n</span>
+      <span>g</span>
+    </span>
+  </div>
+
+  <!-- header -->
+  <header>
+    <p class="logo">
+      <a href="#"><img src="./images/brand_intro-logo-lilybyred.png" alt="logo-img"></a>
+    </p>
+    <ul class="global-menu">
+      <li><a href="./shop.html">shop</a>
+        <svg width="116" height="55" viewBox="0 0 116 55" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="shop-circle">
+          <path
+            d="M65.1811 11.2147C48.2593 7.94225 29.9484 11.3671 15.7344 20.4589C11.2292 23.3395 6.69271 28.0342 8.34878 32.8667C9.93421 37.4598 16.0091 39.0053 21.1735 39.6874C47.2469 43.1267 73.901 42.7276 99.8409 38.5046C103.71 37.8734 108.372 36.4149 108.945 32.8232C109.581 28.7961 104.542 26.2057 100.351 24.9504C73.8147 17.0123 45.9204 12.9489 18.0262 12.9417"
+            stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" class="shop-circle-path"></path>
+        </svg>
+      </li>
+      <li><a href="./brand.html">brand</a>
+        <svg width="120" height="55" viewBox="0 0 87 55" fill="none" xmlns="http://www.w3.org/2000/svg" class="wave">
+          <path
+            d="M12.0571 46.3168C11.9751 45.0043 11.901 43.625 12.4436 42.4304C12.9862 41.2358 14.3721 40.3124 15.6019 40.7525C18.3073 41.7192 16.8824 47.0438 19.6229 47.9044C21.5514 48.5096 22.992 46.1203 23.5503 44.1634C24.1046 42.2104 25.2406 39.7504 27.2395 40.0216C30.6632 40.4892 29.4764 47.7865 32.9314 47.8219C34.6998 47.8415 35.5821 45.7117 35.9452 43.9708C36.3083 42.23 37.0344 40.0884 38.7951 39.9194C42.211 39.5972 42.0704 46.6705 45.4942 46.8591C49.1482 47.0595 48.9843 39.3417 52.6384 39.5029C56.0035 39.6522 56.2417 46.5644 59.56 45.9749C62.3825 45.472 61.5432 40.2849 64.19 39.1767C65.6228 38.5755 67.2273 39.605 68.215 40.8114C69.2027 42.0178 69.9679 43.4914 71.3186 44.2616C72.6694 45.0318 74.879 44.5013 75 42.9413"
+            stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" class="wave-path"></path>
+        </svg>
+      </li>
+      <li><a href="./community.html">community</a>
+        <svg width="116" height="55" viewBox="0 0 116 55" fill="none" xmlns="http://www.w3.org/2000/svg" class="circle">
+          <path
+            d="M65.1811 11.2147C48.2593 7.94225 29.9484 11.3671 15.7344 20.4589C11.2292 23.3395 6.69271 28.0342 8.34878 32.8667C9.93421 37.4598 16.0091 39.0053 21.1735 39.6874C47.2469 43.1267 73.901 42.7276 99.8409 38.5046C103.71 37.8734 108.372 36.4149 108.945 32.8232C109.581 28.7961 104.542 26.2057 100.351 24.9504C73.8147 17.0123 45.9204 12.9489 18.0262 12.9417"
+            stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" class="circle-path"></path>
+        </svg>
+      </li>
+    </ul>
+  </header>
+
+  <!-- main-page -->
+  <section class="main-page-wrapper">
+    <div class="brand-name-box">
+      <h1 class="title-box">
+        <span class="title-back">
+          <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+        </span>
+        <span class="title-front">
+          <span>T</span><span>o</span>
+          <span>L</span><span>i</span><span>l</span><span>y</span><span>b</span><span>y</span><span>r</span><span>e</span><span>d</span>
+        </span>
+      </h1>
+      <p class="main-intro">lily! cheeky! sassy!</p>
+      <div class="main-img-box">
+        <img src="./images/main-star1.png" alt="black-star1" class="draggable">
+        <img src="./images/main-star2.svg" alt="black-star2" class="draggable">
+        <img src="./images/main-cherry.png" alt="cherry" class="draggable">
+        <img src="./images/main-tint.png" alt="tint" class="draggable">
+      </div>
+      <div class="bg-img-box">
+        <img src="./images/main-left-line.svg" alt="main-left">
+        <img src="./images/main-right-line.svg" alt="main-right">
+      </div>
+    </div>
+  </section>
+
+  <!-- brand-intro / 사용자가 보는 slide 영역 -->
+  <section class="brand-intro-wrapper">
+    <!-- pagenation -->
+    <ul class="slide-button">
+      <li class="btn1 active"><a href="#">원모양 버튼1</a></li>
+      <li class="btn2"><a href="#">원모양 버튼2</a></li>
+      <li class="btn3"><a href="#">원모양 버튼3</a></li>
+      <li class="btn4"><a href="#">원모양 버튼4</a></li>
+    </ul>
+    <!-- 이미지가 나열되는 영역 -->
+    <div class="slide-wrapper">
+      <!-- 릴리바이레드 -->
+      <div class="lilyByRed-box slide-item">
+        <ul class="brand-intro">
+          <li>
+            <h2 class="brand-logo"><img src="./images/brand_intro-logo-lilybyred.png" alt="lilybyred-logo"></h2>
+            <strong>#순수 능란 앙큼 메이크업</strong>
+            <p class="des"><strong>릴리바이레드</strong>는<br>
+              순수한 듯 능란한 소녀,<span> 때로는 대담한 듯 은밀한</span> <span>숙녀들의
+                반전매력을 표현하는</span> <strong>컬러 메이크업</strong> 브랜드입니다.</p>
+          </li>
+        </ul>
+        <!-- 릴리바이레드 이미지 -->
+        <div class="brand-intro-img-box">
+          <!-- 박스 이미지 -->
+          <img src="./images/m-brand-lilybyred.svg" class="brand-box" alt="릴리바이레드 박스">
+          <img src="./images/pc-brand-lilybyred.svg" class="pc-brand-box" alt="릴리바이레드 박스">
+          <!-- 내용 데코 이미지 -->
+          <img src="./images/brand_intro-icon-heart-pink.svg" alt="heart-icon">
+          <img src="./images/brand_intro-icon-star.svg" alt="star-icon">
+          <!-- 화장품 이미지 -->
+          <img src="./images/brand_intro-icon-dotted.svg" alt="dotted-icon">
+          <img src="./images/pc-brand_intro-lily-img1.png" alt="블러셔" class="brand-img1">
+          <img src="./images/pc-brand_intro-lily-img2.png" alt="틴트" class="brand-img2">
+          <img src="./images/pc-brand_intro-lily-img3.png" alt="섀도우" class="brand-img3">
+        </div>
+      </div>
+      <!-- 디어오운 -->
+      <div class="family-site-box slide-item">
+        <ul class="brand-intro">
+          <li>
+            <h2 class="brand-logo"><img src="./images/brand_intro-logo-dearown.png" alt="dearown-logo"></h2>
+            <strong id="dearown">#Family site</strong>
+            <p class="des"><strong>디어오운</strong>은<br>
+              일상의 순간 속 모습에서 <span>다양한 매력을 이끌어내,</span>
+              <strong>주체적인 나의 아름다움</strong>을 <span>표현하는 브랜드입니다.</span>
+            </p>
+          </li>
+        </ul>
+        <!-- 모바일에서는 바로가기, pc에서는 홈 아이콘 -->
+        <a href="#" class="go-to-brand" id="dearown-btn">바로가기</a>
+        <!-- 디어오운 이미지 -->
+        <div class="brand-intro-img-box">
+          <!-- 박스 이미지 -->
+          <img src="./images/m-brand-Dearown.png" class="brand-box" alt="디어오운박스">
+          <img src="./images/pc-brand_intro-dearown-box.png" class="pc-brand-box" alt="디어오운박스">
+          <!-- 내용 데코 이미지 -->
+          <img src="./images/brand_intro-icon-heart-yellow.svg" alt="heart-icon">
+          <img src="./images/mobile-brand_intro-icon-arrow-yellow.svg" alt="arrow-icon">
+        </div>
+      </div>
+      <!-- 슬로우 허밍 -->
+      <div class="family-site-box slide-item">
+        <ul class="brand-intro">
+          <li>
+            <h2 class="brand-logo"><img src="./images/brand_intro-logo-slowhumming.png" alt="slowhumming-logo"></h2>
+            <strong id="slowhumming">#Family site</strong>
+            <p class="des"><strong>슬로우 허밍</strong>은<br>
+              당신의 내밀한 일상을 <span>변주하고 하이 센티드 테라피로</span>
+              시공간을 풍부하게 설계하는 <span><strong>비건 리추얼</strong> 브랜드입니다.</span></p>
+          </li>
+        </ul>
+        <!-- 모바일에서는 바로가기, pc에서는 홈 아이콘 -->
+        <a href="#" class="go-to-brand" id="slowhumming-btn">바로가기</a>
+        <!-- 슬로우허밍 이미지 -->
+        <div class="brand-intro-img-box">
+          <!-- 박스 이미지 -->
+          <img src="./images/m-brand-slowHumming.png" class="brand-box" alt="슬로우허밍박스">
+          <img src="./images/pc-brand_intro-slowhumming-box.png" class="pc-brand-box" alt="슬로우허밍박스">
+          <!-- 내용 데코 이미지 -->
+          <img src="./images/brand_intro-icon-heart-brown.svg" alt="heart-icon">
+          <img src="./images/mobile-brand_intro-icon-arrow-brown.svg" alt="arrow-icon">
+        </div>
+      </div>
+      <!-- 해서린 -->
+      <div class="family-site-box slide-item">
+        <ul class="brand-intro">
+          <li>
+            <h2 class="brand-logo haterine-logo"><img src="./images/brand_intro-logo-haterine.png" alt="haterine-logo"></h2>
+            <strong id="haterine">#Family site</strong>
+            <p class="des haterine-des"><strong>해서린</strong>은<br>
+              매일 밝게 빛나는 해처럼, <span>눈뜨는 아침부터
+                잠드는 저녁까지</span> 당신의 하루를 완성해갑니다.</p>
+          </li>
+        </ul>
+        <!-- 모바일에서는 바로가기, pc에서는 홈 아이콘 -->
+        <a href="#" class="go-to-brand" id="haterine-btn">바로가기</a>
+        <!-- 해서린 이미지 -->
+        <div class="brand-intro-img-box">
+          <!-- 박스 이미지 -->
+          <img src="./images/m-brand-hatherine.png" class="brand-box" alt="해서린박스">
+          <img src="./images/pc-brand_intro-hatherine-box.png" class="pc-brand-box" alt="해서린박스">
+          <!-- 내용 데코 이미지 -->
+          <img src="./images/brand_intro-icon-heart-sky.svg" alt="heart-icon">
+          <img src="./images/mobile-brand_intro-icon-arrow-sky.svg" alt="arrow-icon" class="haterine-arrow-icon">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- event -->
+  <section class="event-wrapper">
+    <!-- 움직이는 텍스트 -->
+    <div class="animated-box">
+      <div class="animated-box-track">
+        <div class="animated-content event-move-text">&nbsp;LILY HAPPY STATION&nbsp;LILY HAPPY STATION&nbsp;LILY HAPPY
+          STATION&nbsp;LILY HAPPY STATION&nbsp;LILY HAPPY STATION&nbsp;LILY HAPPY STATION&nbsp;LILY HAPPY STATION</div>
+      </div>
+    </div>
+    <!-- 이벤트 내용 -->
+    <div class="event-box">
+      <div class="event-box-flex">
+        <h2 class="event-title front">Lily Happy Station</h2>
+        <h2 class="event-title back">Lily Happy Station</h2>
+        <h3 class="title">NOTICE</h3>
+        <div class="event-des">
+          <p class="wave-text">증정품은 당사의 사정에 따라 변경될 수 있습니다.</p>
+          <p class="wave-text">쿠폰 사용 후 주문 취소시 유효기간 내에만 재발급 됩니다.</p>
+          <p class="wave-text">쿠폰은 직접 다운로드 후 사용하실 수 있습니다.</p>
+          <p class="wave-text">쿠폰 간 중복사용, 쿠폰&적립금 사용 불가합니다.</p>
+          <p class="wave-text">일부 품목엔 쿠폰 사용 불가합니다.</p>
+        </div>
+        <a href="#" class="event-btn">이벤트 페이지 바로가기</a>
+      </div>
+      <!-- 이벤트 사진 -->
+      <img src="./images/pc-event-img.png" alt="event-img">
+    </div>
+  </section>
+
+  <!-- youtube -->
+  <section class="youtube-wrapper">
+    <!-- 텍스트 박스 -->
+    <div class="edition-box">
+      <div class="edition-box-flex">
+        <h3 class="edition-sub-title">쏟아지는 F/W 러브콜에 응답합니다</h3>
+        <h2 class="edition-main-title">LoveCall Edition
+          <svg width="257" height="88" viewBox="0 0 257 88" fill="none" xmlns="http://www.w3.org/2000/svg" class="edition-arrow">
+            <path d="M2.18677 86.4486C14.6507 69.7234 25.2622 61.5394 44.0846 58.65C61.0825 56.0406 80.8605 61.6506 97.5901 65.2591C118.303 69.7267 157.432 68.4714 164.596 39.124C170.157 16.3367 153.2 -6.02726 133.575 5.07522C126.009 9.35543 123.797 22.6987 128.648 30.6345C133.887 39.2058 145.97 41.3602 154.18 41.8889C176.229 43.309 186.777 17.1087 205.304 9.05662C222.613 1.53382 237.335 8.19717 252.825 18.1234C254.152 18.9736 252.451 11.8418 252.174 10.0273C251.159 3.37555 252.742 6.09346 253.509 11.1228C254.003 14.3574 256.503 20.9343 252.507 19.8659C249.624 19.095 243.944 19.9611 240.935 20.5836" stroke="#EF76B0" stroke-opacity="0.4" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </h2>
+      </div>
+      <p class="edition-des">음영의 근본, 브라운의 재해석<br>
+        자꾸 재다이얼 누르게 되는<br>
+        <strong>로즈/라벤더빛 NEW 에디션</strong>
+      </p>
+    </div>
+      <!-- 데코 이미지 -->
+      <div class="edition-img-box">
+        <img src="./images/edition-icon-pink-star.svg" alt="icon-star">
+      </div>
+      
+    <!-- 유튜브 박스 -->
+    <div class="video-wrapper">
+      <iframe id="player" frameborder="0" allowfullscreen=""
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" title="[릴리바이레드] 𝐋𝐨𝐯𝐞𝐂𝐚𝐥𝐥 𝐄𝐝𝐢𝐭𝐢𝐨𝐧☎"
+        src="https://www.youtube.com/embed/pzxqY-v9AnM?autoplay=1&amp;playsinline=1&amp;controls=0&amp;mute=1&amp;rel=0&amp;fs=1&amp;loop=1&amp;playlist=pzxqY-v9AnM&amp;enablejsapi=1&amp;origin=https%3A%2F%2Flilybyred.co.kr&amp;widgetid=1"
+        data-gtm-yt-inspected-15="true" data-gtm-yt-inspected-23="true"></iframe>
+    </div>
+  </section>
+
+  <!-- best seller -->
+  <section class="best-wrapper">
+    <!-- 텍스트 박스 -->
+    <div class="best-text-box">
+      <h2 class="best-main-title">Best Seller</h2>
+      <h3 class="best-sub-title">릴바레 BEST 품목을 한눈에!</h3>
+    </div>
+    <!-- 제품 리스트 -->
+    <ul class="best-list-box">
+      <li>
+        <img src="./images/best-seller-img1.png" alt="eyeliner" class="product-img">
+        <h3 class="product-title">
+          릴리바이레드 스태리아이즈<br>나인투나인 슬림 젤 아이라이너
+        </h3>
+        <p class="product-des">2mm 초슬림으로 점막부터 꼬리까지 엣지눈매</p>
+      </li>
+      <li>
+        <img src="./images/best-seller-img2.png" alt="tint" class="product-img">
+        <h3 class="product-title">릴리바이레드 앙큼 라이어 코팅 틴트</h3>
+        <p class="product-des">타고난 생기인 척, 입술 위 터지는 과즙 시럽 광택</p>
+      </li>
+      <li>
+        <img src="./images/best-seller-img3.png" alt="lipstick" class="product-img">
+        <h3 class="product-title">릴리바이레드 스마일리<br>립 블렌딩 스틱</h3>
+        <p class="product-des">우유 크림처럼 부드럽게 블렌딩되어<br>
+          웃음기 어린 립 라인을 연출해 주는 오버 립 스틱
+        </p>
+      </li>
+      <li>
+        <img src="./images/best-seller-img4.png" alt="shadow" class="product-img">
+        <h3 class="product-title">릴리바이레드 무드키보드</h3>
+        <p class="product-des">한 글자 한 글자 꾹꾹 눌러담아,<br>릴리바이레드가 전하는 새로운 무드 레터</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- instagram -->
+  <section class="insta-wrapper">
+    <!-- 텍스트 박스 -->
+    <div class="insta-text-box">
+      <h2 class="insta-main-title">Instagram</h2>
+      <h3 class="insta-sub-title">@lilybyred_official </h3>
+    </div>
+    <!-- 이미지 박스 -->
+    <div class="insta-img-box">
+      <img src="./images/pc-instagram-img1.png" alt="insta-img1">
+      <img src="./images/pc-instagram-img2.png" alt="insta-img2">
+      <img src="./images/pc-instagram-img3.png" alt="insta-img3">
+      <img src="./images/pc-instagram-img4.png" alt="insta-img4">
+      <img src="./images/pc-instagram-img5.png" alt="insta-img5">
+      <img src="./images/pc-instagram-img6.png" alt="insta-img6">
+    </div>
+  </section>
+
+  <!-- 움직이는 텍스트 -->
+  <div class="insta-animated-box">
+    <div class="insta-animated-box-track">
+      <div class="insta-animated-content">
+        &nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!&nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!&nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!&nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!&nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!&nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!&nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!&nbsp;LILY!&nbsp;CHEEKY!&nbsp;SASSY!
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <!-- contact -->
+    <div class="contact-wrapper">
+      <!-- 말풍선 박스 -->
+      <div class="contact-box">
+        <h3 class="contact-num">1566 - 1696</h3>
+        <p class="contact-sub">
+          <!-- 전화모양 아이콘 백그라운드로 넣기 -->
+          MON - FRI : 10 - 17시<br>
+          점심시간 : 12 - 13시
+        </p>
+        <a href="#" class="contact-btn">고객 불만 처리절차</a>
+        <img src="./images/footer-icon-eye.svg" alt="footer-eyes" class="footer-eyes">
+        <div class="eyes">
+          <span class="eye"></span>
+          <span class="eye"></span>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h2 class="footer-contact-num">1566 - 1696</h2>
+        <h2 class="footer-contact-email">cs@dyddeyang.com</h2>
+      </div>
+      
+      <!-- 백그라운드 이미지로 let's talk 넣기 -->
+    </div>
+    <!-- footer address -->
+    <address>
+      <ul class="address-list">
+        <li>법인명 : 주식회사 디와이디 ｜ 대표 : 정창래</li>
+        <li>경기도 고양시 덕양구 동송로 30 제엠비엔스튜디어동 18층 1805호</li>
+      </ul>
+      <p class="copy">Copyright ⓒ lilybyred. All right reserved</p>
+    </address>
+  </footer>
+</body>
+
+</html>

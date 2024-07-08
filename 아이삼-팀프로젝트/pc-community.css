@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/***** tablet *****/
+@media (min-width: 834px) {
+
+  .notice {
+    margin: 180px 50px 280px;
+   }
+
+   .notice .main-menu {
+    margin: 0 auto 110px;
+    width: 200px;
+    font-size: 16px;
+  }
+  
+   .notice .button-box {
+    margin: 16px 0px 130px;
+   }
+  
+   .notice .button-box .week-btn {
+    width: 19%;
+   }
+  
+   .notice .button-box .title-btn {
+    width: 14%;
+   }
+  
+   .notice .button-box .empty-btn {
+    width: 44%;
+   }
+  
+   .notice .button-box .search-btn {
+    width: 19%;
+   }
+
+}
+
+/***** pc *****/
+@media (min-width: 1200px) {
+
+  .notice {
+    margin: 200px 80px 250px;
+  }
+
+  .notice .sub-menu {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+
+  .notice .main-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px auto 25px;
+  }
+
+  .notice .main-menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 110px;
+    width: 200px;
+    font-size: 18px;
+    color: #6d6d6d;
+  }
+
+  .notice .notice-title-box {
+    height: 64px;
+    line-height: 64px;
+    background-color: #F6F6F6;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px 120px;
+  }
+
+  .notice .notice-contents-box {
+    width: 100%;
+  }
+
+  .notice .notice-contents-box li {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    font-size: var(--font-m-sm);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0px;
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px 120px;
+  }
+
+  .notice .notice-contents-box li .num {
+    display: none;
+  }
+
+  .notice .notice-contents-box li .title {
+    text-align: left;
+    margin-bottom: 0px;
+  }
+
+  .notice .notice-contents-box li .writer {
+    margin: 0px;
+  }
+
+  .notice .notice-contents-box li .date {
+    margin-right: 0px;
+  }
+
+  .notice .notice-contents-box li:first-child {
+    border-top: none;
+  }
+
+  .notice .notice-contents-box li .num {
+    display: block;
+  }
+
+  .notice .notice-contents-box li:nth-child(2) {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .notice .notice-contents-box li:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .notice .button-box {
+    width: 40%;
+    margin: 16px 0px 200px;
+  }
+
+}

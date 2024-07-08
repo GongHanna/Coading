@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* fonts */
+/* Noto Sans KR, Noto Sans */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@1,100..900&display=swap');
+
+:root {
+    /* 폰트 설정 */
+    --font-m-ko:"Noto Sans KR","Noto Sans",-apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+    --font-m-en: "Noto Sans",-apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+    --font-pc-ko:"Noto Sans KR","Noto Sans",-apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    --font-pc-en:"Noto Sans",-apple-system, BlinkMacSystemFont, "Helvetica Neue","Apple SD Gothic Neo", Arial, sans-serif;
+    
+    /* 폰트 크기 설정 */
+    --font-m-xlg: 25px;
+    --font-m-lg: 20px;
+    --font-m-md: 16px;
+    --font-m-sm: 14px;
+    
+    --font-pc-xlg: 30px;
+    --font-pc-lg: 24px;
+    --font-pc-md: 18px;
+    --font-pc-sm: 13px;
+
+    /* 폰트 두께 */
+    --font-bold: 700;
+    --font-regular: 400;
+
+    /* 색상 설정 */
+    --color-primary: #BE094A;
+    --color-main-title: #9E0039;
+    --color-main-pink: #EF76B0 ;
+    --color-main-yellow: #FBE200;
+
+    --color-footer: #3E1E2E;
+    
+    --color-element-1: #FFC9CE;
+    --color-element-2: #FFE9C9; 
+    --color-element-3: #AFC6E5; 
+    --color-element-4: #F1A9BC; 
+    --color-DearOwn: #FFAD0F; 
+    --color-SlowHumming: #81421F;   
+    --color-Hatherine: #005FB7; 
+
+    --color-white: #fff; 
+    --color-black: #000; 
+}
